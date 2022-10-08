@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class scriptVaiSecondoLivello : MonoBehaviour
+public class scriptVaiSchermataIniziale : MonoBehaviour
 {
-    
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +16,8 @@ public class scriptVaiSecondoLivello : MonoBehaviour
     {
         
     }
-    
-    public void vaiSecondolivello () {
-        SceneManager.LoadSceneAsync("secondolivello");
+
+    public void vaiSchermataIniziale(){
+        SceneManager.LoadSceneAsync("SchermataIniziale");
     }
 }
