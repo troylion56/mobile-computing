@@ -20,6 +20,7 @@ public class player : MonoBehaviour
         {
             vita.danneggia(1);
         }
+    
 //!-----------------debug-------------------
     }
 
