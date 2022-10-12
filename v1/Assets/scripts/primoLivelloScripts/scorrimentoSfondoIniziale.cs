@@ -14,12 +14,19 @@ public class scorrimentoSfondoIniziale : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y>-11) {
-            transform.position = new Vector2 (transform.position.x, transform.position.y-05f*Time.deltaTime);
+        if(transform.position.y>-11.3) {
+            transform.position = new Vector2 (transform.position.x, transform.position.y-1.5f*Time.deltaTime);
         }
         else {
             transform.position= posizioneIniziale;
         }
-
+        //!-----------debug---------------------------------------
+        if(Input.GetKeyDown(KeyCode.UpArrow)){
+            transform.position=new Vector2(transform.position.x,11);
+        }
+        if(Input.GetKeyDown(KeyCode.DownArrow)){
+            transform.position=new Vector2(transform.position.x,-10.88f);
+        }
+        //!-----------debug---------------------------------------
     }
 }
