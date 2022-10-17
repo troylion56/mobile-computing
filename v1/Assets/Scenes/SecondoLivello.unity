@@ -1129,6 +1129,7 @@ GameObject:
   - component: {fileID: 617666152}
   - component: {fileID: 617666154}
   - component: {fileID: 617666153}
+  - component: {fileID: 617666155}
   m_Layer: 5
   m_Name: slider effetti
   m_TagString: Untagged
@@ -1238,6 +1239,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 617666155}
+        m_TargetAssemblyTypeName: gestisciVolumeEffetti, Assembly-CSharp
+        m_MethodName: cambiavolumeEffetti
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &617666155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617666151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be3d26706ea9ea49948ea90a9c68298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spariPlayer: {fileID: 0}
+  mortePlayer: {fileID: 0}
+  spariNemici: {fileID: 0}
+  morteNemici: {fileID: 0}
+  effettiPausa: {fileID: 0}
+  slider: {fileID: 617666154}
 --- !u!1001 &629282505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3669,6 +3700,7 @@ GameObject:
   - component: {fileID: 1919576323}
   - component: {fileID: 1919576325}
   - component: {fileID: 1919576324}
+  - component: {fileID: 1919576326}
   m_Layer: 5
   m_Name: slider musica
   m_TagString: Untagged
@@ -3778,6 +3810,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1919576326}
+        m_TargetAssemblyTypeName: gestisciVolumeMusica, Assembly-CSharp
+        m_MethodName: cambiaVolumeMusica
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1919576326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919576322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b313cde0010b444a5cf4f649e2b0d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musica: {fileID: 0}
+  slider: {fileID: 1919576325}
 --- !u!1 &2067310376
 GameObject:
   m_ObjectHideFlags: 0
