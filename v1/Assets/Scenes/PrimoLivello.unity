@@ -376,6 +376,8 @@ GameObject:
   m_Component:
   - component: {fileID: 337505900}
   - component: {fileID: 337505901}
+  - component: {fileID: 337505903}
+  - component: {fileID: 337505902}
   m_Layer: 5
   m_Name: slider volume generale
   m_TagString: Untagged
@@ -458,7 +460,58 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 337505903}
+        m_TargetAssemblyTypeName: scriptAggiornaValoreVolume, Assembly-CSharp
+        m_MethodName: aggiorna
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 337505902}
+        m_TargetAssemblyTypeName: ScriptGestisciVolume, Assembly-CSharp
+        m_MethodName: cambiaVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &337505902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337505899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4f46e6c81bf854894e8668da9476d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderVolume: {fileID: 337505901}
+--- !u!114 &337505903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337505899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3ec18ddbdba4c4c845a8d00647d3fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valore: {fileID: 894167069}
+  sliderVolume: {fileID: 337505901}
 --- !u!1 &388872337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,6 +1172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 728401656}
   - component: {fileID: 728401657}
+  - component: {fileID: 728401658}
   m_Layer: 5
   m_Name: slider musica
   m_TagString: Untagged
@@ -1201,7 +1255,33 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 728401658}
+        m_TargetAssemblyTypeName: scriptAggiornaValoreVolume, Assembly-CSharp
+        m_MethodName: aggiorna
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &728401658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728401655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3ec18ddbdba4c4c845a8d00647d3fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valore: {fileID: 522330999}
+  sliderVolume: {fileID: 728401657}
 --- !u!1 &769178354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,7 +1650,7 @@ RectTransform:
   m_GameObject: {fileID: 999799112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.8125, z: 1}
+  m_LocalScale: {x: 1, y: 0.89375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 837865267}
@@ -1580,7 +1660,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -800}
+  m_AnchoredPosition: {x: 0, y: -909}
   m_SizeDelta: {x: 1114.7, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &999799114
@@ -2447,6 +2527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1654804398}
   - component: {fileID: 1654804399}
+  - component: {fileID: 1654804400}
   m_Layer: 5
   m_Name: slider effetti
   m_TagString: Untagged
@@ -2529,7 +2610,33 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1654804400}
+        m_TargetAssemblyTypeName: scriptAggiornaValoreVolume, Assembly-CSharp
+        m_MethodName: aggiorna
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1654804400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654804397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3ec18ddbdba4c4c845a8d00647d3fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valore: {fileID: 1899390559}
+  sliderVolume: {fileID: 1654804399}
 --- !u!1 &1662041354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,7 +3043,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862041156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.11, z: 0}
+  m_LocalPosition: {x: 0, y: -3.5, z: 0}
   m_LocalScale: {x: 0.13, y: 0.13, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
