@@ -25,7 +25,10 @@ public class scorrimentoSfondoIniziale : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        transform.position = new Vector2 (transform.position.x, transform.position.y-2.5f*Time.deltaTime);
+        if(!gameController.pausa){
+            transform.position = new Vector2 (transform.position.x, transform.position.y-2.5f*Time.deltaTime);
+        }
+        
 
         //!-----------debug---------------------------------------
         if(Input.GetKeyDown(KeyCode.UpArrow)){
