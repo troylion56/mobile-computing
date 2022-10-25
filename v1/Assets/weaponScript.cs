@@ -18,7 +18,6 @@ public class weaponScript : MonoBehaviour
         {
             Shoot();
             spawnTimer=0;
-            Debug.Log("sparo");
         }
     }
 
