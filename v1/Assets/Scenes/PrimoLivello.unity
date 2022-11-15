@@ -3992,6 +3992,7 @@ GameObject:
   - component: {fileID: 1862041160}
   - component: {fileID: 1862041162}
   - component: {fileID: 1862041163}
+  - component: {fileID: 1862041164}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -4159,6 +4160,21 @@ MonoBehaviour:
   bulletPreFab: {fileID: 5895105278621477321, guid: 532a562e429b7a8448eff965c492eec6, type: 3}
   timeScale: 0.22
   spawnTimer: 0.24
+--- !u!114 &1862041164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862041156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cae763b65e55b54583ebdbbb0c0ce0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posizione: {fileID: 1862041158}
+  swipeTime: 2.5
+  tapTime: 10
 --- !u!1 &1883668942
 GameObject:
   m_ObjectHideFlags: 0
