@@ -3993,6 +3993,7 @@ GameObject:
   - component: {fileID: 1862041162}
   - component: {fileID: 1862041163}
   - component: {fileID: 1862041164}
+  - component: {fileID: 1862041165}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -4175,6 +4176,27 @@ MonoBehaviour:
   posizione: {fileID: 1862041158}
   swipeTime: 2.5
   tapTime: 10
+  spostamento: {fileID: 1862041165}
+--- !u!95 &1862041165
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862041156}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4fcc2a5b5de37c74199f205bcfdea73c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1883668942
 GameObject:
   m_ObjectHideFlags: 0
