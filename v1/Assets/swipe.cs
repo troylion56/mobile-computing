@@ -11,10 +11,6 @@ public class swipe : MonoBehaviour
     public Transform posizione;
     public float swipeTime;
     public float tapTime;
-
-    float [] posizioni=new float[5] {-1.8f, -0.9f, 0.0f, 0.9f,1.8f};
-    
-    int index=2;
     public Animator spostamento;   
 
     // Update is called once per frame
@@ -23,29 +19,51 @@ public class swipe : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            index--;
-            if (index<0)
-            {
-                index=4;
-            }
-            //!posizione.position=new Vector2(posizioni[index],posizione.position.y);
-            spostamento.SetTrigger("vaiSx");
+                    if (posizione.position.x==0)
+                    {
+                        spostamento.SetTrigger("vaiSx");
+                    }
+                    if (posizione.position.x==0.9f)
+                    {
+                        spostamento.SetTrigger("tornaDx");
+                    }
+                    if (posizione.position.x==-0.9f)
+                    {
+                        spostamento.SetTrigger("vaiSSx");
+                    }
+                    if (posizione.position.x==1.8f)
+                    {
+                        spostamento.SetTrigger("tornaDDx");
+                    }
+                    if (posizione.position.x==-1.8f)
+                    {
+                        spostamento.SetTrigger("vaiSSSx");
+                    }
             Debug.Log("sinistra");
-            //!spostamento.SetTrigger("torna");
-            //!StartCoroutine(swipeSx());
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            index++;
-            if (index>4)
-            {
-                index=0;
-            }
-            //!posizione.position=new Vector2(posizioni[index],posizione.position.y);
-            spostamento.SetTrigger("vaiDx");
+                   if (posizione.position.x==0)
+                    {
+                        spostamento.SetTrigger("vaiDx");
+                    }
+                    if (posizione.position.x==0.9f)
+                    {
+                        spostamento.SetTrigger("vaiDDx");
+                    }
+                    if (posizione.position.x==-0.9f)
+                    {
+                        spostamento.SetTrigger("tornaSx");
+                    }
+                    if (posizione.position.x==1.8f)
+                    {
+                        spostamento.SetTrigger("vaiDDDx");
+                    }
+                    if (posizione.position.x==-1.8f)
+                    {
+                        spostamento.SetTrigger("tornaSSx");
+                    }
             Debug.Log("destra");
-            //!spostamento.SetTrigger("torna");
-            //!StartCoroutine(swipeDx());
         }
 
         if (Input.touchCount>0&&Input.GetTouch(0).phase==TouchPhase.Began)
@@ -62,25 +80,52 @@ public class swipe : MonoBehaviour
             {
                 if (distanza.x<-swipeTime)
                 {
-                    index--;
-                    if (index<0)
+                    if (posizione.position.x==0)
                     {
-                        index=4;
+                        spostamento.SetTrigger("vaiSx");
                     }
-                    posizione.position=new Vector2(posizioni[index],posizione.position.y);
-                    spostamento.SetTrigger("vaiSx");
+                    if (posizione.position.x==0.9f)
+                    {
+                        spostamento.SetTrigger("tornaDx");
+                    }
+                    if (posizione.position.x==-0.9f)
+                    {
+                        spostamento.SetTrigger("vaiSSx");
+                    }
+                    if (posizione.position.x==1.8f)
+                    {
+                        spostamento.SetTrigger("tornaDDx");
+                    }
+                    if (posizione.position.x==-1.8f)
+                    {
+                        spostamento.SetTrigger("vaiSSSx");
+                    }
                     Debug.Log("sinistra");
                     stopTouch=true;
                 }
                 if (distanza.x>swipeTime)
                 {
-                    index++;
-                    if (index>4)
+
+                    if (posizione.position.x==0)
                     {
-                        index=0;
+                        spostamento.SetTrigger("vaiDx");
                     }
-                    posizione.position=new Vector2(posizioni[index],posizione.position.y);
-                    spostamento.SetTrigger("vaiDx");
+                    if (posizione.position.x==0.9f)
+                    {
+                        spostamento.SetTrigger("vaiDDx");
+                    }
+                    if (posizione.position.x==-0.9f)
+                    {
+                        spostamento.SetTrigger("tornaSx");
+                    }
+                    if (posizione.position.x==1.8f)
+                    {
+                        spostamento.SetTrigger("vaiDDDx");
+                    }
+                    if (posizione.position.x==-1.8f)
+                    {
+                        spostamento.SetTrigger("tornaSSx");
+                    }
                     Debug.Log("destra");
                     stopTouch=true;
                 }
