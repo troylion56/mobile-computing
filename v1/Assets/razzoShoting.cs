@@ -13,8 +13,12 @@ public class razzoShoting : MonoBehaviour
         rb.velocity = transform.up * speed;
         
     }
-    void OnTriggerEnter2D(Collider2D hitInfo) 
-    {
+
+    void Update() {
+        Distruggi();
+    }
+
+    void OnTriggerEnter2D(Collider2D hitInfo) {
         /*enemyScript enemy = hitInfo.GetComponent<enemyScript>();
         if(enemy != null)
         {
@@ -23,6 +27,13 @@ public class razzoShoting : MonoBehaviour
         Debug.Log(hitInfo.name);
         Destroy(gameObject);
 
+    }
+    void Distruggi() 
+    {
+        if(gameObject.transform.position.y > 6)
+        {
+            Destroy(gameObject);
+        }
     }
 
 
