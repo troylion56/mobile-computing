@@ -14,9 +14,8 @@ public class swipe : MonoBehaviour
     public Animator spostamento;   
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-
         if (Input.GetKeyDown(KeyCode.A))
         {
                     if (posizione.position.x==0)
@@ -69,6 +68,7 @@ public class swipe : MonoBehaviour
         if (Input.touchCount>0&&Input.GetTouch(0).phase==TouchPhase.Began)
         {
             posIniziale=Input.GetTouch(0).position;
+            Debug.Log("posizione: "+posIniziale.y);
         }
 
         if (Input.touchCount>0&&Input.GetTouch(0).phase==TouchPhase.Moved)
@@ -76,8 +76,9 @@ public class swipe : MonoBehaviour
             posAttuale=Input.GetTouch(0).position;
             Vector2 distanza=posAttuale-posIniziale;
 
-            if (!stopTouch)
+            if (!stopTouch&&posIniziale.y>500)
             {
+                
                 if (distanza.x<-swipeTime)
                 {
                     if (posizione.position.x==0)
