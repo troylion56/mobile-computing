@@ -35,6 +35,10 @@ public class inventory : MonoBehaviour
                 stellineTot++;
                 stella3.sprite = stellinaColore;
             }
+            else if (canCollect is collectableBenzina)
+            {
+                Debug.Log("benzina raccolta");
+            }
 
         }
 
