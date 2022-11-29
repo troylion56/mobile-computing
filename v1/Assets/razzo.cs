@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class razzo : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class razzo : MonoBehaviour
     }
     public void Shoot () {
         Instantiate(razzooooPreFab, firePoint2.position, firePoint2.rotation);
-
+    }
+    public Button Button1;
+    public void DisableButtonOnClick() {
+        Button1.interactable=false;
     }
 }

@@ -11,6 +11,15 @@ public class inventory : MonoBehaviour
 
     private int stellineTot = 0;
 
+    public Button buttonSparo;
+    public Button buttonRazzo;
+    // Start is called before the first frame update
+    void Start()
+    {
+        buttonSparo.interactable=false;
+        buttonRazzo.interactable=false;
+    }
+
     private void OnTriggerEnter2D(Collider2D collider2D) {
         if(collider2D.CompareTag("collectable")){
             Collect(collider2D.GetComponent<collect>());
@@ -35,9 +44,16 @@ public class inventory : MonoBehaviour
                 stellineTot++;
                 stella3.sprite = stellinaColore;
             }
-
-        }
-
-            
+            else if (canCollect is collectRazzo)
+            {
+                buttonRazzo.interactable=true;
+                Debug.Log("Ora puoi lancaira razzzzzzzziiiiiiiiiiiiiiiiiiiiiiiiiiii");
+            }
+            else if (canCollect is collectShooting)
+            {
+                buttonSparo.interactable=true;
+                Debug.Log("Ora puoi sparare");
+            }
+        }   
     }
 }
