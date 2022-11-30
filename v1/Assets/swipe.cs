@@ -76,7 +76,7 @@ public class swipe : MonoBehaviour
             posAttuale=Input.GetTouch(0).position;
             Vector2 distanza=posAttuale-posIniziale;
 
-            if (!stopTouch&&posIniziale.y>500)
+            if (!stopTouch&&posIniziale.y>300)
             {
                 
                 if (distanza.x<-swipeTime)
@@ -142,6 +142,7 @@ public class swipe : MonoBehaviour
 
             if (Mathf.Abs(distanza.x)<tapTime && Mathf.Abs(distanza.y)<tapTime)
             {
+                Debug.Log("y:"+posAttuale.y);
                 Debug.Log("tap");
             }
         }

@@ -16,6 +16,9 @@ public class gestoreBenzina : MonoBehaviour
     }
 
     private void Update() {
-        benzina.value=benzina.value-0.1f;
+        if (!gameController.pausa)
+        {
+            benzina.value=benzina.value-0.1f;
+        }
     }
 }
