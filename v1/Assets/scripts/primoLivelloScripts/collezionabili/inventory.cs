@@ -33,16 +33,19 @@ public class inventory : MonoBehaviour
             {
                 stellineTot++;
                 stella1.sprite = stellinaColore;
+                gameController.s11=true;
             }
             else if (canCollect is collectStellina2)
             {
                 stellineTot++;
                 stella2.sprite = stellinaColore;
+                gameController.s12=true;
             }
             else if (canCollect is collectStellina3)
             {
                 stellineTot++;
                 stella3.sprite = stellinaColore;
+                gameController.s13=true;
             }
             else if (canCollect is collectRazzo)
             {

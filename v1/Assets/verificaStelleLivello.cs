@@ -7,27 +7,36 @@ using UnityEngine.UI;
 
 public class verificaStelleLivello : MonoBehaviour
 {
-    public GameObject ss11; //ss prima stellina del primo livello
-    public GameObject ss12; //ss seconda stellina del primo livello
-    public GameObject ss13; //ss terza stellina del primo livello
+    public SpriteRenderer ss11; //ss prima stellina del primo livello
+    public SpriteRenderer ss12; //ss seconda stellina del primo livello
+    public SpriteRenderer ss13; //ss terza stellina del primo livello
 
-     public Sprite stellaAttiva;
+    public Sprite stellaAttiva;
     void Start()
     {
         if (!PlayerPrefs.HasKey("superStella1:1")){
-            /*se non esiste un salvataggio del volume lo imposto di default a 1 (100%)*/
-            PlayerPrefs.SetBool("superStella1:1",false);
+                PlayerPrefs.SetInt("superStella1:1",0);
         }else{
-            /*se esiste un precedente salvataggio lo assegno come valore dello slider*/
-            carica();
-            aggiornaSpirte (PlayerPrefs.GetBool("superStella1:1"),ss11);
+                aggiornaSpirte (PlayerPrefs.GetInt("superStella1:1"),ss11);
+        }
+
+         if (!PlayerPrefs.HasKey("superStella1:2")){
+                PlayerPrefs.SetInt("superStella1:2",0);
+        }else{
+                aggiornaSpirte (PlayerPrefs.GetInt("superStella1:2"),ss12);
+        }
+
+         if (!PlayerPrefs.HasKey("superStella1:3")){
+                PlayerPrefs.SetInt("superStella1:3",0);
+        }else{
+                aggiornaSpirte (PlayerPrefs.GetInt("superStella1:3"),ss13);
         }
     }
 
-    void aggiornaSpirte(bool verifica,GameObject stella){
-        if(verifica){
-            
+    void aggiornaSpirte(int verifica,SpriteRenderer stella){
+        if(verifica==1){
+            stella.sprite=stellaAttiva;
         }
     }
-}
+} 
 

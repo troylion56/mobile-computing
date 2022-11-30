@@ -465,6 +465,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a801812689492543a9c192820605a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ss11: {fileID: 1981814096}
+  ss12: {fileID: 1245297014}
+  ss13: {fileID: 460010822}
+  stellaAttiva: {fileID: 21300000, guid: eabc27e6dd314cd42851bf0266bf36c6, type: 3}
 --- !u!1 &357035318
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,7 +630,7 @@ GameObject:
   - component: {fileID: 460010821}
   - component: {fileID: 460010822}
   m_Layer: 0
-  m_Name: stellaBN
+  m_Name: stellaBN3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1022,7 +1026,7 @@ GameObject:
   - component: {fileID: 1245297013}
   - component: {fileID: 1245297014}
   m_Layer: 0
-  m_Name: stellaBN
+  m_Name: stellaBN2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1120,7 +1124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279870374}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -8.5, z: -20520}
+  m_LocalPosition: {x: 0, y: -8, z: -20520}
   m_LocalScale: {x: 7, y: 2.5, z: 228}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1666,8 +1670,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543551567}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.806587, y: -7.7, z: -20520}
-  m_LocalScale: {x: 6.4733233, y: 3.025663, z: 228}
+  m_LocalPosition: {x: 47, y: -8, z: -20520}
+  m_LocalScale: {x: 7, y: 2.5, z: 228}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 357035319}
@@ -1736,7 +1740,7 @@ GameObject:
   - component: {fileID: 1981814095}
   - component: {fileID: 1981814096}
   m_Layer: 0
-  m_Name: stellaBN
+  m_Name: stellaBN1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
