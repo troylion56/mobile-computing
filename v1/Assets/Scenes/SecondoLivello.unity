@@ -281,6 +281,7 @@ MonoBehaviour:
   stella2: {fileID: 0}
   stella3: {fileID: 0}
   stellinaColore: {fileID: 0}
+  scriptBenzina: {fileID: 0}
 --- !u!1 &111412299
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,6 +693,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 207262858}
   m_CullTransparentMesh: 1
+--- !u!4 &212507886 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3424024964827714118, guid: ac84ff6dae0fa8c48842724a3bdfa689, type: 3}
+  m_PrefabInstance: {fileID: 1207099440}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &237510632
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,6 +3040,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203591379}
   m_CullTransparentMesh: 1
+--- !u!1001 &1207099440
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1876006593}
+    m_Modifications:
+    - target: {fileID: 3424024964827714117, guid: ac84ff6dae0fa8c48842724a3bdfa689, type: 3}
+      propertyPath: m_Name
+      value: carica benzina
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424024964827714118, guid: ac84ff6dae0fa8c48842724a3bdfa689, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424024964827714118, guid: ac84ff6dae0fa8c48842724a3bdfa689, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424024964827714118, guid: ac84ff6dae0fa8c48842724a3bdfa689, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.5915873
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424024964827714118, guid: ac84ff6dae0fa8c48842724a3bdfa689, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.009334367
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424024964827714118, guid: ac84ff6dae0fa8c48842724a3bdfa689, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424024964827714118, guid: ac84ff6dae0fa8c48842724a3bdfa689, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424024964827714118, guid: ac84ff6dae0fa8c48842724a3bdfa689, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424024964827714118, guid: ac84ff6dae0fa8c48842724a3bdfa689, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424024964827714118, guid: ac84ff6dae0fa8c48842724a3bdfa689, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424024964827714118, guid: ac84ff6dae0fa8c48842724a3bdfa689, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424024964827714118, guid: ac84ff6dae0fa8c48842724a3bdfa689, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac84ff6dae0fa8c48842724a3bdfa689, type: 3}
 --- !u!1 &1251657678
 GameObject:
   m_ObjectHideFlags: 0
@@ -4704,6 +4767,7 @@ MonoBehaviour:
   stella2: {fileID: 970097190}
   stella3: {fileID: 1467554900}
   stellinaColore: {fileID: 21300000, guid: eabc27e6dd314cd42851bf0266bf36c6, type: 3}
+  scriptBenzina: {fileID: 1683766526}
 --- !u!61 &1685475265
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5304,6 +5368,7 @@ Transform:
   - {fileID: 1477502425}
   - {fileID: 1572598649}
   - {fileID: 1893047525}
+  - {fileID: 212507886}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -9,6 +9,7 @@ public class inventory : MonoBehaviour
 
     public Sprite stellinaColore;
 
+    public gestoreBenzina scriptBenzina;
     private int stellineTot = 0;
 
     private void OnTriggerEnter2D(Collider2D collider2D) {
@@ -37,6 +38,7 @@ public class inventory : MonoBehaviour
             }
             else if (canCollect is collectableBenzina)
             {
+                scriptBenzina.carica(100);
                 Debug.Log("benzina raccolta");
             }
 
