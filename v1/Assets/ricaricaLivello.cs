@@ -7,7 +7,11 @@ public class ricaricaLivello : MonoBehaviour
 {
     public void ricLivello (){
         gameController.pausa=false;
+        gameController.s1=false;
+        gameController.s2=false;
+        gameController.s3=false;
         Time.timeScale=1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
 }

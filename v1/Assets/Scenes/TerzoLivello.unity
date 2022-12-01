@@ -490,6 +490,12 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &225316989
+--- !u!1 &199471860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7795473555970856794, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
+  m_PrefabInstance: {fileID: 199471859}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &199471861
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -575,6 +581,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   benzina: {fileID: 225316989}
+  m_GameObject: {fileID: 199471860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510072e02924f104d8d385d8d43ded9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &244899648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,6 +1170,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 225316990}
+  - {fileID: 1378859175}
   - {fileID: 1478931597}
   - {fileID: 1378859175}
   - {fileID: 1468227169}
@@ -1376,7 +1389,7 @@ RectTransform:
   - {fileID: 570085037}
   - {fileID: 198319562}
   m_Father: {fileID: 538173134}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1621,7 +1634,7 @@ RectTransform:
   m_Children:
   - {fileID: 1740094953}
   m_Father: {fileID: 538173134}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3264,7 +3277,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 538173134}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4486,7 +4499,7 @@ RectTransform:
   m_Children:
   - {fileID: 1312832559}
   m_Father: {fileID: 538173134}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4507,6 +4520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint2: {fileID: 1331848442}
   razzooooPreFab: {fileID: 5895105278621477321, guid: 19b78399d6108e94d9f0246e70a8d959, type: 3}
+  Button1: {fileID: 0}
 --- !u!114 &1836745057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4950,6 +4964,8 @@ MonoBehaviour:
   stella3: {fileID: 966073312}
   stellinaColore: {fileID: 21300000, guid: eabc27e6dd314cd42851bf0266bf36c6, type: 3}
   scriptBenzina: {fileID: 225316991}
+  buttonSparo: {fileID: 0}
+  buttonRazzo: {fileID: 0}
 --- !u!61 &2009163703
 BoxCollider2D:
   m_ObjectHideFlags: 0

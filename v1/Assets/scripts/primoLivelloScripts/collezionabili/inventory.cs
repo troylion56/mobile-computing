@@ -12,6 +12,15 @@ public class inventory : MonoBehaviour
     public gestoreBenzina scriptBenzina;
     private int stellineTot = 0;
 
+    public Button buttonSparo;
+    public Button buttonRazzo;
+    // Start is called before the first frame update
+    void Start()
+    {
+        buttonSparo.interactable=false;
+        buttonRazzo.interactable=false;
+    }
+
     private void OnTriggerEnter2D(Collider2D collider2D) {
         if(collider2D.CompareTag("collectable")){
             Collect(collider2D.GetComponent<collect>());
@@ -25,25 +34,36 @@ public class inventory : MonoBehaviour
             {
                 stellineTot++;
                 stella1.sprite = stellinaColore;
+                gameController.s1=true;             
             }
             else if (canCollect is collectStellina2)
             {
                 stellineTot++;
                 stella2.sprite = stellinaColore;
+                gameController.s2=true;
             }
             else if (canCollect is collectStellina3)
             {
                 stellineTot++;
                 stella3.sprite = stellinaColore;
+                gameController.s3=true;
             }
             else if (canCollect is collectableBenzina)
             {
                 scriptBenzina.carica(100);
                 Debug.Log("benzina raccolta");
             }
-
+            else if (canCollect is collectRazzo)
+            {
+                buttonRazzo.interactable=true;
+                Debug.Log("Ora puoi lancaira razzzzzzzziiiiiiiiiiiiiiiiiiiiiiiiiiii");
+            }
+            else if (canCollect is collectShooting)
+            {
+                buttonSparo.interactable=true;
+                Debug.Log("Ora puoi sparare");
+            }
         }
-
-            
+           
     }
 }
