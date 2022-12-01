@@ -1111,6 +1111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 659745611}
+  - component: {fileID: 659745612}
   m_Layer: 0
   m_Name: stelle
   m_TagString: Untagged
@@ -1136,6 +1137,22 @@ Transform:
   m_Father: {fileID: 229493862}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &659745612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659745610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4baff37da593307419622a0f9c9975dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ss11: {fileID: 129887212}
+  ss12: {fileID: 19958782}
+  ss13: {fileID: 423467857}
+  stellaAttiva: {fileID: 21300000, guid: eabc27e6dd314cd42851bf0266bf36c6, type: 3}
 --- !u!1 &1059768686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,6 +1738,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1388374797}
+  - component: {fileID: 1388374798}
   m_Layer: 0
   m_Name: stelle
   m_TagString: Untagged
@@ -1746,6 +1764,22 @@ Transform:
   m_Father: {fileID: 357035319}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1388374798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388374796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13dc4da0f5484f84c9fbad9bfc74a719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ss11: {fileID: 1303317711}
+  ss12: {fileID: 1279870376}
+  ss13: {fileID: 1543551569}
+  stellaAttiva: {fileID: 21300000, guid: eabc27e6dd314cd42851bf0266bf36c6, type: 3}
 --- !u!1 &1469763710
 GameObject:
   m_ObjectHideFlags: 0
