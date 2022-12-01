@@ -1199,7 +1199,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300849478}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &497908029
 SpriteRenderer:
@@ -4669,6 +4669,7 @@ MonoBehaviour:
   stella2: {fileID: 1169039507}
   stella3: {fileID: 412281330}
   stellinaColore: {fileID: 21300000, guid: eabc27e6dd314cd42851bf0266bf36c6, type: 3}
+  scriptBenzina: {fileID: 1644977017}
   buttonSparo: {fileID: 1418712180}
   buttonRazzo: {fileID: 1735072222}
 --- !u!61 &1862041161
@@ -5197,7 +5198,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 300849478}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1919587172
 BoxCollider2D:
