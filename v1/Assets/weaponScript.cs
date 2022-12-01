@@ -7,13 +7,11 @@ public class weaponScript : MonoBehaviour
 
     public Transform firePoint;
     public GameObject bulletPreFab;
-    
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public static bool stato;
 
+    private void Start() {
+        stato=false;
+    }
     void Shoot()
     {
         Instantiate(bulletPreFab, firePoint.position, firePoint.rotation);

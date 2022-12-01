@@ -1167,6 +1167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transizione: {fileID: 1768361523}
+  pulsanteRazzo: {fileID: 1735072222}
 --- !u!1 &497908027
 GameObject:
   m_ObjectHideFlags: 0
@@ -5769,6 +5770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transizione: {fileID: 1768361523}
+  pulsanteRazzo: {fileID: 1735072222}
 --- !u!1 &2078218656
 GameObject:
   m_ObjectHideFlags: 0

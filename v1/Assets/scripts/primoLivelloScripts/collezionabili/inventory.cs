@@ -56,6 +56,7 @@ public class inventory : MonoBehaviour
             else if (canCollect is collectRazzo)
             {
                 buttonRazzo.interactable=true;
+                razzo.stato=true;
                 Debug.Log("Ora puoi lancaira razzzzzzzziiiiiiiiiiiiiiiiiiiiiiiiiiii");
             }
             else if (canCollect is collectShooting)
