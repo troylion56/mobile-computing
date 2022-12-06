@@ -11,14 +11,12 @@ public class inventory : MonoBehaviour
 
     public gestoreBenzina scriptBenzina;
     private int stellineTot = 0;
-
     public Button buttonSparo;
     public Button buttonRazzo;
     // Start is called before the first frame update
     void Start()
     {
-        buttonSparo.interactable=false;
-        buttonRazzo.interactable=false;
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collider2D) {

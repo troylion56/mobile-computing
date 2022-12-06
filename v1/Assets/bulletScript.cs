@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bulletScript : MonoBehaviour
+public class bulletScript : proiettili
 {
     public float speed = 20f;
     public int damage = 40;
@@ -29,8 +29,6 @@ public class bulletScript : MonoBehaviour
 
     }
 
-    
-
     void Distruggi() 
     {
         if(gameObject.transform.position.y > 6)
@@ -38,5 +36,4 @@ public class bulletScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 }

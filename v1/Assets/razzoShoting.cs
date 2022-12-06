@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class razzoShoting : MonoBehaviour
+public class razzoShoting : proiettili
 {
     public float speed = 20f;
     public int damage = 40;

@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class asteroide : MonoBehaviour
 {
+    public Image prova;
     // Update is called once per frame
     void Update()
     {
@@ -16,4 +18,25 @@ public class asteroide : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collider2D) {
+        if(collider2D.CompareTag("proiettili")){
+            impatto(collider2D.GetComponent<proiettili>());
+        }
+    }
+
+    private void impatto (proiettili proiettile){
+        if (proiettile is razzoShoting)
+        {
+            Debug.Log("missile colpisce asteroide");
+            Destroy(gameObject);
+        }
+        if (proiettile is bulletScript)
+        {
+            Debug.Log("proiettile colpisce asteroide");
+            Destroy(proiettile);
+        }
+    }
+
+
 }

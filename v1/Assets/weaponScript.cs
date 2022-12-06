@@ -7,11 +7,7 @@ public class weaponScript : MonoBehaviour
 
     public Transform firePoint;
     public GameObject bulletPreFab;
-    public static bool stato;
 
-    private void Start() {
-        stato=false;
-    }
     void Shoot()
     {
         Instantiate(bulletPreFab, firePoint.position, firePoint.rotation);
@@ -20,5 +16,5 @@ public class weaponScript : MonoBehaviour
     public void onClick (){
         Shoot();
     }
-    
+
 }

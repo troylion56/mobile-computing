@@ -6,6 +6,7 @@ TagManager:
   tags:
   - collectable
   - ostacoli
+  - proiettili
   layers:
   - Default
   - TransparentFX
