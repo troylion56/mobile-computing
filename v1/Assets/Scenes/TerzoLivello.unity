@@ -2064,6 +2064,7 @@ MonoBehaviour:
   sp3: {fileID: 346933572}
   sp4: {fileID: 1793621992}
   sp5: {fileID: 1595394602}
+  asteroide: {fileID: 6730780980030681337, guid: 10e6be346692ddd42966e726d7e2c11e, type: 3}
 --- !u!1 &769126543
 GameObject:
   m_ObjectHideFlags: 0
