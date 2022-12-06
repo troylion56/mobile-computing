@@ -25,6 +25,11 @@ public class inventory : MonoBehaviour
         if(collider2D.CompareTag("collectable")){
             Collect(collider2D.GetComponent<collect>());
         }
+
+        if(collider2D.CompareTag("ostacoli")){
+            Debug.Log("asteroide colpito");
+            Destroy(gameObject);
+        }
     }
     private void Collect(collect canCollect)
     {

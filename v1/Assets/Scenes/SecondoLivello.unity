@@ -3930,6 +3930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transizione: {fileID: 270805892}
+  pulsanteRazzo: {fileID: 734855989}
 --- !u!114 &1472461107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5297,6 +5298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transizione: {fileID: 270805892}
+  pulsanteRazzo: {fileID: 0}
 --- !u!114 &1792644929
 MonoBehaviour:
   m_ObjectHideFlags: 0
