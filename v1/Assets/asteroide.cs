@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class asteroide : MonoBehaviour
 {
-    public Image prova;
     // Update is called once per frame
     void Update()
     {
