@@ -17,7 +17,6 @@ public class inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        buttonSparo.interactable=false;
         buttonRazzo.interactable=false;
     }
 
