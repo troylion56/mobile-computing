@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class weaponScript : MonoBehaviour
 {
 
@@ -13,12 +14,15 @@ public class weaponScript : MonoBehaviour
     public int colpiDisponibili;
     public SpriteRenderer shootingButton;
     public Button pulsante;
-    public Image prova;
+    public Image tasto;
+    public float rate = 1f;
+    public int timeRicarica;
 
 
     private void Start() {
-       stato = false;
-       colpiDisponibili = 3;
+       stato = true;
+       colpiDisponibili = 3;            // si inizia con il caricatore pieno
+
     }
 
     void Shoot()
@@ -29,21 +33,33 @@ public class weaponScript : MonoBehaviour
     public void onClick (){
         Shoot();
         colpiDisponibili--;
+        cambiaSprite();
+        rate = 0;
+
+    }
+
+    public void Update() {
+        rate += Time.deltaTime;
+        if(rate > timeRicarica && colpiDisponibili < 4) {
+            colpiDisponibili ++;
+            cambiaSprite();
+            rate = 0;       // faccio riniziare il tempo di ricarica
+        }
     }
 
     public void cambiaSprite() {
         if(colpiDisponibili == 1) {
             pulsante.interactable = true;
-            prova.sprite = caricamento1;
+            tasto.sprite = caricamento1;
         }
         else if(colpiDisponibili == 2) {
-            prova.sprite = caricamento2;
+            tasto.sprite = caricamento2;
         }
         else if(colpiDisponibili == 3) {
-            prova.sprite = caricamento3;
+            tasto.sprite = caricamento3;
         }
         else if(colpiDisponibili == 0) {
-            prova.sprite = caricamento0;
+            tasto.sprite = caricamento0;
             pulsante.interactable = false;
         }
 

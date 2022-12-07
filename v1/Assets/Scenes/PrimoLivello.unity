@@ -2926,8 +2926,6 @@ GameObject:
   - component: {fileID: 1418712181}
   - component: {fileID: 1418712180}
   - component: {fileID: 1418712179}
-  - component: {fileID: 1418712183}
-  - component: {fileID: 1418712184}
   m_Layer: 5
   m_Name: shootButton
   m_TagString: Untagged
@@ -2974,9 +2972,11 @@ MonoBehaviour:
   caricamento2: {fileID: 21300000, guid: 126110f6292c1e041a1a7da496fb2d4e, type: 3}
   caricamento3: {fileID: 21300000, guid: c047b42814835d74baaf7159ec32aa64, type: 3}
   colpiDisponibili: 0
-  shootingButton: {fileID: 1418712183}
+  shootingButton: {fileID: 0}
   pulsante: {fileID: 1418712180}
-  prova: {fileID: 1418712181}
+  tasto: {fileID: 1418712181}
+  rate: 0.03
+  timeRicarica: 2
 --- !u!114 &1418712180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3083,78 +3083,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418712177}
   m_CullTransparentMesh: 1
---- !u!212 &1418712183
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1418712177}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 25a11d754ddd8be40b821ba1b537c3ad, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 4.3, y: 1.61}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!114 &1418712184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1418712177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5697c92c4df19e43ad792bda517b560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  caricamento0: {fileID: 21300000, guid: 25a11d754ddd8be40b821ba1b537c3ad, type: 3}
-  caricamento1: {fileID: 21300000, guid: ef8d266fb21ea3f4a84127c3526ef3ec, type: 3}
-  caricamento2: {fileID: 21300000, guid: 126110f6292c1e041a1a7da496fb2d4e, type: 3}
-  caricamento3: {fileID: 21300000, guid: c047b42814835d74baaf7159ec32aa64, type: 3}
-  colpiDisponibili: 0
-  shootingButton: {fileID: 1418712183}
-  pulsante: {fileID: 1418712180}
-  prova: {fileID: 1418712181}
 --- !u!1001 &1425051097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4747,14 +4675,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1024672095}
   bulletPreFab: {fileID: 5895105278621477321, guid: 532a562e429b7a8448eff965c492eec6, type: 3}
-  caricamento0: {fileID: 0}
-  caricamento1: {fileID: 0}
-  caricamento2: {fileID: 0}
-  caricamento3: {fileID: 0}
+  caricamento0: {fileID: 21300000, guid: 25a11d754ddd8be40b821ba1b537c3ad, type: 3}
+  caricamento1: {fileID: 21300000, guid: ef8d266fb21ea3f4a84127c3526ef3ec, type: 3}
+  caricamento2: {fileID: 21300000, guid: 126110f6292c1e041a1a7da496fb2d4e, type: 3}
+  caricamento3: {fileID: 21300000, guid: c047b42814835d74baaf7159ec32aa64, type: 3}
   colpiDisponibili: 0
   shootingButton: {fileID: 0}
-  pulsante: {fileID: 0}
-  prova: {fileID: 0}
+  pulsante: {fileID: 1418712180}
+  tasto: {fileID: 1418712181}
+  rate: 5
+  timeRicarica: 13
 --- !u!114 &1862041164
 MonoBehaviour:
   m_ObjectHideFlags: 0
