@@ -17,7 +17,7 @@ public class livelloBenzinaPlayer : MonoBehaviour
             gameController.pausa=true;
             Time.timeScale=0f;
             Debug.Log("sesso");
-            transizione.SetTrigger("fadeInBackGround");
+            transizione.SetTrigger("triggerMorte");
         }
     }
 }
