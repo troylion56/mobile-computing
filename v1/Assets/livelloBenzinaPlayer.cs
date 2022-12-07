@@ -16,7 +16,8 @@ public class livelloBenzinaPlayer : MonoBehaviour
             Destroy(gameObject);
             gameController.pausa=true;
             Time.timeScale=0f;
-            transizione.SetTrigger("fedeInScermataMorteTutto");
+            Debug.Log("sesso");
+            transizione.SetTrigger("fadeInBackGround");
         }
     }
 }
