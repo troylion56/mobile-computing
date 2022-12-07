@@ -18,15 +18,32 @@ public class razzoShoting : proiettili
         Distruggi();
     }
 
-    void OnTriggerEnter2D(Collider2D hitInfo) {
-        /*enemyScript enemy = hitInfo.GetComponent<enemyScript>();
-        if(enemy != null)
+    void OnTriggerEnter2D(Collider2D collisione) {
+        if (collisione.CompareTag("proiettili"))
         {
-            enemy.TakeDamage(damage);            
-        }*/
-        Debug.Log(hitInfo.name);
-        Destroy(gameObject);
+            impattoProiettili(collisione.GetComponent<proiettili>(),collisione);
+        }
+        if (collisione.CompareTag("ostacoli"))
+        {
+            Destroy(gameObject);
+        }
+        if (collisione.CompareTag("collectable"))
+        {
+            impattoCollezionabili(collisione.GetComponent<collect>(),collisione);
+        }
+    }
 
+    private void impattoProiettili (proiettili proiettile,Collider2D collisione){
+        if (proiettile is bulletScript)
+        {
+            Debug.Log("collisione ignorata razzo-proiettile");
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(),collisione);
+        }
+    }
+
+    private void impattoCollezionabili (collect proiettile,Collider2D collisione){
+        Debug.Log("collisione ignorata razzo-collezionabile");
+        Physics2D.IgnoreCollision(GetComponent<Collider2D>(),collisione);
     }
     void Distruggi() 
     {

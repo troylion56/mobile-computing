@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class asteroide : MonoBehaviour
+public class asteroide : ostacoli
 {
     // Update is called once per frame
     void Update()
@@ -32,8 +32,7 @@ public class asteroide : MonoBehaviour
         }
         if (proiettile is bulletScript)
         {
-            Debug.Log("proiettile colpisce asteroide");
-            Destroy(proiettile);
+            Debug.Log("asteroide colpisce proiettile");
         }
     }
 

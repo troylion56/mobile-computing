@@ -25,6 +25,7 @@ public class inventory : MonoBehaviour
         }
 
         if(collider2D.CompareTag("ostacoli")){
+            /*caso di collisione con ostacoli*/
             Debug.Log("asteroide colpito");
             Destroy(gameObject);
         }
