@@ -5649,7 +5649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint2: {fileID: 1331848442}
   razzooooPreFab: {fileID: 5895105278621477321, guid: 19b78399d6108e94d9f0246e70a8d959, type: 3}
-  Button1: {fileID: 0}
+  Button1: {fileID: 1836745057}
 --- !u!114 &1836745057
 MonoBehaviour:
   m_ObjectHideFlags: 0
