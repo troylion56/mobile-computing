@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class inventory : MonoBehaviour
 {
-    public SpriteRenderer stella1, stella2, stella3;
+    public SpriteRenderer stella1, stella2, stella3,stella1GameOver, stella2GameOver, stella3GameOver;
 
     public Sprite stellinaColore;
 
@@ -38,18 +38,21 @@ public class inventory : MonoBehaviour
             {
                 stellineTot++;
                 stella1.sprite = stellinaColore;
+                stella1GameOver.sprite =stellinaColore;
                 gameController.s1=true;             
             }
             else if (canCollect is collectStellina2)
             {
                 stellineTot++;
                 stella2.sprite = stellinaColore;
+                stella2GameOver.sprite =stellinaColore;
                 gameController.s2=true;
             }
             else if (canCollect is collectStellina3)
             {
                 stellineTot++;
                 stella3.sprite = stellinaColore;
+                stella3GameOver.sprite =stellinaColore;
                 gameController.s3=true;
             }
             else if (canCollect is collectableBenzina)

@@ -16,12 +16,14 @@ public class gameController : MonoBehaviour{
     }
     void Update()
     {  
+
         if(Input.GetKeyDown(KeyCode.F)) {
             fineLivello();
             Debug.Log("Fine livello");
         }
-
     }
+
+
 
     public void fineLivello (){
         if(SceneManager.GetActiveScene().name=="PrimoLivello") {

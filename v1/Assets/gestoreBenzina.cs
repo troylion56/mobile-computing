@@ -15,7 +15,14 @@ public class gestoreBenzina : MonoBehaviour
         benzina.value=benzina.value+ricarica;
     }
 
+
+
     private void Update() {
+
+        if(Input.GetKeyDown(KeyCode.Q)) {
+            benzina.value=10;
+        }
+
         if (!gameController.pausa)
         {
             //! benzina.value=benzina.value-0.1f;
