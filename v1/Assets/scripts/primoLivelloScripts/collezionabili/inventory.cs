@@ -16,7 +16,7 @@ public class inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        buttonRazzo.interactable=false;
     }
 
     private void OnTriggerEnter2D(Collider2D collider2D) {
