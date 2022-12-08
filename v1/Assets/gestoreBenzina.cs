@@ -20,7 +20,7 @@ public class gestoreBenzina : MonoBehaviour
     private void Update() {
 
         if(Input.GetKeyDown(KeyCode.Q)) {
-            benzina.value=10;
+            benzina.value=0;
         }
 
         if (!gameController.pausa)
