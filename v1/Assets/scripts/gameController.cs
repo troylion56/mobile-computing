@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class gameController : MonoBehaviour{
     public static bool pausa;
+    public static bool fineLiv;
 
 
     public static bool s1;
     public static bool s2;
     public static bool s3;
+    public Animator transizione; 
 
     void Start()
     {   
@@ -21,11 +24,18 @@ public class gameController : MonoBehaviour{
             fineLivello();
             Debug.Log("Fine livello");
         }
+
     }
 
 
 
     public void fineLivello (){
+        gameController.pausa=true;
+        gameController.fineLiv=true;
+        Time.timeScale=0f;
+        //!per ora scompaiono cosi di botto da fare le animazioni che scompaiono mentre sale il player 
+        transizione.SetTrigger("triggermov");
+        //!---------------------------------------------------------------------------------------------
         if(SceneManager.GetActiveScene().name=="PrimoLivello") {
             if (PlayerPrefs.GetInt("superStella1:1")==0&&s1){
                 PlayerPrefs.SetInt("superStella1:1",1);
