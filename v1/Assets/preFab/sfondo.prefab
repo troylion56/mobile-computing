@@ -98,5 +98,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posizioneIniziale: {x: 0, y: 0}
-  controller: {fileID: 7851628286605749840, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
+  controller: {fileID: 7444645285609643840, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
   raggiunto: 0
