@@ -20,13 +20,15 @@ public class player : MonoBehaviour
         {
             vita.danneggia(1);
         }
+
 //!-----------------debug-------------------
+/*
     if(gameController.fineLiv) {
             Debug.Log("vediamoSechiama");
             transform.position = new Vector2 (transform.position.x, transform.position.y+2.5f*Time.deltaTime);
         }
+    */
     }
-    
 
 
 }

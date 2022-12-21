@@ -2642,6 +2642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31b6c79abcbdbfa41a8ade6728f117d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transizione: {fileID: 2101738974}
   vita: {fileID: 976109965}
   gradiente:
     serializedVersion: 2
@@ -4999,6 +5000,7 @@ MonoBehaviour:
   scriptBenzina: {fileID: 1683766526}
   buttonSparo: {fileID: 1374759725}
   buttonRazzo: {fileID: 734855989}
+  transizione: {fileID: 2101738974}
 --- !u!61 &1685475265
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -3707,7 +3707,6 @@ MonoBehaviour:
   caricamento2: {fileID: 21300000, guid: 126110f6292c1e041a1a7da496fb2d4e, type: 3}
   caricamento3: {fileID: 21300000, guid: c047b42814835d74baaf7159ec32aa64, type: 3}
   colpiDisponibili: 0
-  shootingButton: {fileID: 0}
   pulsante: {fileID: 1418712180}
   tasto: {fileID: 1418712181}
   rate: 0.03
@@ -5494,6 +5493,7 @@ MonoBehaviour:
   scriptBenzina: {fileID: 1644977017}
   buttonSparo: {fileID: 1418712180}
   buttonRazzo: {fileID: 1735072222}
+  transizione: {fileID: 999440371}
 --- !u!61 &1862041161
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5560,7 +5560,6 @@ MonoBehaviour:
   caricamento2: {fileID: 21300000, guid: 126110f6292c1e041a1a7da496fb2d4e, type: 3}
   caricamento3: {fileID: 21300000, guid: c047b42814835d74baaf7159ec32aa64, type: 3}
   colpiDisponibili: 0
-  shootingButton: {fileID: 0}
   pulsante: {fileID: 1418712180}
   tasto: {fileID: 1418712181}
   rate: 5
@@ -6348,6 +6347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31b6c79abcbdbfa41a8ade6728f117d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transizione: {fileID: 999440371}
+  player: {fileID: 1862041156}
   vita: {fileID: 2022207719}
   gradiente:
     serializedVersion: 2

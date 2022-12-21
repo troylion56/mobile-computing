@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class gestoreVita : MonoBehaviour
 {
+   public Animator transizione; 
+   public GameObject player;
    public Slider vita;
     public Gradient gradiente;
     public Image colore;
@@ -24,5 +26,15 @@ public class gestoreVita : MonoBehaviour
     vita.value=vita.value-danno;
    /*gestisce il gradiente della vita*/
     colore.color=gradiente.Evaluate(vita.normalizedValue);
+
+    if(vita.value==0) {
+      Debug.Log("muori");
+      Destroy(player);
+      gameController.pausa=true;
+      Time.timeScale=0f;
+      transizione.SetTrigger("triggerMorte");
+    }
    }
+
+   
 }

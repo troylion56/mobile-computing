@@ -13,6 +13,7 @@ public class inventory : MonoBehaviour
     private int stellineTot = 0;
     public Button buttonSparo;
     public Button buttonRazzo;
+    public Animator transizione; 
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,8 @@ public class inventory : MonoBehaviour
             /*caso di collisione con ostacoli*/
             Debug.Log("asteroide colpito");
             Destroy(gameObject);
+            Time.timeScale=0f;
+            transizione.SetTrigger("triggerMorte");
         }
     }
     private void Collect(collect canCollect)
