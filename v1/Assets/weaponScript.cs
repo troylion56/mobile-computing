@@ -12,7 +12,6 @@ public class weaponScript : MonoBehaviour
     public static bool stato;
     public Sprite caricamento0, caricamento1, caricamento2, caricamento3;
     public int colpiDisponibili;
-    public SpriteRenderer shootingButton;
     public Button pulsante;
     public Image tasto;
     public float rate = 1f;
