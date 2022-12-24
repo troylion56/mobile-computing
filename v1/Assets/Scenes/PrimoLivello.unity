@@ -3965,6 +3965,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7444645285609643845, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
+      propertyPath: trans
+      value: 
+      objectReference: {fileID: 1862041165}
+    - target: {fileID: 7444645285609643845, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
       propertyPath: transizione
       value: 
       objectReference: {fileID: 1059718231}

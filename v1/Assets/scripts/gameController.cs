@@ -12,7 +12,8 @@ public class gameController : MonoBehaviour{
     public static bool s1;
     public static bool s2;
     public static bool s3;
-    public Animator transizione; 
+    public Animator transizione;    //animazione delle cose che scompaiono
+    public Animator trans;          //animazione del player che vola
 
     void Start()
     {   
@@ -35,7 +36,9 @@ public class gameController : MonoBehaviour{
         Time.timeScale=0f;
         //!per ora scompaiono cosi di botto da fare le animazioni che scompaiono mentre sale il player 
         transizione.SetTrigger("triggermov");
-        //!---------------------------------------------------------------------------------------------
+        trans.SetTrigger("volaInAlto");
+
+        //!-----------------------------------salvataggio stelle in memoria---------------------------------------------
         if(SceneManager.GetActiveScene().name=="PrimoLivello") {
             if (PlayerPrefs.GetInt("superStella1:1")==0&&s1){
                 PlayerPrefs.SetInt("superStella1:1",1);
