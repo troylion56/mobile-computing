@@ -34,11 +34,10 @@ public class gameController : MonoBehaviour{
         gameController.pausa=true;
         gameController.fineLiv=true;
         Time.timeScale=0f;
-        //!per ora scompaiono cosi di botto da fare le animazioni che scompaiono mentre sale il player 
+
         transizione.SetTrigger("triggermov");
         trans.SetTrigger("volaInAlto");
 
-        //!-----------------------------------salvataggio stelle in memoria---------------------------------------------
         if(SceneManager.GetActiveScene().name=="PrimoLivello") {
             if (PlayerPrefs.GetInt("superStella1:1")==0&&s1){
                 PlayerPrefs.SetInt("superStella1:1",1);
