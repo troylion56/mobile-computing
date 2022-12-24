@@ -14,6 +14,7 @@ public class gameController : MonoBehaviour{
     public static bool s3;
     public Animator transizione;    //animazione delle cose che scompaiono
     public Animator trans;          //animazione del player che vola
+    public Animator trans1;   
 
     void Start()
     {   
@@ -37,6 +38,7 @@ public class gameController : MonoBehaviour{
 
         transizione.SetTrigger("triggermov");
         trans.SetTrigger("volaInAlto");
+        trans1.SetTrigger("stel");
 
         if(SceneManager.GetActiveScene().name=="PrimoLivello") {
             if (PlayerPrefs.GetInt("superStella1:1")==0&&s1){
