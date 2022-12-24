@@ -22,5 +22,6 @@ public class spawnSfondo : MonoBehaviour
             Instantiate(razzo,sp3.transform.position,sp3.rotation);
         }
     }
+    
 //!--------------------------------------------------
 }
