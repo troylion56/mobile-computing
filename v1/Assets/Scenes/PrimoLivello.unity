@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 463630}
   - component: {fileID: 463629}
   - component: {fileID: 463628}
-  - component: {fileID: 463631}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -208,22 +207,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &463631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a44ff787cd0a90e41ab76089ef6baa6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wireColor: {r: 1, g: 1, b: 1, a: 1}
-  UnitsSize: 10
-  constraint: 1
-  camera: {fileID: 463629}
 --- !u!1 &9438664
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,7 +518,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202218430}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.6025329, y: 1.193528, z: 0.17933628}
+  m_LocalPosition: {x: 4.32, y: 1.193528, z: 0.17933628}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1341,7 +1324,6 @@ GameObject:
   m_Component:
   - component: {fileID: 412281329}
   - component: {fileID: 412281330}
-  - component: {fileID: 412281331}
   m_Layer: 0
   m_Name: punteggioStella3
   m_TagString: Untagged
@@ -1357,7 +1339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412281328}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5077002, y: 6.9462624, z: -1}
+  m_LocalPosition: {x: -1.5077, y: 6.9462624, z: -1}
   m_LocalScale: {x: 0.07, y: 0.07, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1404,7 +1386,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 16
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: f993a6f3615deb54b9b3bd3921438800, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1416,20 +1398,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &412281331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 412281328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2db732067f188c4a81ae7dd1bd8b30b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anchorType: 4
-  anchorOffset: {x: -1.64, y: 3.55, z: 0}
 --- !u!1 &412289374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,7 +1594,6 @@ GameObject:
   - component: {fileID: 488932594}
   - component: {fileID: 488932593}
   - component: {fileID: 488932596}
-  - component: {fileID: 488932597}
   m_Layer: 5
   m_Name: Pulsante pausa
   m_TagString: Untagged
@@ -1762,20 +1729,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transizione: {fileID: 1768361523}
   pulsanteRazzo: {fileID: 1735072222}
---- !u!114 &488932597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488932591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2db732067f188c4a81ae7dd1bd8b30b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anchorType: 4
-  anchorOffset: {x: 1.64, y: 4.6, z: 0}
 --- !u!1 &522330997
 GameObject:
   m_ObjectHideFlags: 0
@@ -3418,7 +3371,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1169039506}
   - component: {fileID: 1169039507}
-  - component: {fileID: 1169039508}
   m_Layer: 0
   m_Name: punteggioStella2
   m_TagString: Untagged
@@ -3434,7 +3386,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169039505}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5077002, y: 7.4462624, z: -1}
+  m_LocalPosition: {x: -1.5077, y: 7.4462624, z: -1}
   m_LocalScale: {x: 0.07, y: 0.07, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3481,7 +3433,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 16
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: f993a6f3615deb54b9b3bd3921438800, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3493,20 +3445,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1169039508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169039505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2db732067f188c4a81ae7dd1bd8b30b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anchorType: 4
-  anchorOffset: {x: -1.64, y: 4.05, z: 0}
 --- !u!1 &1184772079
 GameObject:
   m_ObjectHideFlags: 0
@@ -3852,7 +3790,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1377973977}
   - component: {fileID: 1377973978}
-  - component: {fileID: 1377973979}
   m_Layer: 0
   m_Name: punteggioStella1
   m_TagString: Untagged
@@ -3868,7 +3805,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377973976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5077002, y: 7.9462624, z: -1}
+  m_LocalPosition: {x: -1.5077, y: 7.9462624, z: -1}
   m_LocalScale: {x: 0.07, y: 0.07, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3915,7 +3852,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 16
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: f993a6f3615deb54b9b3bd3921438800, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3927,20 +3864,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1377973979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377973976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2db732067f188c4a81ae7dd1bd8b30b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anchorType: 4
-  anchorOffset: {x: -1.64, y: 4.55, z: 0}
 --- !u!1 &1386147682
 GameObject:
   m_ObjectHideFlags: 0
@@ -4058,7 +3981,6 @@ GameObject:
   - component: {fileID: 1418712181}
   - component: {fileID: 1418712180}
   - component: {fileID: 1418712179}
-  - component: {fileID: 1418712183}
   m_Layer: 5
   m_Name: shootButton
   m_TagString: Untagged
@@ -4215,20 +4137,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418712177}
   m_CullTransparentMesh: 1
---- !u!114 &1418712183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1418712177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2db732067f188c4a81ae7dd1bd8b30b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anchorType: 4
-  anchorOffset: {x: 1.05, y: -4.6, z: 0}
 --- !u!1001 &1425051097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4839,7 +4747,6 @@ GameObject:
   - component: {fileID: 1644977015}
   - component: {fileID: 1644977016}
   - component: {fileID: 1644977017}
-  - component: {fileID: 1644977018}
   m_Layer: 5
   m_Name: benzina
   m_TagString: Untagged
@@ -4933,20 +4840,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   benzina: {fileID: 1644977016}
---- !u!114 &1644977018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644977014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2db732067f188c4a81ae7dd1bd8b30b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anchorType: 4
-  anchorOffset: {x: -2.0229, y: 4.1, z: 0}
 --- !u!1 &1654804397
 GameObject:
   m_ObjectHideFlags: 0
@@ -5263,7 +5156,6 @@ GameObject:
   - component: {fileID: 1735072223}
   - component: {fileID: 1735072222}
   - component: {fileID: 1735072221}
-  - component: {fileID: 1735072225}
   m_Layer: 5
   m_Name: razzoButton
   m_TagString: Untagged
@@ -5414,20 +5306,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735072219}
   m_CullTransparentMesh: 1
---- !u!114 &1735072225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735072219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2db732067f188c4a81ae7dd1bd8b30b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anchorType: 4
-  anchorOffset: {x: -1.17, y: -4.6, z: 0}
 --- !u!1 &1768361519
 GameObject:
   m_ObjectHideFlags: 0
@@ -6428,7 +6306,6 @@ GameObject:
   - component: {fileID: 2022207718}
   - component: {fileID: 2022207719}
   - component: {fileID: 2022207720}
-  - component: {fileID: 2022207721}
   m_Layer: 5
   m_Name: vita
   m_TagString: Untagged
@@ -6555,20 +6432,6 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   colore: {fileID: 1184772081}
---- !u!114 &2022207721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2022207717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2db732067f188c4a81ae7dd1bd8b30b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anchorType: 4
-  anchorOffset: {x: -2.1, y: 4.1, z: 0}
 --- !u!1 &2034182034
 GameObject:
   m_ObjectHideFlags: 0
