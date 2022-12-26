@@ -7,13 +7,17 @@ public class inventory : MonoBehaviour
 {
     public SpriteRenderer stella1, stella2, stella3,stella1GameOver, stella2GameOver, stella3GameOver;
 
-    public Sprite stellinaColore;
+    public Sprite stellinaColore, on ;
 
     public gestoreBenzina scriptBenzina;
     private int stellineTot = 0;
     public Button buttonSparo;
     public Button buttonRazzo;
     public Animator transizione; 
+
+    public Image tasto;         //per passargli il bottone
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +72,7 @@ public class inventory : MonoBehaviour
                 buttonRazzo.interactable=true;
                 razzo.stato=true;
                 Debug.Log("Ora puoi lancaira razzzzzzzziiiiiiiiiiiiiiiiiiiiiiiiiiii");
+                tasto.sprite = on;
             }
             else if (canCollect is collectShooting)
             {

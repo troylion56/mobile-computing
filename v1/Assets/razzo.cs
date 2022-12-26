@@ -8,9 +8,14 @@ public class razzo : MonoBehaviour
 
     public Transform firePoint2;
     public GameObject razzooooPreFab;
+
+    public Sprite off ;
+    public Image tasto;             //per passargli il bottone
     // Update is called once per frame
     public static bool stato;
     public Button Button1;
+
+
     private void Start() {
         stato=false;
         Button1.interactable=false;
@@ -22,6 +27,7 @@ public class razzo : MonoBehaviour
     public void DisableButtonOnClick() {
         Button1.interactable=false;
         stato=false;
+        tasto.sprite = off;
     }
 
     private void Update() {
