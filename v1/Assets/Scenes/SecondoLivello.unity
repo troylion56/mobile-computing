@@ -2495,7 +2495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3c4e4d217846a48bbc845aa048d478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transizione: {fileID: 0}
+  transizione: {fileID: 270805892}
   pulsanteRazzo: {fileID: 318156651}
 --- !u!114 &872981049
 MonoBehaviour:
