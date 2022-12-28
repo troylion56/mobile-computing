@@ -14,11 +14,8 @@ public class inventory : MonoBehaviour
     public Button buttonSparo;
     public Button buttonRazzo;
     public Animator transizione; 
-
     public Image tasto;         //per passargli il bottone
 
-
-    // Start is called before the first frame update
     void Start()
     {
         buttonRazzo.interactable=false;
