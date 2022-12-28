@@ -18,8 +18,11 @@ public class gestoreTestoTutorial : MonoBehaviour
     public float tapTime;
     public Animator spostamento;  
     string prova= "testo di prova per testare la comparsa singola delle lettere";
+    public Animator transizioniTutorial;
+    
+    [TextArea(3,10)]
     public string [] dialoghi=new string [10];
-
+    
     int contatoreDialoghi=0;
     void Update()
     {
@@ -49,7 +52,11 @@ public class gestoreTestoTutorial : MonoBehaviour
         }
     }
 
-    void scrivi (){
+    public void scrivi (){
+        if (contatoreDialoghi==4)
+        {
+            transizioniTutorial.SetTrigger("uscitaTutorial");
+        }
         StopAllCoroutines();
         StartCoroutine(scrittura(dialoghi[contatoreDialoghi]));
         contatoreDialoghi++;
