@@ -7,23 +7,61 @@ using TMPro;
 public class gestoreTestoTutorial : MonoBehaviour
 {
     public TextMeshProUGUI tutorial;
-    
+    public GameObject continua;
+    public static bool dialogo=true;
+    private Vector2 posIniziale;
+    private Vector2 posAttuale;
+    private Vector2 posFinale;
+    private bool stopTouch=false;
+    public Transform posizione;
+    public float swipeTime;
+    public float tapTime;
+    public Animator spostamento;  
     string prova= "testo di prova per testare la comparsa singola delle lettere";
+    public string [] dialoghi=new string [10];
+
+    int contatoreDialoghi=0;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            tutorial.fontSize=30;
-            //StopAllCoroutines();
-            StartCoroutine(scrittura(prova));
+            scrivi ();
+        }
+
+
+        if (Input.touchCount>0&&Input.GetTouch(0).phase==TouchPhase.Began)
+        {
+               posIniziale=Input.GetTouch(0).position;
+        }
+        
+         if (Input.touchCount>0&&Input.GetTouch(0).phase==TouchPhase.Ended)
+        {
+            stopTouch=false;
+            posFinale=Input.GetTouch(0).position;
+
+            Vector2 distanza=posFinale-posIniziale;
+
+            if (Mathf.Abs(distanza.x)<tapTime && Mathf.Abs(distanza.y)<tapTime)
+            {
+                scrivi ();
+                Debug.Log("tap");
+            }
         }
     }
 
+    void scrivi (){
+        StopAllCoroutines();
+        StartCoroutine(scrittura(dialoghi[contatoreDialoghi]));
+        contatoreDialoghi++;
+    }
+
     IEnumerator scrittura (string dialogo){
+        continua.SetActive(false);
         tutorial.text="";
-        foreach (char lettera in prova.ToCharArray()){
+        foreach (char lettera in dialogo.ToCharArray()){
             tutorial.text += lettera;
             yield return new WaitForSeconds(0.05f);
         }
+        continua.SetActive(true);
     }
 }

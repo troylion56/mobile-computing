@@ -577,7 +577,7 @@ GameObject:
   - component: {fileID: 158620453}
   - component: {fileID: 158620454}
   m_Layer: 0
-  m_Name: sbarra tutorial 2)
+  m_Name: sbarra tutorial 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -920,6 +920,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorial: {fileID: 2076229134}
+  continua: {fileID: 646608416}
+  posizione: {fileID: 933981698}
+  swipeTime: 2.5
+  tapTime: 10
+  spostamento: {fileID: 933981690}
+  dialoghi:
+  - Tu devi essere il novellino assunto da poco.
+  - "Bene ti insegner\xF2 le basi, cerca di seguirmi."
+  - prova 3
+  - prova 4
+  - prova 5
+  - prova 6
+  - prova 7
+  - prova 8
+  - prova 9
+  - prova 10
 --- !u!1 &344709075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,7 +1176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 422055495}
   - component: {fileID: 422055497}
-  - component: {fileID: 422055496}
+  - component: {fileID: 422055498}
   m_Layer: 5
   m_Name: benzina
   m_TagString: Untagged
@@ -1190,19 +1206,6 @@ RectTransform:
   m_AnchoredPosition: {x: -3.3119078, y: 4.1090984}
   m_SizeDelta: {x: 160.3, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &422055496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 422055494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a7c800016de4584dbb4355983517fc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  benzina: {fileID: 422055497}
 --- !u!114 &422055497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1254,6 +1257,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &422055498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422055494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38fd14eb0b36d9246bb1bf9ed14cb158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  benzina: {fileID: 422055497}
 --- !u!1 &522485193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2952,6 +2968,7 @@ GameObject:
   - component: {fileID: 933981690}
   - component: {fileID: 933981689}
   - component: {fileID: 933981699}
+  - component: {fileID: 933981700}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -3000,7 +3017,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933981688}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cae763b65e55b54583ebdbbb0c0ce0b, type: 3}
   m_Name: 
@@ -3180,11 +3197,27 @@ MonoBehaviour:
   stella3GameOver: {fileID: 165455813}
   stellinaColore: {fileID: 21300000, guid: 04849338b984bc84aa62d18ad963225b, type: 3}
   on: {fileID: 21300000, guid: 5cd7208d753639f42a8816c368b406ac, type: 3}
-  scriptBenzina: {fileID: 422055496}
+  scriptBenzina: {fileID: 422055498}
   buttonSparo: {fileID: 1160618805}
   buttonRazzo: {fileID: 1343135809}
   transizione: {fileID: 1844408212}
   tasto: {fileID: 1343135811}
+--- !u!114 &933981700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933981688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ffa84c245c6df43a68b85dd46fbc17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posizione: {fileID: 933981698}
+  swipeTime: 2.5
+  tapTime: 10
+  spostamento: {fileID: 933981690}
 --- !u!1 &968631714
 GameObject:
   m_ObjectHideFlags: 0

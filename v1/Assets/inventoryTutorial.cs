@@ -9,7 +9,7 @@ public class inventoryTutorial : MonoBehaviour
 
     public Sprite stellinaColore, on ;
 
-    public gestoreBenzina scriptBenzina;
+    public gestoreBenzinaTutorial scriptBenzina;
     private int stellineTot = 0;
     public Button buttonSparo;
     public Button buttonRazzo;
