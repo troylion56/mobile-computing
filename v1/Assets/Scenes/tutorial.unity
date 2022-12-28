@@ -2946,12 +2946,12 @@ GameObject:
   - component: {fileID: 933981697}
   - component: {fileID: 933981696}
   - component: {fileID: 933981695}
-  - component: {fileID: 933981694}
   - component: {fileID: 933981693}
   - component: {fileID: 933981692}
   - component: {fileID: 933981691}
   - component: {fileID: 933981690}
   - component: {fileID: 933981689}
+  - component: {fileID: 933981699}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -2971,8 +2971,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8347e259b58121d4e968c21efc8ff4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transizione: {fileID: 0}
-  benzina: {fileID: 0}
+  transizione: {fileID: 1844408212}
+  benzina: {fileID: 422055497}
 --- !u!95 &933981690
 Animator:
   serializedVersion: 4
@@ -3053,31 +3053,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 1
---- !u!114 &933981694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 933981688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be38fe9ffc05a7e459269b7c435a8d24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stella1: {fileID: 144614273}
-  stella2: {fileID: 1278880806}
-  stella3: {fileID: 1782998658}
-  stella1GameOver: {fileID: 0}
-  stella2GameOver: {fileID: 0}
-  stella3GameOver: {fileID: 0}
-  stellinaColore: {fileID: 21300000, guid: 04849338b984bc84aa62d18ad963225b, type: 3}
-  on: {fileID: 21300000, guid: 5cd7208d753639f42a8816c368b406ac, type: 3}
-  scriptBenzina: {fileID: 0}
-  buttonSparo: {fileID: 0}
-  buttonRazzo: {fileID: 0}
-  transizione: {fileID: 0}
-  tasto: {fileID: 0}
 --- !u!61 &933981695
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3116,7 +3091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a68d59e0103a94d974f60ac2b3ef4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vita: {fileID: 0}
+  vita: {fileID: 1898730270}
 --- !u!212 &933981697
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3185,6 +3160,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &933981699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933981688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81297c8811235fd4f9ecb076a83b6f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stella1: {fileID: 144614273}
+  stella2: {fileID: 1278880806}
+  stella3: {fileID: 1782998658}
+  stella1GameOver: {fileID: 855625328}
+  stella2GameOver: {fileID: 256699343}
+  stella3GameOver: {fileID: 165455813}
+  stellinaColore: {fileID: 21300000, guid: 04849338b984bc84aa62d18ad963225b, type: 3}
+  on: {fileID: 21300000, guid: 5cd7208d753639f42a8816c368b406ac, type: 3}
+  scriptBenzina: {fileID: 422055496}
+  buttonSparo: {fileID: 1160618805}
+  buttonRazzo: {fileID: 1343135809}
+  transizione: {fileID: 1844408212}
+  tasto: {fileID: 1343135811}
 --- !u!1 &968631714
 GameObject:
   m_ObjectHideFlags: 0
@@ -3548,7 +3548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cf0f3e19bf8ef4faff8b7cceacd2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 711801894}
   bulletPreFab: {fileID: 5895105278621477321, guid: 532a562e429b7a8448eff965c492eec6, type: 3}
   caricamento0: {fileID: 21300000, guid: 25a11d754ddd8be40b821ba1b537c3ad, type: 3}
   caricamento1: {fileID: 21300000, guid: ef8d266fb21ea3f4a84127c3526ef3ec, type: 3}
@@ -4529,7 +4529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffceca7dbbf04cf4ba23a4e6f9e00cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint2: {fileID: 0}
+  firePoint2: {fileID: 711801894}
   razzooooPreFab: {fileID: 5895105278621477321, guid: 19b78399d6108e94d9f0246e70a8d959, type: 3}
   off: {fileID: 21300000, guid: 3994422c860c6874992cf69d99d03979, type: 3}
   tasto: {fileID: 1343135811}

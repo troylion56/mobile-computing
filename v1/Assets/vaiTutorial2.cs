@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class vaiTutorial2 : MonoBehaviour
 {
     public void vaiATutorial () {
-        SceneManager.LoadSceneAsync("primoLivello");
+        SceneManager.LoadSceneAsync("tutorial");
     }
 }
