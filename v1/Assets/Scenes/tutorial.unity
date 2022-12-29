@@ -952,7 +952,7 @@ MonoBehaviour:
   - "Bene ti insegner\xF2 le basi, cerca di seguirmi."
   - Come prima cosa cerca di muoverti, per farlo scorri il dito a destra e sinistra.
   - inoltre ricorda, puoi uscire da un lato per rientrare nell'altro, prova.
-  - prova 5
+  - pausa spostamento
   - prova 6
   - prova 7
   - prova 8
@@ -2986,7 +2986,6 @@ GameObject:
   - component: {fileID: 933981695}
   - component: {fileID: 933981693}
   - component: {fileID: 933981692}
-  - component: {fileID: 933981691}
   - component: {fileID: 933981690}
   - component: {fileID: 933981689}
   - component: {fileID: 933981699}
@@ -3032,22 +3031,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &933981691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 933981688}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cae763b65e55b54583ebdbbb0c0ce0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  posizione: {fileID: 933981698}
-  swipeTime: 2.5
-  tapTime: 10
-  spostamento: {fileID: 933981690}
 --- !u!114 &933981692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3240,6 +3223,7 @@ MonoBehaviour:
   swipeTime: 2.5
   tapTime: 10
   spostamento: {fileID: 933981690}
+  tutorial: {fileID: 331741306}
 --- !u!1 &968631714
 GameObject:
   m_ObjectHideFlags: 0

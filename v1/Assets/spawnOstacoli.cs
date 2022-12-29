@@ -9,7 +9,6 @@ public class spawnOstacoli : MonoBehaviour
     public Transform sp3;
     public Transform sp4;
     public Transform sp5;
-
     public GameObject asteroide;
     // Update is called once per frame
     void Update()

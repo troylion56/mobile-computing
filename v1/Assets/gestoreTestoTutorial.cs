@@ -23,7 +23,12 @@ public class gestoreTestoTutorial : MonoBehaviour
     [TextArea(3,10)]
     public string [] dialoghi=new string [10];
     
-    int contatoreDialoghi=0;
+    public static int contatoreDialoghi=0;
+
+    private void Start() {
+        contatoreDialoghi=0;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.T))
@@ -55,23 +60,26 @@ public class gestoreTestoTutorial : MonoBehaviour
     public void scrivi (){
         switch (contatoreDialoghi){
             case 4:
-                transizioniTutorial.SetTrigger("uscitaTutorial");
-                dialogo=false;
-                Debug.Log("case 4");
+            /*il trigger parte solo se è attivo un dialogo*/
+                if (dialogo){
+                    transizioniTutorial.SetTrigger("uscitaTutorial");
+                    dialogo=false;
+                    Debug.Log("case 4");  
+                }
             break;
 
             default:
                 Debug.Log("default");
                 if (!dialogo)
                 {
-                    dialogo=false;
+                    dialogo=true;
                     StartCoroutine(entra());
                 }
                 StopAllCoroutines();
                 StartCoroutine(scrittura(dialoghi[contatoreDialoghi]));
+                contatoreDialoghi++;
             break;
         }
-        contatoreDialoghi++;
         Debug.Log("contatore: "+contatoreDialoghi);
     }
 

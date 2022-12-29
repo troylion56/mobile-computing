@@ -14,6 +14,7 @@ public class swipeTutorial : MonoBehaviour
     public float tapTime;
     public Animator spostamento;   
 
+    public gestoreTestoTutorial tutorial;
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -39,6 +40,10 @@ public class swipeTutorial : MonoBehaviour
                     if (posizione.position.x==-1.8f)
                     {
                         spostamento.SetTrigger("vaiSSSx");
+                        if (gestoreTestoTutorial.contatoreDialoghi==4){
+                            /*se il tutorial si trova nella prima pausa registro lo spostamento*/
+                            chiamaTutorial();
+                        }
                     }
             Debug.Log("sinistra");
         }
@@ -59,6 +64,10 @@ public class swipeTutorial : MonoBehaviour
                 if (posizione.position.x==1.8f)
                 {
                     spostamento.SetTrigger("vaiDDDx");
+                        if (gestoreTestoTutorial.contatoreDialoghi==4){
+                            /*se il tutorial si trova nella prima pausa registro lo spostamento*/
+                            chiamaTutorial();
+                        }
                 }
                 if (posizione.position.x==-1.8f)
                 {
@@ -102,6 +111,10 @@ public class swipeTutorial : MonoBehaviour
                     if (posizione.position.x==-1.8f)
                     {
                         spostamento.SetTrigger("vaiSSSx");
+                        if (gestoreTestoTutorial.contatoreDialoghi==4){
+                            /*se il tutorial si trova nella prima pausa registro lo spostamento*/
+                            chiamaTutorial();
+                        }
                     }
                     Debug.Log("sinistra");
                     stopTouch=true;
@@ -124,6 +137,10 @@ public class swipeTutorial : MonoBehaviour
                     if (posizione.position.x==1.8f)
                     {
                         spostamento.SetTrigger("vaiDDDx");
+                        if (gestoreTestoTutorial.contatoreDialoghi==4){
+                            /*se il tutorial si trova nella prima pausa registro lo spostamento*/
+                            chiamaTutorial();
+                        }
                     }
                     if (posizione.position.x==-1.8f)
                     {
@@ -163,5 +180,9 @@ public class swipeTutorial : MonoBehaviour
         //!spostamento.SetTrigger("torna");
     }
     }
-        
+    
+    void chiamaTutorial(){
+        gestoreTestoTutorial.contatoreDialoghi++;
+        tutorial.scrivi();
+    }
 }
