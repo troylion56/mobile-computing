@@ -1386,7 +1386,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: f993a6f3615deb54b9b3bd3921438800, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2281,7 +2281,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: aa45f2226ac9b884eba90b9b14f1b832, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3433,7 +3433,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: f993a6f3615deb54b9b3bd3921438800, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3852,7 +3852,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: f993a6f3615deb54b9b3bd3921438800, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4212,6 +4212,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7444645285609643843, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
+      propertyPath: nemico
+      value: 
+      objectReference: {fileID: 8541633178973661598, guid: 5d2f301b5f006de4e880cb1ff49a8e43, type: 3}
     - target: {fileID: 7444645285609643843, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
       propertyPath: stella1
       value: 
@@ -4613,6 +4617,14 @@ PrefabInstance:
     - target: {fileID: 9102399840091644241, guid: d121d7eb52285364da570b1126f6ef8a, type: 3}
       propertyPath: m_Name
       value: sfondo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9102399840091644268, guid: d121d7eb52285364da570b1126f6ef8a, type: 3}
+      propertyPath: posizioneIniziale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9102399840091644268, guid: d121d7eb52285364da570b1126f6ef8a, type: 3}
+      propertyPath: posizioneIniziale.y
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9102399840091644271, guid: d121d7eb52285364da570b1126f6ef8a, type: 3}
       propertyPath: m_RootOrder
