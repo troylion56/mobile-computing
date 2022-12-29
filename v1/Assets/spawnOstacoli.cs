@@ -12,6 +12,7 @@ public class spawnOstacoli : MonoBehaviour
 
     public GameObject asteroide;
     public GameObject nemico;
+    
     // Update is called once per frame
     void Update()
     {
@@ -39,19 +40,19 @@ public class spawnOstacoli : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.O)){
             Debug.Log("testNemico");
-            Instantiate(nemico,sp2.transform.position,sp2.rotation);
+            Instantiate(nemico, sp2.transform.position,sp2.rotation);
         }
         if(Input.GetKeyDown(KeyCode.L)){
             Debug.Log("testNemico");
-            Instantiate(nemico,sp3.transform.position,sp3.rotation);
+            Instantiate(nemico, sp3.transform.position,sp3.rotation);
         }
-        if(Input.GetKeyDown(KeyCode.K)){
+        if(Input.GetKeyDown(KeyCode.U)){
             Debug.Log("testNemico");
-            Instantiate(nemico,sp4.transform.position,sp4.rotation);
+            Instantiate(nemico, sp4.transform.position,sp4.rotation);
         }
         if(Input.GetKeyDown(KeyCode.I)){
             Debug.Log("testNemico");
-            Instantiate(nemico,sp5.transform.position,sp5.rotation);
+            Instantiate(nemico, sp5.transform.position,sp5.rotation);
         }
     }
 

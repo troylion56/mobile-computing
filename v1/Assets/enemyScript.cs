@@ -5,41 +5,52 @@ using UnityEngine;
 public class enemyScript : ostacoli
 {
     public Transform posizione;
-    public Vector2 pos;
-    public Vector2 posIniziale;
-    public Vector2 posCorr;         // per la posizione corrente
+    private Vector2 posCorr;
+    public bool arrivato;
+    public bool dx;
+    public bool sx;
+
     public int health = 100;
     
 
     public void Start() {
+        arrivato = false;
+        dx = true;
+        sx = false;
     }
 
     public void Update() {
-
-        if(transform.position.y < 8) {
-            Destroy(gameObject);
+        
+        /* movimento verticale */
+        if(transform.position.y > 2.5) {
+            transform.position = new Vector2 (transform.position.x, transform.position.y - 4f*Time.deltaTime);
         }
-        
-        
-       
-       /* posCorr = posizione.transform.position;
-        
-        //if(posCorr.y < 2.5 && ! arrivato) {
-            posCorr.y -= 4f;
+        if(transform.position.y <= 2.5) {
             arrivato = true;
         }
         
-        // quando è in posizione deve andare sx dx
-        if(posCorr.y <= 2.5 && posCorr.x < 1.73)
+        /* movimento orizzontale (solo quando sei in posizione) */
+        if(arrivato)
         {
-            posCorr.x += 4f;            // muovi a dx
+            if(sx) {
+                transform.position = new Vector2 (transform.position.x + 2f*Time.deltaTime, transform.position.y);
+            }
+            if(dx) {
+                transform.position = new Vector2 (transform.position.x - 2f*Time.deltaTime, transform.position.y);
+            }
+
+            if(transform.position.x >= 1.83) {
+                dx = true;         // sei arrivato alla fine destra dello schermo
+                sx = false;
+            }
+            if(transform.position.x <= -1.83) {
+                sx = true;             // sei arrivato alla fine sinistra dello schermo
+                dx = false;
+            }
+
         }
 
-        if(posCorr.y <= 2.5 && posCorr.x > -1.73)
-        {
-            posCorr.x -= 4f;           // muovi a sx
-        }
-     */   
+     
     }
     
     public void TakeDamage(int Damage)
