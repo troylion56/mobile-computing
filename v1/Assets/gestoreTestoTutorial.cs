@@ -53,13 +53,26 @@ public class gestoreTestoTutorial : MonoBehaviour
     }
 
     public void scrivi (){
-        if (contatoreDialoghi==4)
-        {
-            transizioniTutorial.SetTrigger("uscitaTutorial");
+        switch (contatoreDialoghi){
+            case 4:
+                transizioniTutorial.SetTrigger("uscitaTutorial");
+                dialogo=false;
+                Debug.Log("case 4");
+            break;
+
+            default:
+                Debug.Log("default");
+                if (!dialogo)
+                {
+                    dialogo=false;
+                    StartCoroutine(entra());
+                }
+                StopAllCoroutines();
+                StartCoroutine(scrittura(dialoghi[contatoreDialoghi]));
+            break;
         }
-        StopAllCoroutines();
-        StartCoroutine(scrittura(dialoghi[contatoreDialoghi]));
         contatoreDialoghi++;
+        Debug.Log("contatore: "+contatoreDialoghi);
     }
 
     IEnumerator scrittura (string dialogo){
@@ -70,5 +83,10 @@ public class gestoreTestoTutorial : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
         continua.SetActive(true);
+    }
+
+    IEnumerator entra (){
+        transizioniTutorial.SetTrigger("ingressoTutorial");
+        yield return new WaitForSeconds(1);
     }
 }

@@ -946,6 +946,7 @@ MonoBehaviour:
   swipeTime: 2.5
   tapTime: 10
   spostamento: {fileID: 933981690}
+  transizioniTutorial: {fileID: 49610594}
   dialoghi:
   - Tu devi essere il novellino assunto da poco.
   - "Bene ti insegner\xF2 le basi, cerca di seguirmi."
