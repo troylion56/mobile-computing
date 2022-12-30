@@ -29,6 +29,12 @@ public class bulletScript : proiettili
         {
             collisioneProiettili (hitInfo.GetComponent<proiettili>(),hitInfo);
         }
+
+        if (hitInfo.CompareTag("nemico"))
+        {
+            collisioneNemici (hitInfo.GetComponent<enemyScript>(),hitInfo);
+        }
+
     }
 
     private void collisioneOstacoli (ostacoli ostacolo){
@@ -36,7 +42,7 @@ public class bulletScript : proiettili
         {
         enemyScript enemy = ostacolo.GetComponent<enemyScript>();
           if(enemy != null){
-            enemy.TakeDamage(damage);            
+            enemy.TakeDamage();            
             }
             Destroy(gameObject);
         }
@@ -47,12 +53,20 @@ public class bulletScript : proiettili
         }
     }
 
-    private void collisioneProiettili (proiettili proiettile,Collider2D collisione){
+    private void collisioneProiettili (proiettili proiettile, Collider2D collisione){
         if (proiettile is razzoShoting)
         {
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(),collisione);  
         }
     }
+
+    private void collisioneNemici (enemyScript enemy, Collider2D collisione) {
+        if(enemy is enemyScript) {
+            Destroy(gameObject);
+        }
+    }
+
+
     void Distruggi() 
     {
         if(gameObject.transform.position.y > 6)

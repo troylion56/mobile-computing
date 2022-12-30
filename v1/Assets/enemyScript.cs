@@ -6,9 +6,9 @@ public class enemyScript : ostacoli
 {
     public Transform posizione;
     private Vector2 posCorr;
-    public bool arrivato;
-    public bool dx;
-    public bool sx;
+    private bool arrivato;
+    private bool dx;
+    private bool sx;
 
     public int health = 100;
     
@@ -33,10 +33,10 @@ public class enemyScript : ostacoli
         if(arrivato)
         {
             if(sx) {
-                transform.position = new Vector2 (transform.position.x + 2f*Time.deltaTime, transform.position.y);
+                transform.position = new Vector2 (transform.position.x + 1.5f*Time.deltaTime, transform.position.y);
             }
             if(dx) {
-                transform.position = new Vector2 (transform.position.x - 2f*Time.deltaTime, transform.position.y);
+                transform.position = new Vector2 (transform.position.x - 1.5f*Time.deltaTime, transform.position.y);
             }
 
             if(transform.position.x >= 1.83) {
@@ -53,7 +53,29 @@ public class enemyScript : ostacoli
      
     }
     
-    public void TakeDamage(int Damage)
+
+
+
+    
+    private void OnTriggerEnter2D(Collider2D col) {
+        if(col.CompareTag("proiettili")){
+            colpisci(col.GetComponent<proiettili>());
+        }
+    }
+
+    private void colpisci(proiettili proiettile) {
+        if(proiettile is razzoShoting) {
+            Destroy(gameObject);
+            Debug.Log("Nemico distrutto da razzo");
+        }
+        if(proiettile is bulletScript) {
+            Debug.Log("Nemico colpito da proiettile");
+            TakeDamage();
+        }
+    }
+
+
+    public void TakeDamage()
     {
         health -= 40;
         if(health<0)
@@ -69,7 +91,6 @@ public class enemyScript : ostacoli
             Destroy(gameObject);
             Debug.Log("Nemico distrutto");
         }
-    
     }
 
 }
