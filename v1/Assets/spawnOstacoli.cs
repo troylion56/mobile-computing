@@ -29,4 +29,11 @@ public class spawnOstacoli : MonoBehaviour
             Instantiate(asteroide,sp5.transform.position,sp5.rotation);
         }
     }
+
+    public void spawnTutorial(){
+        Instantiate(asteroide,sp1.transform.position,sp1.rotation);
+        Instantiate(asteroide,sp2.transform.position,sp2.rotation);
+        Instantiate(asteroide,sp4.transform.position,sp4.rotation);
+        Instantiate(asteroide,sp5.transform.position,sp5.rotation);
+    }
 }

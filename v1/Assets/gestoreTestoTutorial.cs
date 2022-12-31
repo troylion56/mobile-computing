@@ -6,6 +6,7 @@ using TMPro;
 
 public class gestoreTestoTutorial : MonoBehaviour
 {
+    public spawnOstacoli spawn;
     public TextMeshProUGUI tutorial;
     public GameObject continua;
     public static bool dialogo=true;
@@ -34,6 +35,11 @@ public class gestoreTestoTutorial : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             scrivi ();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("contatore: "+contatoreDialoghi);
         }
 
 
@@ -67,6 +73,27 @@ public class gestoreTestoTutorial : MonoBehaviour
                     Debug.Log("case 4");  
                 }
             break;
+
+            case 8:
+            /*il trigger parte solo se è attivo un dialogo*/
+                if (dialogo){
+                    transizioniTutorial.SetTrigger("uscitaTutorial");
+                    dialogo=false;
+                    spawn.spawnTutorial();
+                    Debug.Log("case 8");  
+                }
+            break;
+
+            case 11:
+            /*caso in cui il player colpisce un asteroide durante il tutorial di movimento*/
+                if (dialogo){
+                    contatoreDialoghi=8;
+                    Debug.Log("case 11");  
+                    scrivi();
+                }
+            break;
+
+
 
             default:
                 Debug.Log("default");

@@ -8,13 +8,12 @@ public class inventoryTutorial : MonoBehaviour
     public SpriteRenderer stella1, stella2, stella3,stella1GameOver, stella2GameOver, stella3GameOver;
 
     public Sprite stellinaColore, on ;
-
     public gestoreBenzinaTutorial scriptBenzina;
     private int stellineTot = 0;
     public Button buttonSparo;
     public Button buttonRazzo;
     public Animator transizione; 
-
+    public gestoreTestoTutorial tutorial;
     public Image tasto;         //per passargli il bottone
 
 
@@ -30,11 +29,7 @@ public class inventoryTutorial : MonoBehaviour
         }
 
         if(collider2D.CompareTag("ostacoli")){
-            /*caso di collisione con ostacoli*/
-            Debug.Log("asteroide colpito");
-            Destroy(gameObject);
-            Time.timeScale=0f;
-            transizione.SetTrigger("triggerMorte");
+            impatto(collider2D.GetComponent<ostacoli>());
         }
     }
     private void Collect(collect canCollect)
@@ -78,5 +73,15 @@ public class inventoryTutorial : MonoBehaviour
             }
         }
            
+    }
+
+    private void impatto (ostacoli oggetto){
+        Debug.Log("impatto con asteroide tutorial");
+        chiamaTutorial();
+    }
+
+    void chiamaTutorial(){
+        gestoreTestoTutorial.contatoreDialoghi++;
+        tutorial.scrivi();
     }
 }

@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7475006395828926973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7475006395828926972}
+  - component: {fileID: 7475006395828926975}
+  m_Layer: 0
+  m_Name: tutorialController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7475006395828926972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475006395828926973}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5025873, y: 0.0685658, z: -0.019241333}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7475006395828926975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475006395828926973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c53ed66e8b035c47be5796d64638ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawn: {fileID: 0}
+  tutorial: {fileID: 0}
+  continua: {fileID: 0}
+  posizione: {fileID: 0}
+  swipeTime: 2.5
+  tapTime: 10
+  spostamento: {fileID: 0}
+  transizioniTutorial: {fileID: 0}
+  dialoghi:
+  - Tu devi essere il novellino assunto da poco.
+  - "Bene ti insegner\xF2 le basi, cerca di seguirmi."
+  - Come prima cosa cerca di muoverti, per farlo scorri il dito a destra e sinistra.
+  - inoltre ricorda, puoi uscire da un lato per rientrare nell'altro, prova.
+  - pausa spostamento
+  - Bene ora sai muoverti.
+  - "Cerca di farlo velocemente perche non sempre la strada davanti a te sar\xE0
+    libera."
+  - "Appunto, asteroidi in arrivo, per questa volta cercher\xF2 di aiutarti ma cerca
+    di schivarli."
+  - 'PAUSA ASTEROIDI
+
+'
+  - Per un pelo!
+  - "Fai attenzione la fuori non ci sar\xF2 io a coprirti, prova ancora."
+  - CASO IN CUI IL PLAYER SI SCONTRA CON UN ASTEROIDE
+  - Molto bene
+  - prova 13
+  - prova 14
