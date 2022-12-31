@@ -1,15 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class enemyScript : ostacoli
 {
+    /* per farlo muovere */
     public Transform posizione;
     private Vector2 posCorr;
     private bool arrivato;
     private bool dx;
     private bool sx;
 
+    /* per farlo sparare */
+    public Transform puntoFuoco;
+    public GameObject enemyShotPreFab;
+    public float shootRate;
+    public float shooting;
+
+    /* per la vita */
     public int health = 100;
     
 
@@ -17,6 +26,8 @@ public class enemyScript : ostacoli
         arrivato = false;
         dx = true;
         sx = false;
+
+        shootRate = 5f;
     }
 
     public void Update() {
@@ -48,15 +59,24 @@ public class enemyScript : ostacoli
                 dx = false;
             }
 
+            shooting = shootRate * Time.deltaTime;
         }
 
+        /* DA VEDERE VELOCITA' SHOOTING */
+        if(arrivato && shooting>=0.1f) {
+            enemyShoot();
+        }
+
+        if(enemyShotPreFab.transform.position.y < -6) {
+            Destroy(gameObject);            // distruggi i proiettili appena escono dallo schermo
+        }
      
     }
     
 
 
 
-    
+    /* collisioni */
     private void OnTriggerEnter2D(Collider2D col) {
         if(col.CompareTag("proiettili")){
             colpisci(col.GetComponent<proiettili>());
@@ -74,7 +94,6 @@ public class enemyScript : ostacoli
         }
     }
 
-
     public void TakeDamage()
     {
         health -= 40;
@@ -86,11 +105,14 @@ public class enemyScript : ostacoli
 
     void Die()
     {
-        if(health<0)
-        {
             Destroy(gameObject);
             Debug.Log("Nemico distrutto");
-        }
     }
+
+
+    void enemyShoot() {
+        Instantiate(enemyShotPreFab, puntoFuoco.position, puntoFuoco.rotation);
+    }
+
 
 }
