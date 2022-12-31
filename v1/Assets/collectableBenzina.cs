@@ -7,6 +7,11 @@ public class collectableBenzina : collect
     public gestoreBenzina script;
     Vector3 posizione;
     private void Update() {
+
+        if (transform.position.y<-7)
+        {
+            Destroy(gameObject);
+        }
         
         if (!gameController.pausa)
         {

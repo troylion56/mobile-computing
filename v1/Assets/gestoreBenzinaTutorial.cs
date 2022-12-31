@@ -8,7 +8,7 @@ public class gestoreBenzinaTutorial : MonoBehaviour
     public Slider benzina;
     void Start()
     {
-        benzina.value=100;
+        benzina.value=50;
     }
 
     public void carica (int ricarica){
@@ -23,9 +23,9 @@ public class gestoreBenzinaTutorial : MonoBehaviour
             benzina.value=0;
         }
 
-        if (!gameController.pausa)
+        if (!gameController.pausa&&!gestoreTestoTutorial.dialogo&&gestoreTestoTutorial.contatoreDialoghi<20)
         {
-            //benzina.value=benzina.value-0.1f;
+            benzina.value=benzina.value-0.1f;
         }
     }
 }

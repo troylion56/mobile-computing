@@ -1533,6 +1533,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &628148884 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7444645285380952849, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
+  m_PrefabInstance: {fileID: 745370052}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &629188463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2113,6 +2118,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 745370055}
     - target: {fileID: 7444645285609643840, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
+      propertyPath: sp4
+      value: 
+      objectReference: {fileID: 1101252152}
+    - target: {fileID: 7444645285609643840, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
+      propertyPath: sp5
+      value: 
+      objectReference: {fileID: 628148884}
+    - target: {fileID: 7444645285609643840, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
       propertyPath: stella1
       value: 
       objectReference: {fileID: 5523208374626519792, guid: 457b53c3f2685b748a0d25c349b4204f, type: 3}
@@ -2207,6 +2220,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b601e4d5247b0d4eaf2abad1021997a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &745370062 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7444645285609643840, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
+  m_PrefabInstance: {fileID: 745370052}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745370053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58ad680bc3efbe4fa1a58aa472b51c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &789543070
@@ -3255,6 +3279,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049309956}
   m_CullTransparentMesh: 1
+--- !u!4 &1101252152 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7444645287198043515, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
+  m_PrefabInstance: {fileID: 745370052}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1108008247
 GameObject:
   m_ObjectHideFlags: 0
@@ -3380,7 +3409,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3418,6 +3447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorial: {fileID: 331741306}
+  spawn: {fileID: 745370059}
 --- !u!50 &1110644082
 Rigidbody2D:
   serializedVersion: 4
@@ -3495,7 +3525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1160618803
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4371,7 +4401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1343135809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5213,7 +5243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1478539426
 Transform:
   m_ObjectHideFlags: 0
@@ -6514,7 +6544,7 @@ RectTransform:
   m_GameObject: {fileID: 1898730268}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -0.08226254}
-  m_LocalScale: {x: 0.005699012, y: 0.004385965, z: 0.004385965}
+  m_LocalScale: {x: 0.005699011, y: 0.004385965, z: 0.004385965}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 674181730}
@@ -6525,7 +6555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.3890076, y: 4.1090984}
+  m_AnchoredPosition: {x: -3.3890076, y: 4.1090965}
   m_SizeDelta: {x: 254.82, y: 28.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1898730270
@@ -7661,6 +7691,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 745370059}
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: benzina
+      value: 
+      objectReference: {fileID: 422055494}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
       propertyPath: continua
       value: 
       objectReference: {fileID: 646608416}
@@ -7677,8 +7711,137 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 933981690}
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: pulsanteRazzi
+      value: 
+      objectReference: {fileID: 1343135808}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: contenitoreStelle
+      value: 
+      objectReference: {fileID: 843420}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.size
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
       propertyPath: transizioniTutorial
       value: 
       objectReference: {fileID: 49610594}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: scriptCollezionabili
+      value: 
+      objectReference: {fileID: 745370062}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[12]
+      value: Molto bene, ora puoi almeno evitare di schiantarti.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[13]
+      value: Ma i meteoriti non sono le uniche cose a cui devi fare attenzione, vedi
+        la barra arancione in alto a sinistra?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[14]
+      value: "Bene \xE8 l'indicatore del carburante,caler\xE0 costantemente durante
+        le missioni."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[15]
+      value: Evita di farlo svuotare completamente se ci tieni a tornare a casa.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[16]
+      value: Se dovesse svuotarsi troppo puoi riempirlo raccogliendo le cariche che
+        trovi in giro.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[17]
+      value: Normalmente puoi trovarli per lo spazio o da altre navi distrutte, te
+        ne mando un paio raccogline uno.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[18]
+      value: PAUSA COLLEZIONABILI BENZINA
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[19]
+      value: "Bene questi erano difficili da schivare eh, ma la fuori non sar\xE0
+        cosi facile."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[20]
+      value: Ora passiamo alla prossima, vedi il pulsante in basso a sinistra?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[21]
+      value: "Bene serve a lanciare i missili anti asteroide, direi che il nome \xE8
+        gi\xE0 esplicativo dell'utilizzo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[22]
+      value: Sono decisamente utili ma le cariche sono rare e la base non ne fornisce
+        per le missioni.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[23]
+      value: Almeno per l'addestramento posso mandartene qualcuno, ci sono asteroidi
+        in vista usalo bene.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[24]
+      value: PAUSA CONSUMABILI MISSILI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[25]
+      value: Ok non credevo servisse specificarlo, ma dopo esserti aperto un varco
+        tra gli asteroidi devi passarci.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[26]
+      value: VUOTO PER RIPROVARE
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[27]
+      value: "Va bene che sono rari ma se l'alternativa \xE8 un asteroide cerca almeno
+        di salvarti, riproviamo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[28]
+      value: VUOTO PER RIPROVARE
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[29]
+      value: Bel botto vero?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[30]
+      value: Ricorda, acnhe se sono ideati per gli asteroidi nulla ti vieta di usarli
+        contro altre navi.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[31]
+      value: "Ottimo ora veniamo al dunque, il tuto obiettivo durante le missioni
+        sar\xE0 il recupero di alcune stelle."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[32]
+      value: In alto a sinistra puoi vedere il raccoglitore delle stelle, cerca di
+        raccoglierle tutte durante le missioni.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[33]
+      value: Prova con questa.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[34]
+      value: prova 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[35]
+      value: prova 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[36]
+      value: prova 32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9249e92e919befd42a943e178befd655, type: 3}

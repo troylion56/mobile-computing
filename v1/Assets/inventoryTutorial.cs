@@ -81,7 +81,28 @@ public class inventoryTutorial : MonoBehaviour
     }
 
     void chiamaTutorial(){
-        gestoreTestoTutorial.contatoreDialoghi++;
-        tutorial.scrivi();
+        if (gestoreTestoTutorial.contatoreDialoghi==8){
+        /*caso di impatto durante il tutorial di spostamento*/
+        Debug.Log("caso 1");
+            gestoreTestoTutorial.contatoreDialoghi++;
+            tutorial.scrivi();        
+        }
+
+        if (gestoreTestoTutorial.contatoreDialoghi==24){
+        /*caso di impatto durante il tutorial sui razzi*/  
+            if (razzo.stato){
+            /*caso in cui il player si schianta senza sparare il razzo*/
+            /*ripeto il tutorial senza spawnare i razzi*/
+                Debug.Log("caso 2");
+                gestoreTestoTutorial.contatoreDialoghi=27;
+                tutorial.scrivi();  
+            }else{
+            /*caso in cui il player si schianta sparando il razzo*/
+            /*ripeto il tutorial rispawnando i razzi*/
+                Debug.Log("caso 3");
+                gestoreTestoTutorial.contatoreDialoghi=25;
+                tutorial.scrivi();  
+            }
+        }
     }
 }

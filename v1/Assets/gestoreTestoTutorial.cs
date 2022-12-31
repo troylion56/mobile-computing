@@ -6,6 +6,10 @@ using TMPro;
 
 public class gestoreTestoTutorial : MonoBehaviour
 {
+    public GameObject benzina;
+    public GameObject pulsanteRazzi;
+    public GameObject contenitoreStelle;
+    public spawnSfondo scriptCollezionabili;
     public spawnOstacoli spawn;
     public TextMeshProUGUI tutorial;
     public GameObject continua;
@@ -37,30 +41,12 @@ public class gestoreTestoTutorial : MonoBehaviour
             scrivi ();
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.O))
         {
-            Debug.Log("contatore: "+contatoreDialoghi);
+            contatoreDialoghi=20;
         }
 
-
-        if (Input.touchCount>0&&Input.GetTouch(0).phase==TouchPhase.Began)
-        {
-               posIniziale=Input.GetTouch(0).position;
-        }
-        
-         if (Input.touchCount>0&&Input.GetTouch(0).phase==TouchPhase.Ended)
-        {
-            stopTouch=false;
-            posFinale=Input.GetTouch(0).position;
-
-            Vector2 distanza=posFinale-posIniziale;
-
-            if (Mathf.Abs(distanza.x)<tapTime && Mathf.Abs(distanza.y)<tapTime)
-            {
-                scrivi ();
-                Debug.Log("tap");
-            }
-        }
+        leggiTocco();
     }
 
     public void scrivi (){
@@ -93,6 +79,75 @@ public class gestoreTestoTutorial : MonoBehaviour
                 }
             break;
 
+            case 13:
+                benzina.SetActive(true);
+                StopAllCoroutines();
+                StartCoroutine(scrittura(dialoghi[contatoreDialoghi]));
+                contatoreDialoghi++;
+            break;
+
+            case 18:
+                if (dialogo){
+                    transizioniTutorial.SetTrigger("uscitaTutorial");
+                    dialogo=false;
+                    scriptCollezionabili.spawnBenzianTutorial();
+                    Debug.Log("case 18");  
+                }
+            break;
+
+            case 20:
+                pulsanteRazzi.SetActive(true);
+                StopAllCoroutines();
+                StartCoroutine(scrittura(dialoghi[contatoreDialoghi]));
+                contatoreDialoghi++;
+                Debug.Log("case 20");  
+            break;
+
+            case 24:
+                if (dialogo){
+                    transizioniTutorial.SetTrigger("uscitaTutorial");
+                    dialogo=false;
+                    spawnOstacoli.singolo=true;
+                    if (razzo.stato){
+                    /*se il player ha un colpo carico spawno solo i meteoriti*/
+                        spawn.ostacoliCompleti();
+                    }else{
+                    /*se il player non ha colpi carichi spawno anche i meteoriti*/
+                        scriptCollezionabili.spawnRazziTutorial();
+                    }
+                    Debug.Log("case 24");  
+                }
+            break;
+
+            case 26:
+                if (dialogo){
+                    contatoreDialoghi=24;
+                    Debug.Log("case 25");  
+                    scrivi();
+                }
+            break;
+
+            case 28:
+                if (dialogo){
+                    contatoreDialoghi=24;
+                    Debug.Log("case 28");  
+                    scrivi();
+                }
+            break;
+
+            case 32:
+                contenitoreStelle.SetActive(true);
+                StopAllCoroutines();
+                StartCoroutine(scrittura(dialoghi[contatoreDialoghi]));
+                contatoreDialoghi++;
+                Debug.Log("case 32");  
+            break;
+
+            case 34:
+            /*spawno la stella del tutorial*/
+                Debug.Log("case 34");  
+            break;
+
 
 
             default:
@@ -123,5 +178,32 @@ public class gestoreTestoTutorial : MonoBehaviour
     IEnumerator entra (){
         transizioniTutorial.SetTrigger("ingressoTutorial");
         yield return new WaitForSeconds(1);
+    }
+
+    private void leggiTocco (){
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("contatore: "+contatoreDialoghi);
+        }
+
+
+        if (Input.touchCount>0&&Input.GetTouch(0).phase==TouchPhase.Began)
+        {
+               posIniziale=Input.GetTouch(0).position;
+        }
+        
+         if (Input.touchCount>0&&Input.GetTouch(0).phase==TouchPhase.Ended)
+        {
+            stopTouch=false;
+            posFinale=Input.GetTouch(0).position;
+
+            Vector2 distanza=posFinale-posIniziale;
+
+            if (Mathf.Abs(distanza.x)<tapTime && Mathf.Abs(distanza.y)<tapTime)
+            {
+                scrivi ();
+                Debug.Log("tap");
+            }
+        }
     }
 }
