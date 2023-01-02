@@ -1747,6 +1747,7 @@ GameObject:
   - component: {fileID: 646608417}
   - component: {fileID: 646608419}
   - component: {fileID: 646608418}
+  - component: {fileID: 646608420}
   m_Layer: 5
   m_Name: continuaTutorial
   m_TagString: Untagged
@@ -1794,7 +1795,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: tocca per continuare...
+  m_text: Tocca per continuare
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a816c74238e5f1d49933721d4861759d, type: 2}
   m_sharedMaterial: {fileID: -8913004006830550826, guid: a816c74238e5f1d49933721d4861759d, type: 2}
@@ -1871,6 +1872,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 646608416}
   m_CullTransparentMesh: 1
+--- !u!114 &646608420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646608416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccabfab25fe6ef1478cdd3a49d4d49c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testo: {fileID: 646608418}
 --- !u!1 &672025192
 GameObject:
   m_ObjectHideFlags: 0
@@ -7715,6 +7729,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1343135808}
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: scrittaAttesa
+      value: 
+      objectReference: {fileID: 646608420}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
       propertyPath: contenitoreStelle
       value: 
       objectReference: {fileID: 843420}
@@ -7819,7 +7837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
       propertyPath: dialoghi.Array.data[31]
-      value: "Ottimo ora veniamo al dunque, il tuto obiettivo durante le missioni
+      value: "Ottimo ora veniamo al dunque, il tuo obiettivo durante le missioni
         sar\xE0 il recupero di alcune stelle."
       objectReference: {fileID: 0}
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}

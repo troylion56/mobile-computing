@@ -24,6 +24,8 @@ public class gestoreTestoTutorial : MonoBehaviour
     public Animator spostamento;  
     string prova= "testo di prova per testare la comparsa singola delle lettere";
     public Animator transizioniTutorial;
+
+    public continuaTutorial scrittaAttesa;
     
     [TextArea(3,10)]
     public string [] dialoghi=new string [10];
@@ -173,6 +175,7 @@ public class gestoreTestoTutorial : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
         continua.SetActive(true);
+        scrittaAttesa.attesa();     //animazione puntini scritta attesa
     }
 
     IEnumerator entra (){
@@ -201,6 +204,12 @@ public class gestoreTestoTutorial : MonoBehaviour
 
             if (Mathf.Abs(distanza.x)<tapTime && Mathf.Abs(distanza.y)<tapTime)
             {
+                if (dialogo)
+                {
+                    
+                }else{
+                    
+                }
                 scrivi ();
                 Debug.Log("tap");
             }
