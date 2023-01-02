@@ -248,6 +248,7 @@ public class gestoreTestoTutorial : MonoBehaviour
             {
                 if (saltabile){
                     pausa=0f;
+                    saltabile=false;
                 }else{
                     scrivi ();
                     Debug.Log("tap");
