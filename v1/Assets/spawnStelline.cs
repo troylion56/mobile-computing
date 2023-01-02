@@ -24,4 +24,9 @@ public class spawnStelline : MonoBehaviour
             Debug.Log("3");
         }
     }
+
+    public void stelleTutorial(){
+    /*metodi necessario al tutorial*/
+        Instantiate(stella1,sp3.transform.position,sp3.rotation);
+    }
 }

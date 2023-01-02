@@ -1822,8 +1822,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3532,7 +3532,7 @@ GameObject:
   - component: {fileID: 1160618807}
   - component: {fileID: 1160618806}
   - component: {fileID: 1160618805}
-  - component: {fileID: 1160618804}
+  - component: {fileID: 1160618808}
   m_Layer: 5
   m_Name: shootButton
   m_TagString: Untagged
@@ -3560,29 +3560,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.23900765, y: -4.5909014}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1160618804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160618802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91cf0f3e19bf8ef4faff8b7cceacd2c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 711801894}
-  bulletPreFab: {fileID: 5895105278621477321, guid: 532a562e429b7a8448eff965c492eec6, type: 3}
-  caricamento0: {fileID: 21300000, guid: 25a11d754ddd8be40b821ba1b537c3ad, type: 3}
-  caricamento1: {fileID: 21300000, guid: ef8d266fb21ea3f4a84127c3526ef3ec, type: 3}
-  caricamento2: {fileID: 21300000, guid: 126110f6292c1e041a1a7da496fb2d4e, type: 3}
-  caricamento3: {fileID: 21300000, guid: c047b42814835d74baaf7159ec32aa64, type: 3}
-  colpiDisponibili: 0
-  pulsante: {fileID: 1160618805}
-  tasto: {fileID: 1160618806}
-  rate: 0.03
-  timeRicarica: 2
 --- !u!114 &1160618805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3627,8 +3604,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1160618804}
-        m_TargetAssemblyTypeName: weaponScript, Assembly-CSharp
+      - m_Target: {fileID: 1160618808}
+        m_TargetAssemblyTypeName: weaponScriptTutorial, Assembly-CSharp
         m_MethodName: onClick
         m_Mode: 1
         m_Arguments:
@@ -3639,8 +3616,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1160618804}
-        m_TargetAssemblyTypeName: weaponScript, Assembly-CSharp
+      - m_Target: {fileID: 1160618808}
+        m_TargetAssemblyTypeName: weaponScriptTutorial, Assembly-CSharp
         m_MethodName: cambiaSprite
         m_Mode: 1
         m_Arguments:
@@ -3689,6 +3666,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160618802}
   m_CullTransparentMesh: 1
+--- !u!114 &1160618808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160618802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39431f5c6e4d84341979121ca211955b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 711801894}
+  bulletPreFab: {fileID: 5895105278621477321, guid: 532a562e429b7a8448eff965c492eec6, type: 3}
+  caricamento0: {fileID: 21300000, guid: 25a11d754ddd8be40b821ba1b537c3ad, type: 3}
+  caricamento1: {fileID: 21300000, guid: ef8d266fb21ea3f4a84127c3526ef3ec, type: 3}
+  caricamento2: {fileID: 21300000, guid: 126110f6292c1e041a1a7da496fb2d4e, type: 3}
+  caricamento3: {fileID: 21300000, guid: c047b42814835d74baaf7159ec32aa64, type: 3}
+  colpiDisponibili: 0
+  pulsante: {fileID: 1160618805}
+  tasto: {fileID: 1160618806}
+  rate: 0.03
+  timeRicarica: 2
+  tutorial: {fileID: 331741306}
 --- !u!1 &1187825047
 GameObject:
   m_ObjectHideFlags: 0
@@ -7499,8 +7500,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7721,6 +7722,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 933981698}
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: spawnStelle
+      value: 
+      objectReference: {fileID: 745370057}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
       propertyPath: spostamento
       value: 
       objectReference: {fileID: 933981690}
@@ -7733,12 +7738,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 646608420}
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: pulsanteShooting
+      value: 
+      objectReference: {fileID: 1160618802}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
       propertyPath: contenitoreStelle
       value: 
       objectReference: {fileID: 843420}
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
       propertyPath: dialoghi.Array.size
-      value: 37
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
       propertyPath: transizioniTutorial
@@ -7832,7 +7841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
       propertyPath: dialoghi.Array.data[30]
-      value: Ricorda, acnhe se sono ideati per gli asteroidi nulla ti vieta di usarli
+      value: Ricorda, anche se sono ideati per gli asteroidi nulla ti vieta di usarli
         contro altre navi.
       objectReference: {fileID: 0}
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
@@ -7851,15 +7860,94 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
       propertyPath: dialoghi.Array.data[34]
-      value: prova 32
+      value: PAUSA STELLE
       objectReference: {fileID: 0}
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
       propertyPath: dialoghi.Array.data[35]
-      value: prova 32
+      value: "Forse non hai capito, il tuo lavoro \xE8 raccogliere stelle come quella,
+        quindi no stelle no paga, riproviamo."
       objectReference: {fileID: 0}
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
       propertyPath: dialoghi.Array.data[36]
-      value: prova 32
+      value: PAUSA RIPROVA STELLE
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[37]
+      value: Bene come puoi vedere il raccoglitore di stelle indica il numero di
+        stelle raccolte durante la missione.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[38]
+      value: Potrai trovare e raccogliere fino a tre stelle per spedizione.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[39]
+      value: Cerca di raggiungere almeno il minimo sindacale per passare alla spedizione
+        successiva.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[40]
+      value: Sembra un lavor facile fino ad ora vero?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[41]
+      value: Ecco lo sarebbe anche se non fosse per la concorrenza, durante le missioni
+        ti imbatterai in altre navi.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[42]
+      value: "Quelli sono i nostri principali concorrenti in commercio, le loro navi
+        sono pi\xF9 piccole delle nostre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[43]
+      value: In caso dovessi trovartene davanti qualcuna non farti problemi ad aprire
+        il fuoco.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[44]
+      value: Il pulsante in basso a destra serve a sparare con il cannone.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[45]
+      value: "I colpi sono meno potenti dei razzi ma anche pi\xF9 veloci e si ricaricano
+        nel tempo senz ail bisogno di raccogliere cariche."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[46]
+      value: Prova a sparare qualche colpo, non farti problemi questi non sono costosi
+        come i razzi.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[47]
+      value: PAUSA SPAWN NEMICO
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[48]
+      value: Bene bene direi che hai sparato abbastanza, non farti prendere la mano
+        anche le navi nemiche saranno armate.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[49]
+      value: Inoltre manchi di esperiane quindi probabilemtne saranno spareranno
+        meglio di te.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[50]
+      value: Quindi cerca almeno di essere pronto a sparare per primo.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[51]
+      value: E non servono sensi di colpa, quelle navi sono pilotate da remoto.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[52]
+      value: Direi che sei pronto ad affrontarne una ora, abbatti questo veivolo
+        di prova.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
+      propertyPath: dialoghi.Array.data[53]
+      value: PAUSA SPAWN NEMICO
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9249e92e919befd42a943e178befd655, type: 3}

@@ -41,6 +41,8 @@ public class inventoryTutorial : MonoBehaviour
                 stellineTot++;
                 stella1.sprite = stellinaColore;
                 stella1GameOver.sprite =stellinaColore;
+                gestoreTestoTutorial.contatoreDialoghi=37;
+                tutorial.scrivi();     
             }
             else if (canCollect is collectStellina2)
             {

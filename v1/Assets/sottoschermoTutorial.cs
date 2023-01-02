@@ -33,5 +33,12 @@ public class sottoschermoTutorial : MonoBehaviour
                 tutorial.scrivi();  
             }
         }
+
+        if (gestoreTestoTutorial.contatoreDialoghi==34){
+        /*collisione con la stella durante il tutorial*/
+        /*caso in cui il player non perende la stella durante il tutorial*/
+            gestoreTestoTutorial.contatoreDialoghi++;
+            tutorial.scrivi(); 
+        }
     }
 }

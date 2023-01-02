@@ -13,7 +13,6 @@ public class swipeTutorial : MonoBehaviour
     public float swipeTime;
     public float tapTime;
     public Animator spostamento;   
-
     public gestoreTestoTutorial tutorial;
     // Update is called once per frame
     void FixedUpdate()

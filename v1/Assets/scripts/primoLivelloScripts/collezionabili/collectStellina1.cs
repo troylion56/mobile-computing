@@ -6,6 +6,12 @@ public class collectStellina1 : collect {
     Vector3 posizione;
     void Update()
     {
+
+        if (transform.position.y<-7)
+        {
+            Destroy(gameObject);
+        }
+
         if (!gameController.pausa)
         {
             transform.position = new Vector2 (transform.position.x, transform.position.y-2.5f*Time.deltaTime);

@@ -6,6 +6,8 @@ using TMPro;
 
 public class gestoreTestoTutorial : MonoBehaviour
 {
+    public GameObject pulsanteShooting;
+    public spawnStelline spawnStelle;
     public GameObject benzina;
     public GameObject pulsanteRazzi;
     public GameObject contenitoreStelle;
@@ -146,8 +148,44 @@ public class gestoreTestoTutorial : MonoBehaviour
             break;
 
             case 34:
-            /*spawno la stella del tutorial*/
-                Debug.Log("case 34");  
+                if (dialogo){
+                    transizioniTutorial.SetTrigger("uscitaTutorial");
+                    dialogo=false;
+                    spawnStelle.stelleTutorial();
+                    Debug.Log("case 34"); 
+                } 
+            break;
+
+            case 36:
+                if (dialogo){
+                    contatoreDialoghi=34;
+                    Debug.Log("case 36");  
+                    scrivi();
+                } 
+            break;
+
+            case 44:
+                pulsanteShooting.SetActive(true);
+                StopAllCoroutines();
+                StartCoroutine(scrittura(dialoghi[contatoreDialoghi]));
+                contatoreDialoghi++;
+                Debug.Log("case 44");
+            break;
+
+            case 47:
+            /*inizio tutorial shooting*/
+                if (dialogo){
+                    transizioniTutorial.SetTrigger("uscitaTutorial");
+                    dialogo=false;
+                    Debug.Log("case 47"); 
+                } 
+            break;
+
+            case 53:
+                if (dialogo){
+                /*spawn dei nemici*/
+                    Debug.Log("case 52");
+                } 
             break;
 
 

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class weaponScript : MonoBehaviour
+public class weaponScriptTutorial : MonoBehaviour
 {
 
     public Transform firePoint;
@@ -16,8 +16,9 @@ public class weaponScript : MonoBehaviour
     public Image tasto;
     public float rate = 1f;
     public int timeRicarica;
-    
-
+    private int contatoreSpari=0;       //variabile che conta gli spari effettuati durante il tutorial dello shooting
+    public gestoreTestoTutorial tutorial;
+    private bool singolo=true;
     private void Start() {
        stato = true;
        colpiDisponibili = 3;            // si inizia con il caricatore pieno
@@ -34,6 +35,8 @@ public class weaponScript : MonoBehaviour
         colpiDisponibili--;
         cambiaSprite();
         rate = 0;
+        contatoreSpari++;
+
     }
 
     public void Update() {
@@ -42,6 +45,11 @@ public class weaponScript : MonoBehaviour
             colpiDisponibili ++;
             cambiaSprite();
             rate = 0;       // faccio riniziare il tempo di ricarica
+        }
+
+        if (contatoreSpari>4&&gestoreTestoTutorial.contatoreDialoghi==47&&singolo){
+            singolo=false;
+            chiamaTutorial();
         }
     }
 
@@ -63,5 +71,8 @@ public class weaponScript : MonoBehaviour
 
     }
 
-    
+    void chiamaTutorial(){
+        gestoreTestoTutorial.contatoreDialoghi++;
+        tutorial.scrivi();
+    }
 }
