@@ -20,6 +20,11 @@ public class enemyScript : ostacoli
 
     /* per la vita */
     public int health = 100;
+
+    /* barra hp */
+    public Sprite vita0, vita1, vita2, vita3;
+    public GameObject barraHP;
+
     
 
     public void Start() {
@@ -28,6 +33,7 @@ public class enemyScript : ostacoli
         sx = false;
 
         shootRate = 5f;
+
     }
 
     public void Update() {
@@ -67,10 +73,7 @@ public class enemyScript : ostacoli
             enemyShoot();
         }
 
-        if(enemyShotPreFab.transform.position.y < -6) {
-            Destroy(gameObject);            // distruggi i proiettili appena escono dallo schermo
-        }
-     
+        
     }
     
 

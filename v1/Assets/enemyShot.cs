@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class enemyShot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
         if(transform.position.y < -6) {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D col) {
+        if(col.CompareTag("Player")){
+            Destroy(gameObject);
+            // Debug.Log("Proiettile ha colpito il player ed è stato distrutto");
         }
     }
 }
