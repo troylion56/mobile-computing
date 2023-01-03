@@ -2939,8 +2939,8 @@ MonoBehaviour:
   caricamento3: {fileID: 21300000, guid: c047b42814835d74baaf7159ec32aa64, type: 3}
   caricamento4: {fileID: 21300000, guid: f4cbc0c54fa339a47b801d4a5b5780c2, type: 3}
   colpiDisponibili: 0
-  pulsante: {fileID: 0}
-  tasto: {fileID: 0}
+  pulsante: {fileID: 1160618805}
+  tasto: {fileID: 1160618806}
   rate: 5
   timeRicarica: 13
   st:
@@ -3568,7 +3568,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.3464, y: -4.5909014}
-  m_SizeDelta: {x: 88.7861, y: 30}
+  m_SizeDelta: {x: 90.0061, y: 41.2864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1160618805
 MonoBehaviour:

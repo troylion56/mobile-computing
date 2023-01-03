@@ -3107,7 +3107,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.23900765, y: -4.5909014}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 90.0061, y: 41.2864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1022341427
 MonoBehaviour:
@@ -3127,11 +3127,21 @@ MonoBehaviour:
   caricamento1: {fileID: 21300000, guid: ef8d266fb21ea3f4a84127c3526ef3ec, type: 3}
   caricamento2: {fileID: 21300000, guid: 126110f6292c1e041a1a7da496fb2d4e, type: 3}
   caricamento3: {fileID: 21300000, guid: c047b42814835d74baaf7159ec32aa64, type: 3}
+  caricamento4: {fileID: 21300000, guid: f4cbc0c54fa339a47b801d4a5b5780c2, type: 3}
   colpiDisponibili: 0
   pulsante: {fileID: 1022341428}
   tasto: {fileID: 1022341429}
   rate: 0.03
   timeRicarica: 2
+  st:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300000, guid: a6b5788b62c55294d93fdaac11aa3694, type: 3}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  onclick1: {fileID: 21300000, guid: 2f3bf1068b117664bad1c9dd87ea02c2, type: 3}
+  onclick2: {fileID: 21300000, guid: e7c738406af7c0e40925efacc2a189d9, type: 3}
+  onclick3: {fileID: 21300000, guid: 734bf86720465a24cbd37a010ccd9e27, type: 3}
+  onclick4: {fileID: 21300000, guid: a6b5788b62c55294d93fdaac11aa3694, type: 3}
 --- !u!114 &1022341428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3151,7 +3161,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -3162,7 +3172,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300000, guid: a6b5788b62c55294d93fdaac11aa3694, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -3220,7 +3230,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c047b42814835d74baaf7159ec32aa64, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f4cbc0c54fa339a47b801d4a5b5780c2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6182,15 +6192,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1331848442}
   bulletPreFab: {fileID: 5895105278621477321, guid: 532a562e429b7a8448eff965c492eec6, type: 3}
-  caricamento0: {fileID: 0}
-  caricamento1: {fileID: 0}
-  caricamento2: {fileID: 0}
-  caricamento3: {fileID: 0}
+  caricamento0: {fileID: 21300000, guid: 25a11d754ddd8be40b821ba1b537c3ad, type: 3}
+  caricamento1: {fileID: 21300000, guid: ef8d266fb21ea3f4a84127c3526ef3ec, type: 3}
+  caricamento2: {fileID: 21300000, guid: 126110f6292c1e041a1a7da496fb2d4e, type: 3}
+  caricamento3: {fileID: 21300000, guid: c047b42814835d74baaf7159ec32aa64, type: 3}
+  caricamento4: {fileID: 21300000, guid: f4cbc0c54fa339a47b801d4a5b5780c2, type: 3}
   colpiDisponibili: 0
-  pulsante: {fileID: 0}
-  tasto: {fileID: 0}
+  pulsante: {fileID: 1022341428}
+  tasto: {fileID: 1022341429}
   rate: 1
   timeRicarica: 0
+  st:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300000, guid: a6b5788b62c55294d93fdaac11aa3694, type: 3}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  onclick1: {fileID: 21300000, guid: 2f3bf1068b117664bad1c9dd87ea02c2, type: 3}
+  onclick2: {fileID: 21300000, guid: e7c738406af7c0e40925efacc2a189d9, type: 3}
+  onclick3: {fileID: 21300000, guid: 734bf86720465a24cbd37a010ccd9e27, type: 3}
+  onclick4: {fileID: 21300000, guid: a6b5788b62c55294d93fdaac11aa3694, type: 3}
 --- !u!50 &2009163701
 Rigidbody2D:
   serializedVersion: 4
