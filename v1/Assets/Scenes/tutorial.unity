@@ -6586,7 +6586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transizione: {fileID: 1844408212}
-  player: {fileID: 0}
+  player: {fileID: 933981688}
   vita: {fileID: 1898730271}
   gradiente:
     serializedVersion: 2
@@ -7911,7 +7911,7 @@ PrefabInstance:
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
       propertyPath: dialoghi.Array.data[45]
       value: "I colpi sono meno potenti dei razzi ma anche pi\xF9 veloci e si ricaricano
-        nel tempo senz ail bisogno di raccogliere cariche."
+        nel tempo senza il bisogno di raccogliere cariche."
       objectReference: {fileID: 0}
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
       propertyPath: dialoghi.Array.data[46]
@@ -7929,8 +7929,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
       propertyPath: dialoghi.Array.data[49]
-      value: Inoltre manchi di esperiane quindi probabilemtne saranno spareranno
-        meglio di te.
+      value: Inoltre manchi di esperiane quindi probabilemtne spareranno meglio di
+        te.
       objectReference: {fileID: 0}
     - target: {fileID: 7475006395828926975, guid: 9249e92e919befd42a943e178befd655, type: 3}
       propertyPath: dialoghi.Array.data[50]

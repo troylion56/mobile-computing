@@ -27,8 +27,7 @@ public class gestoreTestoTutorial : MonoBehaviour
     string prova= "testo di prova per testare la comparsa singola delle lettere";
     public Animator transizioniTutorial;
     public continuaTutorial scrittaAttesa;
-    private float pausa=0.05f;              //pausa tra la scrittura di una lettera e la successiva
-    private bool saltabile=false;           //flag per indicare che il testo è saltabile
+    private bool salta;
     
     [TextArea(3,10)]
     public string [] dialoghi=new string [10];
@@ -207,17 +206,22 @@ public class gestoreTestoTutorial : MonoBehaviour
     }
 
     IEnumerator scrittura (string dialogo){
-        pausa=0.05f;                            //riposto al valore di default la pausa 
-        saltabile=true;                         //il testo è ora saltabile
         continua.SetActive(false);
+        salta=false;
         tutorial.text="";
         foreach (char lettera in dialogo.ToCharArray()){
-            tutorial.text += lettera;
-            yield return new WaitForSeconds(pausa);
+            if (salta)
+            {
+                tutorial.text="";
+                tutorial.text=dialogo;
+                break;
+            }else{
+                tutorial.text += lettera;
+                yield return new WaitForSeconds(0.05f);
+            }
         }
         continua.SetActive(true);
         scrittaAttesa.attesa();                 //animazione puntini scritta attesa
-        saltabile=false;                        //fine della scrittura del testo
     }
 
     IEnumerator entra (){
@@ -246,9 +250,8 @@ public class gestoreTestoTutorial : MonoBehaviour
 
             if (Mathf.Abs(distanza.x)<tapTime && Mathf.Abs(distanza.y)<tapTime)
             {
-                if (saltabile){
-                    pausa=0f;
-                    saltabile=false;
+                if (!salta){
+                    salta=true;;
                 }else{
                     scrivi ();
                     Debug.Log("tap");
