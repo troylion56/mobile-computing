@@ -2182,7 +2182,7 @@ PrefabInstance:
     - target: {fileID: 7444645285609643845, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
       propertyPath: transizione
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1423571834}
     - target: {fileID: 7795473555970856794, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
       propertyPath: m_Name
       value: gameController
@@ -5770,6 +5770,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sfondo
       objectReference: {fileID: 0}
+    - target: {fileID: 9102399840091644268, guid: d121d7eb52285364da570b1126f6ef8a, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 745370062}
     - target: {fileID: 9102399840091644271, guid: d121d7eb52285364da570b1126f6ef8a, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -7007,7 +7011,7 @@ GameObject:
   - component: {fileID: 1959603130}
   - component: {fileID: 1959603129}
   - component: {fileID: 1959603128}
-  - component: {fileID: 1959603127}
+  - component: {fileID: 1959603131}
   m_Layer: 5
   m_Name: pulsante ricarica livello
   m_TagString: Untagged
@@ -7035,18 +7039,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -304}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1959603127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959603125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34889a8192612ed4d8033f880811fd0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1959603128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7091,8 +7083,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1959603127}
-        m_TargetAssemblyTypeName: ricaricaLivello, Assembly-CSharp
+      - m_Target: {fileID: 1959603131}
+        m_TargetAssemblyTypeName: ricaricaLivelloTutorial, Assembly-CSharp
         m_MethodName: ricLivello
         m_Mode: 1
         m_Arguments:
@@ -7141,6 +7133,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959603125}
   m_CullTransparentMesh: 1
+--- !u!114 &1959603131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959603125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086d32ba97645ff4f8c0e0cb23a1bb74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1984435579
 GameObject:
   m_ObjectHideFlags: 0

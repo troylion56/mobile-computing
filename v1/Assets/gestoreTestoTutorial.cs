@@ -42,7 +42,12 @@ public class gestoreTestoTutorial : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            scrivi ();
+            if (!salta){
+                salta=true;;
+            }else{
+                scrivi ();
+                Debug.Log("tap");
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.O))
@@ -256,7 +261,6 @@ public class gestoreTestoTutorial : MonoBehaviour
                     scrivi ();
                     Debug.Log("tap");
                 }
-
             }
         }
     }
