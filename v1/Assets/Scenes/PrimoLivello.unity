@@ -5835,7 +5835,7 @@ MonoBehaviour:
   timeRicarica: 13
   st:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: a6b5788b62c55294d93fdaac11aa3694, type: 3}
+    m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   onclick1: {fileID: 21300000, guid: 2f3bf1068b117664bad1c9dd87ea02c2, type: 3}
