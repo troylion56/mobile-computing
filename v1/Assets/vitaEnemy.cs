@@ -33,10 +33,5 @@ public class vitaEnemy : MonoBehaviour
         }
     }
 
-    /* GESTIONE DELLE COLLISIONI */
-    private void OnTriggerEnter2D(Collider2D col) {
-        if(col.CompareTag("proiettili")){
-            Debug.Log("hai colpito il nemico");
-        }
-    }
+    
 }
