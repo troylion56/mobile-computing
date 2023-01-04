@@ -19,7 +19,7 @@ public class enemyScript : ostacoli
     private float shooting;
 
     /* barra hp */
-    public int health;
+    public static int health;
     public int danno;
     public Sprite vita0, vita1, vita2, vita3;
     public GameObject barraHP;
@@ -33,8 +33,8 @@ public class enemyScript : ostacoli
 
         shootRate = 5f;
 
-        health = 100;
-        danno = 20;             // modificabile
+        health = 4;
+        danno = 1;
 
     }
 
@@ -78,7 +78,7 @@ public class enemyScript : ostacoli
     }
 
     void enemyShoot() {
-        Instantiate(enemyShotPreFab, puntoFuoco.position, puntoFuoco.rotation);
+        // Instantiate(enemyShotPreFab, puntoFuoco.position, puntoFuoco.rotation);
     }
 
 

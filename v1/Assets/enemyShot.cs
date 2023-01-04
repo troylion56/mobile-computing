@@ -17,6 +17,7 @@ public class enemyShot : MonoBehaviour
         if(transform.position.y < -6) {
             Destroy(gameObject);
         }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D col) {
