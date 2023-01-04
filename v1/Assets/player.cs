@@ -5,7 +5,6 @@ using UnityEngine;
 public class player : MonoBehaviour
 {
     public gestoreVita vita;
-    public int health = 100;
 
     void Update()
     {
@@ -18,36 +17,9 @@ public class player : MonoBehaviour
                 }
             */
 
-        if(health <= 0) {
-            Die();
-        }
         
 
     }
 
-
-    /* COLLISIONI */
-
-    private void OnTriggerEnter2D(Collider2D col) {
-        if(col.CompareTag("proiettili")){
-            colpisci(col.GetComponent<proiettili>());
-        }
-    }
-
-    private void colpisci(proiettili proiettile) {
-        if(proiettile is enemyShot) {
-            Debug.Log("Player colpito");
-            takeDamage();
-        }
-    }
-
-
-    public void takeDamage() {
-        health -= 10;            // tolgo 20 di vita al player
-    }
-
-    public void Die() {
-        Destroy(gameObject);
-    }
 
 }

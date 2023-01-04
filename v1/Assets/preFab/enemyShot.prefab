@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2405911094099088292}
   - component: {fileID: -7251211189314276325}
   - component: {fileID: -4079935277536928826}
-  - component: {fileID: 6810765126619394186}
   m_Layer: 0
   m_Name: enemyShot
   m_TagString: proiettili
@@ -137,19 +136,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1619460d22d625c48bf11a36f8a2a221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &6810765126619394186
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5500232280639730836}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.49999997

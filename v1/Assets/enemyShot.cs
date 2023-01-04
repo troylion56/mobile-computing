@@ -14,9 +14,9 @@ public class enemyShot : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D col) {
-        if(col.CompareTag("Player")){
+        if(col.CompareTag("Player")) {
             Destroy(gameObject);
-            // Debug.Log("Proiettile ha colpito il player ed è stato distrutto");
+            Debug.Log("Proiettile ha colpito il player ed è stato distrutto");
         }
     }
 }

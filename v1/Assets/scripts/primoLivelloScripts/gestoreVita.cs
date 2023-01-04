@@ -10,7 +10,8 @@ public class gestoreVita : MonoBehaviour
   public Slider vita;
   public Gradient gradiente;
   public Image colore;
-  public int danno = 10;
+  public int health;
+  public int danno = 100;       // DA MODIFICARE, SERVE SOLO PER LA PROVA
 
   public void setMaxHp(int maxHp){
       /*setta il valore massimo dello slider vita a maxHp*/
@@ -20,19 +21,6 @@ public class gestoreVita : MonoBehaviour
       /*gestisce il gradiente della vita*/
       colore.color=gradiente.Evaluate(1f);
    }
-
-   private void OnTriggerEnter2D(Collider2D col) {
-        if(col.CompareTag("enemyShot")){
-            colpisci(col.GetComponent<proiettili>());
-        }
-    }
-
-    private void colpisci(proiettili proiettile) {
-        if(proiettile is proiettili) {
-            Debug.Log("Player colpito");
-            danneggia();
-        }
-    }
 
 
   public void danneggia(){
@@ -51,5 +39,5 @@ public class gestoreVita : MonoBehaviour
         }
    }
 
-   
+  
 }

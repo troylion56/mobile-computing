@@ -41,9 +41,6 @@ public class bulletScript : proiettili
         if (ostacolo is enemyScript)
         {
         enemyScript enemy = ostacolo.GetComponent<enemyScript>();
-          if(enemy != null){
-            enemy.TakeDamage();            
-            }
             Destroy(gameObject);
         }
 

@@ -15,13 +15,12 @@ public class enemyScript : ostacoli
     /* per farlo sparare */
     public Transform puntoFuoco;
     public GameObject enemyShotPreFab;
-    public float shootRate;
-    public float shooting;
-
-    /* per la vita */
-    public int health = 100;
+    private float shootRate;
+    private float shooting;
 
     /* barra hp */
+    public int health;
+    public int danno;
     public Sprite vita0, vita1, vita2, vita3;
     public GameObject barraHP;
 
@@ -33,6 +32,9 @@ public class enemyScript : ostacoli
         sx = false;
 
         shootRate = 5f;
+
+        health = 100;
+        danno = 20;             // modificabile
 
     }
 
@@ -68,54 +70,45 @@ public class enemyScript : ostacoli
             shooting = shootRate * Time.deltaTime;
         }
 
-        /* DA VEDERE VELOCITA' SHOOTING */
         if(arrivato && shooting>=0.1f) {
-            enemyShoot();
+            enemyShoot();                   // inizi a sparare quando sei in posizione
         }
-
+        
         
     }
-    
-
-
-
-    /* collisioni */
-    private void OnTriggerEnter2D(Collider2D col) {
-        if(col.CompareTag("proiettili")){
-            colpisci(col.GetComponent<proiettili>());
-        }
-    }
-
-    private void colpisci(proiettili proiettile) {
-        if(proiettile is razzoShoting) {
-            Destroy(gameObject);
-            Debug.Log("Nemico distrutto da razzo");
-        }
-        if(proiettile is bulletScript) {
-            Debug.Log("Nemico colpito da proiettile");
-            TakeDamage();
-        }
-    }
-
-    public void TakeDamage()
-    {
-        health -= 40;
-        if(health<0)
-        {
-            Die();
-        }
-    }
-
-    void Die()
-    {
-            Destroy(gameObject);
-            Debug.Log("Nemico distrutto");
-    }
-
 
     void enemyShoot() {
         Instantiate(enemyShotPreFab, puntoFuoco.position, puntoFuoco.rotation);
     }
 
+
+    /* GESTIONE DELLE COLLISIONI */
+    private void OnTriggerEnter2D(Collider2D collider2D) {
+        if(collider2D.CompareTag("proiettili")){
+            impatto(collider2D.GetComponent<proiettili>());
+        }
+    }
+
+    private void impatto (proiettili proiettile){
+        if (proiettile is razzoShoting) {
+            Debug.Log("missile colpisce nemico");
+            Destroy(gameObject);
+        }
+        if (proiettile is bulletScript) {
+            Debug.Log("player colpisce nemico");
+            takeDamage(danno);
+        }
+    }
+
+
+
+    public void takeDamage(int danno) {
+        health -= danno;            // danneggia di un tot
+        if(health <= 0) {
+            Destroy(gameObject);            // muore
+            Debug.Log("hai ucciso un nemico");
+        }
+        
+    }
 
 }
