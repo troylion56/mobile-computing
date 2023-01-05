@@ -5738,7 +5738,7 @@ GameObject:
   - component: {fileID: 1862041166}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5849,8 +5849,7 @@ MonoBehaviour:
   buttonRazzo: {fileID: 1735072222}
   transizione: {fileID: 999440371}
   tasto: {fileID: 1735072223}
-  vita: {fileID: 0}
-  health: 0
+  vita: {fileID: 2022207720}
   danno: 100
 --- !u!61 &1862041161
 BoxCollider2D:

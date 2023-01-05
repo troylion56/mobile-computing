@@ -21,8 +21,6 @@ public class asteroide : ostacoli
     private void OnTriggerEnter2D(Collider2D collider2D) {
         if(collider2D.CompareTag("proiettili")){
             impatto(collider2D.GetComponent<proiettili>());
-        }else{
-            Destroy(gameObject);
         }
     }
 

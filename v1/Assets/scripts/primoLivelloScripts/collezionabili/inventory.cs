@@ -17,15 +17,13 @@ public class inventory : MonoBehaviour
     public Image tasto;         //per passargli il bottone
 
     public gestoreVita vita;
-    public int health;
-    public int danno = 1;
 
 
     // Start is called before the first frame update
     void Start()
     {
         buttonRazzo.interactable = false;
-        health = 4;
+        vita.setMaxHp(5);
     }
 
 
@@ -44,19 +42,12 @@ public class inventory : MonoBehaviour
         }
 
         if(collider2D.CompareTag("proiettili")) {                 // caso di collisione con proettili nemico
-            perdiVita(danno);
+            vita.danneggia(1);
         }
 
     }
 
 
-
-    public void perdiVita(int danno) {
-        health -= danno;
-        if(health <= 0) {
-            Destroy(gameObject);            // muori
-        }
-    }
 
 
 

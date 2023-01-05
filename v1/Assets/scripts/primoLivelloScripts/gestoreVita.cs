@@ -10,7 +10,8 @@ public class gestoreVita : MonoBehaviour
   public Slider vita;
   public Gradient gradiente;
   public Image colore;
-  public int danno = 20;
+  public int danno = 1;
+
 
   public void setMaxHp(int maxHp){
       /*setta il valore massimo dello slider vita a maxHp*/
@@ -22,7 +23,7 @@ public class gestoreVita : MonoBehaviour
    }
 
 
-  public void danneggia(){
+  public void danneggia(int danno){
         Debug.Log("Player danneggiato");
         /*sottrae del valore attuale della vita il danno subito*/
         vita.value=vita.value-danno;

@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 055d5349e198926498482014b17858d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -225,7 +225,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: edb352e746b6d3d47991d2b28606da09, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -299,6 +299,7 @@ MonoBehaviour:
   posizione: {fileID: 1314581763113590387}
   puntoFuoco: {fileID: 3402212364376040954}
   enemyShotPreFab: {fileID: 5500232280639730836, guid: fdd447e90563b104280b197c9cedc5ed, type: 3}
+  shootRate: 0
   health: 0
   danno: 0
   barraHP: {fileID: 3401310348577120371}

@@ -27,6 +27,16 @@ public class weaponScript : MonoBehaviour
 
     }
 
+    public void Update() {
+        rate += Time.deltaTime;
+        if(rate > timeRicarica && colpiDisponibili < 3) {
+            colpiDisponibili ++;
+            cambiaSprite();
+            rate = 0;       // faccio riniziare il tempo di ricarica
+        }
+    }
+
+
     void Shoot()
     {
         Instantiate(bulletPreFab, firePoint.position, firePoint.rotation);
@@ -39,15 +49,7 @@ public class weaponScript : MonoBehaviour
         rate = 0;
     }
 
-    public void Update() {
-        rate += Time.deltaTime;
-        if(rate > timeRicarica && colpiDisponibili < 3) {
-            colpiDisponibili ++;
-            cambiaSprite();
-            rate = 0;       // faccio riniziare il tempo di ricarica
-        }
-    }
-
+    
     public void cambiaSprite() {
         if(colpiDisponibili == 1) {
             pulsante.interactable = true;

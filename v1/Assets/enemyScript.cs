@@ -15,8 +15,8 @@ public class enemyScript : ostacoli
     /* per farlo sparare */
     public Transform puntoFuoco;
     public GameObject enemyShotPreFab;
-    private float shootRate;
-    private float shooting;
+    private float shootTimer;
+    public float shootRate;
 
     /* vita */
     public int health;
@@ -32,10 +32,11 @@ public class enemyScript : ostacoli
         dx = true;
         sx = false;
 
-        shootRate = 5f;
 
         health = 4;
         danno = 1;
+
+        shootRate = 0.4f;
 
         immagine.sprite = health4;
 
@@ -70,13 +71,13 @@ public class enemyScript : ostacoli
                 dx = false;
             }
 
-            shooting = shootRate * Time.deltaTime;
+            shootTimer += Time.deltaTime;
+            
         }
-
-        if(arrivato && shooting>=0.1f) {
-            enemyShoot();                   // inizi a sparare quando sei in posizione
+        if(arrivato && shootTimer >= shootRate) {
+            shootTimer -= shootRate;
+            enemyShoot();
         }
-        
         
     }
 
