@@ -16,24 +16,50 @@ public class inventory : MonoBehaviour
     public Animator transizione; 
     public Image tasto;         //per passargli il bottone
 
+    public gestoreVita vita;
+    public int health;
+    public int danno = 100;         // DA DIMINUIRE, SOLO PER PROVA
+
+
+    // Start is called before the first frame update
     void Start()
     {
-        buttonRazzo.interactable=false;
+        buttonRazzo.interactable = false;
+        health = 100;
     }
 
+
+    /* gestione delle collisioni del player */
     private void OnTriggerEnter2D(Collider2D collider2D) {
         if(collider2D.CompareTag("collectable")){
             Collect(collider2D.GetComponent<collect>());
+            Debug.Log("stellina raccolta");
         }
 
-        if(collider2D.CompareTag("ostacoli")){
-            /*caso di collisione con ostacoli*/
+        if(collider2D.CompareTag("ostacoli")){                  // caso di collisione con ostacoli
             Debug.Log("asteroide colpito");
             Destroy(gameObject);
             Time.timeScale=0f;
             transizione.SetTrigger("triggerMorte");
         }
+
+        if(collider2D.CompareTag("proiettili")) {                 // caso di collisione con proettili nemico
+            perdiVita(danno);
+        }
+
     }
+
+
+
+    public void perdiVita(int danno) {
+        health -= danno;
+        if(health <= 0) {
+            Destroy(gameObject);            // muori
+        }
+    }
+
+
+
     private void Collect(collect canCollect)
     {
         if(canCollect.Collect())
@@ -79,4 +105,5 @@ public class inventory : MonoBehaviour
         }
            
     }
+
 }

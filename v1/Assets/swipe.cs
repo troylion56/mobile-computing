@@ -11,7 +11,7 @@ public class swipe : MonoBehaviour
     public Transform posizione;
     public float swipeTime;
     public float tapTime;
-    public Animator spostamento;   
+    public Animator spostamento;
 
     // Update is called once per frame
     void FixedUpdate()
