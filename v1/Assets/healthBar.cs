@@ -9,7 +9,7 @@ public class healthBar : MonoBehaviour
 
     public Sprite health0, health1, health2, health3, health4;
     public Transform barPosition;
-    public Image immagine;
+    public SpriteRenderer immagine;
 
 
 
@@ -17,7 +17,6 @@ public class healthBar : MonoBehaviour
     void Start()
     {
         immagine.sprite = health4;
-        transform.position = new Vector3 (barPosition.position.x, barPosition.position.y, barPosition.position.z);
     }
 
 

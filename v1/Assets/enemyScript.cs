@@ -78,7 +78,7 @@ public class enemyScript : ostacoli
     }
 
     void enemyShoot() {
-        // Instantiate(enemyShotPreFab, puntoFuoco.position, puntoFuoco.rotation);
+        Instantiate(enemyShotPreFab, puntoFuoco.position, puntoFuoco.rotation);
     }
 
 

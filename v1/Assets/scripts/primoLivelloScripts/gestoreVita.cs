@@ -10,8 +10,7 @@ public class gestoreVita : MonoBehaviour
   public Slider vita;
   public Gradient gradiente;
   public Image colore;
-  public int health;
-  public int danno = 100;       // DA MODIFICARE, SERVE SOLO PER LA PROVA
+  public int danno = 20;
 
   public void setMaxHp(int maxHp){
       /*setta il valore massimo dello slider vita a maxHp*/
