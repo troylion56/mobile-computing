@@ -574,6 +574,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7444645285609643843, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
+      propertyPath: nemico
+      value: 
+      objectReference: {fileID: 3402212365855453830, guid: e3184efb11a4ae9449f36d35a10f5bac, type: 3}
     - target: {fileID: 7444645285609643845, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
       propertyPath: trans
       value: 
@@ -3885,6 +3889,7 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   colore: {fileID: 706118622}
+  danno: 20
 --- !u!114 &1281619162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6257,6 +6262,9 @@ MonoBehaviour:
   buttonRazzo: {fileID: 1047974995}
   transizione: {fileID: 1338101662}
   tasto: {fileID: 1047974996}
+  vita: {fileID: 0}
+  health: 0
+  danno: 100
 --- !u!61 &2009163703
 BoxCollider2D:
   m_ObjectHideFlags: 0

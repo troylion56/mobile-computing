@@ -1572,6 +1572,7 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   colore: {fileID: 995664036}
+  danno: 20
 --- !u!114 &499048960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5305,6 +5306,9 @@ MonoBehaviour:
   buttonRazzo: {fileID: 581072292}
   transizione: {fileID: 2101738974}
   tasto: {fileID: 581072293}
+  vita: {fileID: 0}
+  health: 0
+  danno: 100
 --- !u!61 &1685475265
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6763,6 +6767,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7444645285609643843, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
+      propertyPath: nemico
+      value: 
+      objectReference: {fileID: 3402212365855453830, guid: e3184efb11a4ae9449f36d35a10f5bac, type: 3}
     - target: {fileID: 7444645285609643844, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
       propertyPath: m_Name
       value: gameController

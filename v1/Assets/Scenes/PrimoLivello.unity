@@ -4374,6 +4374,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7444645285609643843, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
+      propertyPath: nemico
+      value: 
+      objectReference: {fileID: 3402212365855453830, guid: e3184efb11a4ae9449f36d35a10f5bac, type: 3}
+    - target: {fileID: 7444645285609643843, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
       propertyPath: stella1
       value: 
       objectReference: {fileID: 0}
@@ -5845,6 +5849,9 @@ MonoBehaviour:
   buttonRazzo: {fileID: 1735072222}
   transizione: {fileID: 999440371}
   tasto: {fileID: 1735072223}
+  vita: {fileID: 0}
+  health: 0
+  danno: 100
 --- !u!61 &1862041161
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6604,6 +6611,7 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   colore: {fileID: 1184772081}
+  danno: 20
 --- !u!1 &2034182034
 GameObject:
   m_ObjectHideFlags: 0
