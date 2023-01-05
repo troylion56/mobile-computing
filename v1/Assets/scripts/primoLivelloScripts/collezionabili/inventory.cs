@@ -18,14 +18,14 @@ public class inventory : MonoBehaviour
 
     public gestoreVita vita;
     public int health;
-    public int danno = 100;         // DA DIMINUIRE, SOLO PER PROVA
+    public int danno = 1;
 
 
     // Start is called before the first frame update
     void Start()
     {
         buttonRazzo.interactable = false;
-        health = 100;
+        health = 4;
     }
 
 

@@ -18,12 +18,13 @@ public class enemyScript : ostacoli
     private float shootRate;
     private float shooting;
 
-    /* barra hp */
-    public static int health;
+    /* vita */
+    public int health;
     public int danno;
-    public Sprite vita0, vita1, vita2, vita3;
     public GameObject barraHP;
-
+    public Sprite health0, health1, health2, health3, health4;
+    public SpriteRenderer immagine;
+    
     
 
     public void Start() {
@@ -35,6 +36,8 @@ public class enemyScript : ostacoli
 
         health = 4;
         danno = 1;
+
+        immagine.sprite = health4;
 
     }
 
@@ -104,11 +107,28 @@ public class enemyScript : ostacoli
 
     public void takeDamage(int danno) {
         health -= danno;            // danneggia di un tot
+        
         if(health <= 0) {
             Destroy(gameObject);            // muore
             Debug.Log("hai ucciso un nemico");
         }
         
+        if(health == 0) {
+            immagine.sprite = health0;
+        }
+        if(health == 1) {
+            immagine.sprite = health1;
+        }
+        if(health == 2) {
+            immagine.sprite = health2;
+        }
+        if(health == 3) {
+            immagine.sprite = health3;
+        }
+        if(health == 4) {
+            immagine.sprite = health4;
+        }
     }
+    
 
 }
