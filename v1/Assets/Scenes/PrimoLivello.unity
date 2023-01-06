@@ -4156,7 +4156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.28, y: -4.5785}
+  m_AnchoredPosition: {x: -0.12234497, y: -4.5786133}
   m_SizeDelta: {x: 90.0061, y: 41.2864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1418712179
@@ -5346,7 +5346,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.4590075, y: -4.5909014}
+  m_AnchoredPosition: {x: -2.455658, y: -4.5908203}
   m_SizeDelta: {x: 154.8381, y: 43.4153}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1735072221
@@ -5850,7 +5850,6 @@ MonoBehaviour:
   transizione: {fileID: 999440371}
   tasto: {fileID: 1735072223}
   vita: {fileID: 2022207720}
-  danno: 100
 --- !u!61 &1862041161
 BoxCollider2D:
   m_ObjectHideFlags: 0
