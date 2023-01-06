@@ -5306,9 +5306,7 @@ MonoBehaviour:
   buttonRazzo: {fileID: 581072292}
   transizione: {fileID: 2101738974}
   tasto: {fileID: 581072293}
-  vita: {fileID: 0}
-  health: 0
-  danno: 100
+  vita: {fileID: 499048959}
 --- !u!61 &1685475265
 BoxCollider2D:
   m_ObjectHideFlags: 0
