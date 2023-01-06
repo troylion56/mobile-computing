@@ -15,12 +15,14 @@ public class inventoryTutorial : MonoBehaviour
     public Animator transizione; 
     public gestoreTestoTutorial tutorial;
     public Image tasto;         //per passargli il bottone
+     public gestoreVitaTutorial vita;
 
 
     // Start is called before the first frame update
     void Start()
     {
         buttonRazzo.interactable=false;
+        vita.setMaxHp(5);
     }
 
     private void OnTriggerEnter2D(Collider2D collider2D) {
@@ -30,6 +32,12 @@ public class inventoryTutorial : MonoBehaviour
 
         if(collider2D.CompareTag("ostacoli")){
             impatto(collider2D.GetComponent<ostacoli>());
+        }
+
+        if(collider2D.CompareTag("proiettili")) {                 // caso di collisione con proettili nemico
+            if (gestoreTestoTutorial.contatoreDialoghi==53){
+                vita.danneggia(1);
+            }
         }
     }
     private void Collect(collect canCollect)

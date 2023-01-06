@@ -15,7 +15,6 @@ public class inventory : MonoBehaviour
     public Button buttonRazzo;
     public Animator transizione; 
     public Image tasto;         //per passargli il bottone
-
     public gestoreVita vita;
 
 

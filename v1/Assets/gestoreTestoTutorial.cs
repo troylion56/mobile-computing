@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class gestoreTestoTutorial : MonoBehaviour
 {
+    public Animator player;
+    public gestoreVitaTutorial vita;
+    public GameObject nemico;
     public GameObject pulsanteShooting;
     public spawnStelline spawnStelle;
     public GameObject benzina;
@@ -34,12 +38,13 @@ public class gestoreTestoTutorial : MonoBehaviour
     
     public static int contatoreDialoghi=0;
 
+    private bool primaMorte=true;          //flag per gestire il testo dopo la prima morte del player contro il nemico     default:true
+
     private void Start() {
-        contatoreDialoghi=0;
+        contatoreDialoghi=60;
     }
 
-    void Update()
-    {
+    void Update(){
         if (Input.GetKeyDown(KeyCode.T))
         {
             if (!salta){
@@ -53,6 +58,11 @@ public class gestoreTestoTutorial : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.O))
         {
             contatoreDialoghi=20;
+        }
+
+        if (nemico==null&&contatoreDialoghi==53){
+            contatoreDialoghi=59;
+            scrivi();
         }
 
         leggiTocco();
@@ -188,11 +198,49 @@ public class gestoreTestoTutorial : MonoBehaviour
 
             case 53:
                 if (dialogo){
-                /*spawn dei nemici*/
-                    Debug.Log("case 52");
+                    vita.setMaxHp(5);
+                    transizioniTutorial.SetTrigger("uscitaTutorial");
+                    dialogo=false;
+                    nemico.SetActive(true);
+                    Debug.Log("il nemico ha attraversato il mare");
+                    Debug.Log("case 53");
                 } 
             break;
 
+            case 54:
+                if (primaMorte){
+                    if (!dialogo){
+                        dialogo=true;
+                        StartCoroutine(entra());
+                    }
+                    nemico.SetActive(false);
+                    StopAllCoroutines();
+                    StartCoroutine(scrittura(dialoghi[contatoreDialoghi]));
+                    contatoreDialoghi++;
+                    primaMorte=false;
+                }else{
+                    /*dopo la prima morte il dialogo cambia*/
+                    contatoreDialoghi=57;
+                    nemico.SetActive(false);
+                    scrivi();
+                }
+                Debug.Log("case 54");
+            break;
+
+            case 58:
+                if (dialogo){
+                    contatoreDialoghi=53;
+                    scrivi();
+                    Debug.Log("case 58");
+                } 
+            break;
+
+            case 65:
+                if (dialogo){
+                    StartCoroutine(fineTutorial());
+                    Debug.Log("case 65");
+                } 
+            break;
 
 
             default:
@@ -208,6 +256,13 @@ public class gestoreTestoTutorial : MonoBehaviour
             break;
         }
         Debug.Log("contatore: "+contatoreDialoghi);
+    }
+
+    IEnumerator fineTutorial (){
+        player.SetTrigger("volaInAlto");
+        //yield return new WaitForSeconds(1);
+        SceneManager.LoadSceneAsync("livelli");
+        yield return null;
     }
 
     IEnumerator scrittura (string dialogo){
@@ -228,6 +283,7 @@ public class gestoreTestoTutorial : MonoBehaviour
         continua.SetActive(true);
         scrittaAttesa.attesa();                 //animazione puntini scritta attesa
     }
+
 
     IEnumerator entra (){
         transizioniTutorial.SetTrigger("ingressoTutorial");

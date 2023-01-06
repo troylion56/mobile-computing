@@ -165,19 +165,6 @@ public class swipeTutorial : MonoBehaviour
             }
         }
     }
-
-        IEnumerator swipeDx(){
-        spostamento.SetTrigger("vaiDx");
-        yield return new WaitForSeconds(0.20f);
-        //!spostamento.SetTrigger("torna");
-    }
-
-    
-    IEnumerator swipeSx(){
-        spostamento.SetTrigger("vaiSx");
-        yield return new WaitForSeconds(0.20f);
-        //!spostamento.SetTrigger("torna");
-    }
     }
     
     void chiamaTutorial(){
