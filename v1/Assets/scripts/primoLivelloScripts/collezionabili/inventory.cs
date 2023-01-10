@@ -17,6 +17,8 @@ public class inventory : MonoBehaviour
     public Image tasto;         //per passargli il bottone
     public gestoreVita vita;
 
+    public shake cameraShake;
+
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +44,7 @@ public class inventory : MonoBehaviour
 
         if(collider2D.CompareTag("proiettili")) {                 // caso di collisione con proettili nemico
             vita.danneggia(1);
+            StartCoroutine(cameraShake.Shaking(.10f, .05f));
         }
 
     }
