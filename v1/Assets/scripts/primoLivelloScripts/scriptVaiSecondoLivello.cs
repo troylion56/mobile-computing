@@ -5,25 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class scriptVaiSecondoLivello : MonoBehaviour
 {
-
+    public Animator trans;
+    public float time = 1f; 
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        if (true)
-        {
-            
-        
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
     public void vaiSecondolivello () {
-        SceneManager.LoadSceneAsync("secondolivello");
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 4));
+    }
+    IEnumerator LoadLevel(int levelIndex) {
+        trans.SetTrigger("start");
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene(levelIndex);
     }
 }

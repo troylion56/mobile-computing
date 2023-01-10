@@ -5,20 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class ScriptVaiTerzoLivello : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Animator trans;
+    public float time = 1f;
 
     public void vaiTerzolivello () {
-        SceneManager.LoadSceneAsync("terzolivello");
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 3));
+    }
+    IEnumerator LoadLevel(int levelIndex) {
+        trans.SetTrigger("start");
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene(levelIndex);
     }
 }
