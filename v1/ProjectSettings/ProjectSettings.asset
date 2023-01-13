@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: alt
   productName: TITOLO
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -157,6 +157,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
+    Android: com.alt.TITOLO
     Standalone: com.DefaultCompany.TITOLO
   buildNumber:
     Standalone: 0
