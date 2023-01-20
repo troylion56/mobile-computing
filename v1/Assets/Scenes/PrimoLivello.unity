@@ -5168,7 +5168,6 @@ MonoBehaviour:
   stella1: {fileID: 5523208374626519792, guid: 457b53c3f2685b748a0d25c349b4204f, type: 3}
   stella2: {fileID: 1498145912768209230, guid: e3523ea2396e1da4e97316ae55ae5663, type: 3}
   stella3: {fileID: 4574897740969164788, guid: 0d0ea355f10ae9c43959b7ac6693448f, type: 3}
-  pausa: 0.25
 --- !u!114 &1607548932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6179,7 +6178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1862041157
 SpriteRenderer:
   m_ObjectHideFlags: 0
