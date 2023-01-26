@@ -26,10 +26,6 @@ public class generatoreLivelli : MonoBehaviour
     }
 
     private void Update() {
-    }
-
-    public void onClick(){
-        StartCoroutine(livello_pt1());
         if (nemico1==null&&!f1){
             /*dopo il completamento del primo encounter*/
             f1=true;
@@ -37,8 +33,12 @@ public class generatoreLivelli : MonoBehaviour
         }
     }
 
+    public void onClick(){
+        StartCoroutine(livello_pt1());
+    }
+
     IEnumerator livello_pt1(){
-        /*crea(asteronide,false,false,true,false,false);
+        crea(asteronide,false,false,true,false,false);
         yield return new WaitForSeconds(pausa*2);
         crea(asteronide,false,true,false,true,false);
         yield return new WaitForSeconds(pausa);
@@ -69,7 +69,7 @@ public class generatoreLivelli : MonoBehaviour
         yield return new WaitForSeconds(pausa);
         crea(stella1,false,false,false,true,false);
         yield return new WaitForSeconds(pausa);
-        crea(asteronide,false,false,true,false,false);*/
+        crea(asteronide,false,false,true,false,false);
 
         yield return new WaitForSeconds(pausa);
         crea(asteronide,false,true,true,true,false);
@@ -104,7 +104,29 @@ public class generatoreLivelli : MonoBehaviour
     }
 
     IEnumerator livello_pt2(){
+        crea(asteronide,true,false,true,true,false);
+        yield return new WaitForSeconds(pausa);
+        crea(asteronide,false,false,true,true,false);
+        crea(stella2,false,false,false,false,true);
+        yield return new WaitForSeconds(pausa);
+        crea(asteronide,false,false,false,false,true);
+        yield return new WaitForSeconds(pausa);
+        crea(asteronide,false,true,false,false,false);
+        crea(collMissili,false,false,false,true,false);
+        yield return new WaitForSeconds(pausa);
         crea(asteronide,false,false,true,false,false);
+        yield return new WaitForSeconds(pausa*2);
+        crea(asteronide,false,false,true,true,true);
+        yield return new WaitForSeconds(pausa);
+        crea(asteronide,false,true,false,true,false);
+        yield return new WaitForSeconds(pausa);
+        crea(asteronide,true,false,false,true,false);
+        yield return new WaitForSeconds(pausa);
+        crea(asteronide,false,false,false,true,false);
+        yield return new WaitForSeconds(pausa);
+        crea(asteronide,false,false,false,true,false);
+        yield return new WaitForSeconds(pausa);
+        crea(asteronide,false,true,false,true,true);
         yield return new WaitForSeconds(pausa);
     }
     private void crea(GameObject oggetto,bool s1,bool s2,bool s3,bool s4,bool s5){
