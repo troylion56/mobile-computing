@@ -23,6 +23,11 @@ public class gestoreBenzina : MonoBehaviour
             benzina.value=0;
         }
 
+
+        if(Input.GetKeyDown(KeyCode.G)) {
+            benzina.value=100;
+        }
+
         if (!gameController.pausa)
         {
             benzina.value=benzina.value-0.1f;
