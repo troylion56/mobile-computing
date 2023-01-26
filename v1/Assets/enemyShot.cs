@@ -6,7 +6,7 @@ public class enemyShot : MonoBehaviour
 {
     Vector3 posizione;
     private bool morto = false;
-    float rotateSpeed = 90;
+    float rotateSpeed = 400;
     Animator animator;
     public float transitionTime = 3f;
 
@@ -31,7 +31,7 @@ public class enemyShot : MonoBehaviour
         }
 
         if(morto) {
-            StartCoroutine(destructionDelay());
+            StartCoroutine(destructionDelay());                 // sei morto, parte l'esplosione
         }
     }
 
@@ -42,14 +42,13 @@ public class enemyShot : MonoBehaviour
             Debug.Log("Proiettile ha colpito il player ed è stato distrutto");
             animator.SetTrigger("morto");
 
-
         }
     }
 
 
-    IEnumerator destructionDelay() {
-        yield return new WaitForSeconds(0.5f);
-        Destroy(gameObject);
+    IEnumerator destructionDelay() {            // aspetta a distruggersi
+        yield return new WaitForSeconds(0.2f);
+        Destroy(gameObject);            // l'esplosione è finita, muori
         yield return null;
         morto = false;
     }
