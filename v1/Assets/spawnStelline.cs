@@ -19,10 +19,10 @@ public class spawnStelline : MonoBehaviour
             Instantiate(stella2,sp3.transform.position,sp3.rotation);
             Debug.Log("2");
         }
-        if(Input.GetKeyDown(KeyCode.G)){
+        /*if(Input.GetKeyDown(KeyCode.G)){
             Instantiate(stella3,sp3.transform.position,sp3.rotation);
             Debug.Log("3");
-        }
+        }*/
     }
 
     public void stelleTutorial(){

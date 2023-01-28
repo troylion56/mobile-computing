@@ -97,7 +97,7 @@ public class enemyScript : ostacoli
     private void impatto (proiettili proiettile){
         if (proiettile is razzoShoting) {
             Debug.Log("missile colpisce nemico");
-            Destroy(gameObject);
+            takeDamage(4);
         }
         if (proiettile is bulletScript) {
             Debug.Log("player colpisce nemico");
@@ -134,6 +134,7 @@ public class enemyScript : ostacoli
     
     /* per far spawnare e muovere la carica di benzina quando il nemico muore */
     public void muori() {
+        Debug.Log("nemico distrutto");
         Instantiate(benzina, puntoFuoco.position, puntoFuoco.rotation);
         transform.position = new Vector2 (transform.position.x, transform.position.y - 4f*Time.deltaTime);          // muovi in basso
         if(transform.position.y < -6) {
