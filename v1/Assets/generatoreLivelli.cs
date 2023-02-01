@@ -136,6 +136,8 @@ public class generatoreLivelli : MonoBehaviour
 
         crea(asteronide,true,true,false,true,true);
         yield return new WaitForSeconds(pausa*2);
+        crea(asteronide,true,true,true,false,true);
+        yield return new WaitForSeconds(pausa*2);
         crea(asteronide,true,true,true,true,false);
         yield return new WaitForSeconds(pausa*2);
         crea(asteronide,false,true,true,true,true);
