@@ -83,6 +83,15 @@ public class bulletScript : proiettili
         }
     }
 
+    /* coroutine per la gestione dell'animazione dell'esplosione */
+    IEnumerator destructionDelay() {
+        yield return new WaitForSeconds(0.2f);
+        Destroy(gameObject);            // l'esplosione è finita, muori
+        yield return null;
+        morto = false;
+        Debug.Log("coroutine attivata");
+    }
+
 
     void Distruggi()                // quando esce dallo schermo
     {
@@ -92,13 +101,6 @@ public class bulletScript : proiettili
         }
     }
 
-    IEnumerator destructionDelay() {            // aspetta a distruggersi
-        yield return new WaitForSeconds(0.2f);
-        Destroy(gameObject);            // l'esplosione è finita, muori
-        yield return null;
-        morto = false;
-        Debug.Log("coroutine attivata");
-    }
-
+    
 
 }
