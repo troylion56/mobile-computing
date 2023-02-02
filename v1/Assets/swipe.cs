@@ -13,11 +13,14 @@ public class swipe : MonoBehaviour
     public float tapTime;
     public Animator spostamento;
 
+    private float[] posizioni= new float[5] {-1.8f,-0.9f,0f,0.9f,1.8f};
+    private int posIndex=2;
+
     // Update is called once per frame
     void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.A))
-        {
+        {/*
                     if (posizione.position.x==0)
                     {
                         spostamento.SetTrigger("vaiSx");
@@ -37,11 +40,13 @@ public class swipe : MonoBehaviour
                     if (posizione.position.x==-1.8f)
                     {
                         spostamento.SetTrigger("vaiSSSx");
-                    }
+                    }*/
             Debug.Log("sinistra");
+            posIndex-=1;
+            StartCoroutine(spostamentoSx());
         }
         if (Input.GetKeyDown(KeyCode.D))
-        {
+        {/*
                    if (posizione.position.x==0)
                     {
                         spostamento.SetTrigger("vaiDx");
@@ -61,8 +66,10 @@ public class swipe : MonoBehaviour
                     if (posizione.position.x==-1.8f)
                     {
                         spostamento.SetTrigger("tornaSSx");
-                    }
+                    }*/
             Debug.Log("destra");
+            posIndex+=1;
+            StartCoroutine(spostamentoDx());
         }
 
         if (Input.touchCount>0&&Input.GetTouch(0).phase==TouchPhase.Began)
@@ -145,6 +152,22 @@ public class swipe : MonoBehaviour
                 Debug.Log("y:"+posAttuale.y);
                 Debug.Log("tap");
             }
+        }
+    }
+
+    IEnumerator spostamentoDx(){
+        while (transform.position.x<=posizioni[posIndex])
+        {
+            transform.position = new Vector2 (transform.position.x+0.05f,transform.position.y);
+            yield return new WaitForSeconds (0.01f);
+        }
+    }
+
+    IEnumerator spostamentoSx(){
+        while (transform.position.x>=posizioni[posIndex])
+        {
+            transform.position = new Vector2 (transform.position.x-0.05f,transform.position.y);
+            yield return new WaitForSeconds (0.01f);
         }
     }
 
