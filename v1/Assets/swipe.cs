@@ -12,6 +12,7 @@ public class swipe : MonoBehaviour
     public float swipeTime;
     public float tapTime;
     public Animator spostamento;
+    private float distanza=3f;
 
     private float[] posizioni= new float[5] {-1.8f,-0.9f,0f,0.9f,1.8f};
     public int posIndex=2;
@@ -42,13 +43,14 @@ public class swipe : MonoBehaviour
                         spostamento.SetTrigger("vaiSSSx");
                     }*/
             Debug.Log("sinistra");
+            StopAllCoroutines();
             if (posIndex==0){
                 /*se sono a margine dello schermo faccio effetto pacman*/
                 posIndex=4;
-                StartCoroutine(spostamentoSSx());
+                StartCoroutine(spostamentoSSx(posizioni[posIndex]));
             }else{
                 posIndex--;
-                StartCoroutine(spostamentoSx());
+                StartCoroutine(spostamentoSx(distanza));
             }
             Debug.Log("index:"+posIndex);
         }
@@ -75,13 +77,14 @@ public class swipe : MonoBehaviour
                         spostamento.SetTrigger("tornaSSx");
                     }*/
             Debug.Log("destra");
+            StopAllCoroutines();
             if (posIndex==4){
                 /*se sono a margine dello schermo faccio effetto pacman*/
                 posIndex=0;
-                StartCoroutine(spostamentoDDx());
+                StartCoroutine(spostamentoDDx(posizioni[posIndex]));
             }else{
                 posIndex++;
-                StartCoroutine(spostamentoDx());
+                StartCoroutine(spostamentoDx(transform.position.x+0.3f,transform.position.y));
             }
             Debug.Log("index:"+posIndex);
         }
@@ -127,10 +130,10 @@ public class swipe : MonoBehaviour
                     if (posIndex==0){
                         /*se sono a margine dello schermo faccio effetto pacman*/
                         posIndex=4;
-                        StartCoroutine(spostamentoSSx());
+                        StartCoroutine(spostamentoSSx(posizioni[posIndex]));
                     }else{
                         posIndex--;
-                        StartCoroutine(spostamentoSx());
+                        StartCoroutine(spostamentoSx(posizioni[posIndex]));
                     }
                     Debug.Log("sinistra");
                     stopTouch=true;
@@ -162,10 +165,10 @@ public class swipe : MonoBehaviour
                     if (posIndex==4){
                         /*se sono a margine dello schermo faccio effetto pacman*/
                         posIndex=0;
-                        StartCoroutine(spostamentoDDx());
+                        StartCoroutine(spostamentoDDx(posizioni[posIndex]));
                     }else{
                         posIndex++;
-                        StartCoroutine(spostamentoDx());
+                        StartCoroutine(spostamentoDx(transform.position.x+0.3f,transform.position.y));
                     }
                     Debug.Log("destra");
                     stopTouch=true;
@@ -188,71 +191,69 @@ public class swipe : MonoBehaviour
         }
     }
 
-    IEnumerator spostamentoDx(){
+    IEnumerator spostamentoDx(float x,float y){
         /*effetto pacman veso destra*/
-        while (transform.position.x<posizioni[posIndex])
-        {
-            transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
-            yield return new WaitForSeconds (0.001f);
-        }
+        transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
+        transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
+        transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
     }
 
-    IEnumerator spostamentoSx(){
+    IEnumerator spostamentoSx(float dist){
         /*spostamento temporizzato del player verso sinistra*/
-        
-        while (transform.position.x>posizioni[posIndex])
-        {
-            transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
-            yield return new WaitForSeconds (0.001f);
-        }
+        transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
+        transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
+        transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
     }
 
-    IEnumerator spostamentoDDx(){
+    IEnumerator spostamentoDDx(float nuovaPosizione){
         /*spostamento temporizzato del player verso destra*/
         /*prima il player si sposta fuori da lo schermo verso destra*/
-        while (transform.position.x<2.7)
-        {
-            transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
-            yield return new WaitForSeconds (0.001f);
-        }
+        transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
+        transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
+        transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
+       
 
         transform.position = new Vector2 (-2.7f,transform.position.y);
 
         /*il player rientra nello schermo da sisistra verso destra*/
-        while (transform.position.x<posizioni[posIndex])
-        {
-            //!DEBUG--------
-            if (transform.position.x==-1.8f){
-                Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-            }
-            transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
-            yield return new WaitForSeconds (0.001f);
-        }
+        transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
+        transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
+        transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
     }
 
     
 
-    IEnumerator spostamentoSSx(){
+    IEnumerator spostamentoSSx(float nuovaPosizione){
         /*spostamento temporizzato del player verso sinistra*/
         /*prima il player si sposta fuori da lo schermo verso sinistra*/
-        while (transform.position.x>-2.7)
-        {
-            transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
-            yield return new WaitForSeconds (0.001f);
-        }
+        transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
+        transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
+        transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
 
         transform.position = new Vector2 (2.7f,transform.position.y);
 
         /*il player rientra nello schermo da destra verso sisistra*/
-        while (transform.position.x>posizioni[posIndex])
-        {
-            //!DEBUG--------
-            if (transform.position.x==1.8f){
-                Debug.Log("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
-            }
-            transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
-            yield return new WaitForSeconds (0.001f);
-        }
+        transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
+        transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
+        transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
+        yield return new WaitForSeconds (0.001f);
     }
 
         IEnumerator swipeDx(){
