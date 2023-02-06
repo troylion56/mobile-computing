@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class collectRazzo : collect {
     Vector3 posizione;
+    float rotateSpeed = 90;
+    
     void Update()
     {
 
@@ -15,9 +17,11 @@ public class collectRazzo : collect {
         if (!gameController.pausa)
         {
             transform.position = new Vector2 (transform.position.x, transform.position.y-2.5f*Time.deltaTime);
-            
             posizione += new Vector3(0,2,0);
-            transform.localEulerAngles=posizione;  
+
+            float angle = rotateSpeed * Time.deltaTime;
+            transform.rotation *= Quaternion.AngleAxis(angle, Vector3.up);
+
         }
     }
 }
