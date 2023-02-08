@@ -195,43 +195,43 @@ public class swipe : MonoBehaviour
     IEnumerator spostamentoDx(float x,float y){
         /*effetto pacman veso destra*/
         transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
         transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
         transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
     }
 
     IEnumerator spostamentoSx(float dist){
         /*spostamento temporizzato del player verso sinistra*/
         transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
         transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
         transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
     }
 
     IEnumerator spostamentoDDx(float nuovaPosizione){
         /*spostamento temporizzato del player verso destra*/
         /*prima il player si sposta fuori da lo schermo verso destra*/
         transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
         transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
         transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
        
 
         transform.position = new Vector2 (-2.7f,transform.position.y);
 
         /*il player rientra nello schermo da sisistra verso destra*/
         transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
         transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
         transform.position = new Vector2 (transform.position.x+0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
     }
 
     
@@ -240,21 +240,21 @@ public class swipe : MonoBehaviour
         /*spostamento temporizzato del player verso sinistra*/
         /*prima il player si sposta fuori da lo schermo verso sinistra*/
         transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
         transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
         transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
 
         transform.position = new Vector2 (2.7f,transform.position.y);
 
         /*il player rientra nello schermo da destra verso sisistra*/
         transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
         transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
         transform.position = new Vector2 (transform.position.x-0.3f,transform.position.y);
-        yield return new WaitForSeconds (0.001f);
+        yield return new WaitForSeconds (0.01f);
     }
 
         IEnumerator swipeDx(){
