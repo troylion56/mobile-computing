@@ -26,7 +26,7 @@ public class enemyScript : ostacoli
     public Sprite health0, health1, health2, health3, health4;
     public SpriteRenderer immagine;
     Animator animator;
-    
+    public bool morto;
 
     public void Start() {
         arrivato = false;
@@ -40,6 +40,9 @@ public class enemyScript : ostacoli
         shootRate = 0.4f;
 
         immagine.sprite = health4;
+
+        animator = GetComponent<Animator>();
+        morto = false;
 
     }
 
@@ -79,7 +82,11 @@ public class enemyScript : ostacoli
             shootTimer -= shootRate;
             enemyShoot();
         }
-        
+
+        if(morto) {
+            StartCoroutine(destructionDelay());                 // sei morto, parte l'esplosione
+
+        }
     }
 
     void enemyShoot() {
@@ -105,15 +112,32 @@ public class enemyScript : ostacoli
         }
     }
 
+    private void collisioneProiettili (bulletScript bullet, Collider2D collisione) {
+        if(bullet is bulletScript) {
+            morto = true;
+            StartCoroutine(destructionDelay());
+            Debug.Log("Shot ha colpito il nemico che è stato distrutto");
+            animator.SetTrigger("isDead");
+        }
+    }
+
+    IEnumerator destructionDelay() {
+        yield return new WaitForSeconds(0.5f);
+        yield return null;
+        morto = false;
+        Debug.Log("coroutine morte nemico attivata");
+        muori();
+    }
 
 
     public void takeDamage(int danno) {
         health -= danno;            // danneggia di un tot
         
         if(health <= 0) {
-            muori();
+            morto = true;
             Debug.Log("hai ucciso un nemico");
-            animator.SetTrigger("morto");
+            animator.SetTrigger("isDead");
+            
         }
         
         if(health == 0) {
