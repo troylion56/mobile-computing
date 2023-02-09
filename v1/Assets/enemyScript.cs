@@ -25,7 +25,7 @@ public class enemyScript : ostacoli
     public GameObject barraHP;
     public Sprite health0, health1, health2, health3, health4;
     public SpriteRenderer immagine;
-    
+    Animator animator;
     
 
     public void Start() {
@@ -113,6 +113,7 @@ public class enemyScript : ostacoli
         if(health <= 0) {
             muori();
             Debug.Log("hai ucciso un nemico");
+            animator.SetTrigger("morto");
         }
         
         if(health == 0) {
