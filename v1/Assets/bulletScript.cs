@@ -18,6 +18,7 @@ public class bulletScript : proiettili
         morto = false;
         // pos = transform.position;
         animator = GetComponent<Animator>();
+        
 
     }
     

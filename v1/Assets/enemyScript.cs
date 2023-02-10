@@ -33,7 +33,6 @@ public class enemyScript : ostacoli
         dx = true;
         sx = false;
 
-
         health = 4;
         danno = 1;
 
@@ -104,7 +103,7 @@ public class enemyScript : ostacoli
     private void impatto (proiettili proiettile){
         if (proiettile is razzoShoting) {
             Debug.Log("missile colpisce nemico");
-            takeDamage(4);
+            takeDamage(danno);
         }
         if (proiettile is bulletScript) {
             Debug.Log("player colpisce nemico");

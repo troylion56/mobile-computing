@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class weaponScript : MonoBehaviour
 {
-    Animator animator;
     public Transform firePoint;
     public GameObject bulletPreFab;
     public static bool stato;
@@ -20,8 +19,6 @@ public class weaponScript : MonoBehaviour
     public Sprite onclick1,onclick2,onclick3, onclick4;
 
     private void Start() {
-        animator = GetComponent<Animator>();
-        animator.SetBool("isAlive", true);
         stato = true;
         colpiDisponibili = 4;            // si inizia con il caricatore pieno
         st.pressedSprite = onclick4;
@@ -36,6 +33,11 @@ public class weaponScript : MonoBehaviour
             cambiaSprite();
             rate = 0;       // faccio riniziare il tempo di ricarica
         }
+
+        if(gestoreVita.morto) {
+            // StartCoroutine(destructionDelay());
+        }
+        
     }
 
 

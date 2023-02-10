@@ -3759,7 +3759,7 @@ MonoBehaviour:
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
@@ -6339,7 +6339,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: 56a1cb5805b90944c96d43cd94d79d32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7139,6 +7139,7 @@ GameObject:
   - component: {fileID: 2022207718}
   - component: {fileID: 2022207719}
   - component: {fileID: 2022207720}
+  - component: {fileID: 2022207721}
   m_Layer: 5
   m_Name: vita
   m_TagString: Untagged
@@ -7266,6 +7267,27 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   colore: {fileID: 1184772081}
   danno: 20
+  animator: {fileID: 2022207721}
+--- !u!95 &2022207721
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022207717}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4fcc2a5b5de37c74199f205bcfdea73c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2034182034
 GameObject:
   m_ObjectHideFlags: 0

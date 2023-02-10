@@ -8,7 +8,6 @@ public class inventory : MonoBehaviour
     public SpriteRenderer stella1, stella2, stella3,stella1GameOver, stella2GameOver, stella3GameOver;
 
     public Sprite stellinaColore, on ;
-
     public gestoreBenzina scriptBenzina;
     private int stellineTot = 0;
     public Button buttonSparo;
@@ -16,8 +15,8 @@ public class inventory : MonoBehaviour
     public Animator transizione; 
     public Image tasto;         //per passargli il bottone
     public gestoreVita vita;
-
     public shake cameraShake;
+    public Animator player;
 
 
     // Start is called before the first frame update
@@ -36,21 +35,14 @@ public class inventory : MonoBehaviour
         }
 
         if(collider2D.CompareTag("ostacoli")){                  // caso di collisione con ostacoli
-            Debug.Log("asteroide colpito");
-            Destroy(gameObject);
-            Time.timeScale=0f;
-            transizione.SetTrigger("triggerMorte");
+            StartCoroutine(destructionDelay());
         }
 
         if(collider2D.CompareTag("proiettili")) {                 // caso di collisione con proettili nemico
             vita.danneggia(1);
             StartCoroutine(cameraShake.Shaking(.10f, .05f));
         }
-
     }
-
-
-
 
 
     private void Collect(collect canCollect)
@@ -98,5 +90,12 @@ public class inventory : MonoBehaviour
         }
            
     }
-
+    public IEnumerator destructionDelay() {
+        yield return new WaitForSeconds(0.1f);
+        Time.timeScale = 0f;
+        player.SetTrigger("dead");
+        transizione.SetTrigger("triggerMorte");
+        yield return new WaitForSeconds(0.6f);
+        Destroy(gameObject);
+    }
 }
