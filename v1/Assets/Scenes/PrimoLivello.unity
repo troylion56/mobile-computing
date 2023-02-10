@@ -6407,6 +6407,7 @@ MonoBehaviour:
   tasto: {fileID: 1735072223}
   vita: {fileID: 2022207720}
   cameraShake: {fileID: 463631}
+  player: {fileID: 1862041165}
 --- !u!61 &1862041161
 BoxCollider2D:
   m_ObjectHideFlags: 0
