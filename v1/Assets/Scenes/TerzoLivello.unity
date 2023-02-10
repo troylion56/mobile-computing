@@ -4200,7 +4200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1314581763113590387, guid: e3184efb11a4ae9449f36d35a10f5bac, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.3770046
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1314581763113590387, guid: e3184efb11a4ae9449f36d35a10f5bac, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6370,6 +6370,8 @@ MonoBehaviour:
   swipeTime: 2.5
   tapTime: 10
   spostamento: {fileID: 1636627790}
+  player: {fileID: 0}
+  posIndex: 2
 --- !u!114 &1636627792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6468,8 +6470,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 20.48, y: 20.48}
-    newSize: {x: 20.48, y: 20.48}
+    oldSize: {x: 5.92, y: 8.64}
+    newSize: {x: 5.92, y: 8.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -6531,12 +6533,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: 21300000, guid: 2272f3f26f1703a429bd9e0dca701f96, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56a1cb5805b90944c96d43cd94d79d32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 20.48, y: 20.48}
+  m_Size: {x: 5.92, y: 8.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
