@@ -44,7 +44,7 @@ public class enemyScriptDx : MonoBehaviour
 
     public void Update() {
         
-        if (gameController.pausa){
+        if (!gameController.pausa){
                 /* movimento verticale */
             if(transform.position.y > 2.5) {
                 transform.position = new Vector2 (transform.position.x, transform.position.y - 4f*Time.deltaTime);
@@ -70,8 +70,7 @@ public class enemyScriptDx : MonoBehaviour
                     dx = false;
                 }
                 shootTimer += Time.deltaTime;
-        }
-            
+            }
         }
         if(arrivato && shootTimer >= shootRate) {
             float temp=transform.position.x*10;

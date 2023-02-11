@@ -47,41 +47,39 @@ public class enemyScript : ostacoli
 
     public void Update() {
         
-        /* movimento verticale */
-        if(transform.position.y > 2.5) {
-            transform.position = new Vector2 (transform.position.x, transform.position.y - 4f*Time.deltaTime);
-        }
-        if(transform.position.y <= 2.5) {
-            arrivato = true;
-        }
-        
-        /* movimento orizzontale (solo quando sei in posizione) */
-        if(arrivato)
-        {
-            if(sx) {
-                transform.position = new Vector2 (transform.position.x + 0.03f, transform.position.y);
+        if (!gameController.pausa){
+                /* movimento verticale */
+            if(transform.position.y > 2.5) {
+                transform.position = new Vector2 (transform.position.x, transform.position.y - 4f*Time.deltaTime);
             }
-            if(dx) {
-                transform.position = new Vector2 (transform.position.x - 0.03f, transform.position.y);
+            if(transform.position.y <= 2.5) {
+                arrivato = true;
             }
+            /* movimento orizzontale (solo quando sei in posizione) */
+            if(arrivato){
+                if(sx) {
+                    transform.position = new Vector2 (transform.position.x + 0.03f, transform.position.y);
+                }
+                if(dx) {
+                    transform.position = new Vector2 (transform.position.x - 0.03f, transform.position.y);
+                }
 
-            if(transform.position.x >= 1.83) {
-                dx = true;         // sei arrivato alla fine destra dello schermo
-                sx = false;
+                if(transform.position.x >= 1.83) {
+                    dx = true;         // sei arrivato alla fine destra dello schermo
+                    sx = false;
+                }
+                if(transform.position.x <= -1.83) {
+                    sx = true;             // sei arrivato alla fine sinistra dello schermo
+                    dx = false;
+                }
+                shootTimer += Time.deltaTime;
             }
-            if(transform.position.x <= -1.83) {
-                sx = true;             // sei arrivato alla fine sinistra dello schermo
-                dx = false;
-            }
-
-            shootTimer += Time.deltaTime;
-            
         }
         if(arrivato && shootTimer >= shootRate) {
             float temp=transform.position.x*10;
             temp=Mathf.Round(temp);
             if (temp==0f||temp==9f||temp==-9f||temp==18f||temp==-18f){
-                shootTimer -= shootRate;
+                shootTimer=0;
                 enemyShoot();
             }
         }
