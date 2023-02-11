@@ -16,17 +16,13 @@ public class gameController : MonoBehaviour{
     public Animator trans;          //animazione del player che vola
     public Animator trans1;   
 
-    void Start()
-    {   
-    }
+    
     void Update()
     {  
-
         if(Input.GetKeyDown(KeyCode.F)) {
             fineLivello();
             Debug.Log("Fine livello");
         }
-
     }
 
 

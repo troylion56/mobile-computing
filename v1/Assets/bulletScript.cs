@@ -18,6 +18,7 @@ public class bulletScript : proiettili
         morto = false;
         // pos = transform.position;
         animator = GetComponent<Animator>();
+        
 
     }
     
@@ -37,11 +38,11 @@ public class bulletScript : proiettili
 
     void OnTriggerEnter2D(Collider2D hitInfo) 
     {
-        if (hitInfo.CompareTag("ostacoli"))
+        /* if (hitInfo.CompareTag("ostacoli"))
         {
             morto = true;
             collisioneOstacoli(hitInfo.GetComponent<ostacoli>());
-        }
+        } */
 
         if (hitInfo.CompareTag("proiettili"))
         {

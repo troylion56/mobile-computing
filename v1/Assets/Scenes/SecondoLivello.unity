@@ -2822,6 +2822,7 @@ MonoBehaviour:
   tasto: {fileID: 475497344}
   vita: {fileID: 1246971194}
   cameraShake: {fileID: 1368651838}
+  player: {fileID: 0}
 --- !u!61 &730445045
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2910,7 +2911,7 @@ SpriteRenderer:
   m_Size: {x: 5.92, y: 8.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &730445048
@@ -5013,6 +5014,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   colore: {fileID: 1050955906}
   danno: 20
+  animator: {fileID: 0}
 --- !u!114 &1246971195
 MonoBehaviour:
   m_ObjectHideFlags: 0
