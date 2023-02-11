@@ -4,6 +4,8 @@ using UnityEngine;
 public class Login : MonoBehaviour
 {
     FirebaseAuth auth;
+    public Animator savedAnimation;
+    public Animator notsavedAnimation; 
 
     void Start()
     {
@@ -18,16 +20,19 @@ public class Login : MonoBehaviour
             if (task.IsCanceled)
             {
                 Debug.LogError("SignInWithEmailAndPasswordAsync was canceled.");
+                notsavedAnimation.SetTrigger("errorTrigger");
                 return;
             }
             if (task.IsFaulted)
             {
                 Debug.LogError("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
+                notsavedAnimation.SetTrigger("errorTrigger");
                 return;
             }
 
             FirebaseUser user = task.Result;
             Debug.LogFormat("User signed in successfully: {0} ({1})", user.DisplayName, user.UserId);
+            savedAnimation.SetTrigger("savedTrigger");
         });
     }
 }
