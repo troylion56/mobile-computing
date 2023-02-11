@@ -2,10 +2,12 @@
   <packages>
     <package>com.google.android.gms:play-services-base:18.1.0</package>
     <package>com.google.firebase:firebase-analytics:21.2.0</package>
-    <package>com.google.firebase:firebase-app-unity:10.3.0</package>
+    <package>com.google.firebase:firebase-app-unity:10.4.0</package>
     <package>com.google.firebase:firebase-auth:21.1.0</package>
-    <package>com.google.firebase:firebase-auth-unity:10.3.0</package>
-    <package>com.google.firebase:firebase-common:20.2.0</package>
+    <package>com.google.firebase:firebase-auth-unity:10.4.0</package>
+    <package>com.google.firebase:firebase-common:20.3.0</package>
+    <package>com.google.firebase:firebase-database:20.1.0</package>
+    <package>com.google.firebase:firebase-database-unity:10.4.0</package>
   </packages>
   <files />
   <settings>
