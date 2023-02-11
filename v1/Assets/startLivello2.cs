@@ -47,7 +47,7 @@ public class startLivello2 : MonoBehaviour
 
 
     IEnumerator livello_pt1(){
-        /*crea(asteronide,false,true,false,true,false);
+        crea(asteronide,false,true,false,true,false);
         yield return new WaitForSeconds(pausa);
         crea(asteronide,false,true,false,true,false);
         yield return new WaitForSeconds(pausa);
@@ -77,7 +77,7 @@ public class startLivello2 : MonoBehaviour
         crea(asteronide,false,false,false,true,false);
         yield return new WaitForSeconds(pausa);
         crea(asteronide,false,false,false,true,true);
-        crea(collBenzina,false,false,true,false,false);*/
+        crea(collBenzina,false,false,true,false,false);
         yield return new WaitForSeconds(pausa*10);
         nemico1.SetActive(true);
         f1=true;
