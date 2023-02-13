@@ -17,20 +17,21 @@ public class inventory : MonoBehaviour
     public gestoreVita vita;
     public shake cameraShake;
     public Animator player;
-    public Transform posizione;
 
 
     public void Update() {
-
+        /* fine livello */
         if(gameController.fineLiv && transform.position.y < 7) {
             transform.position = new Vector2(transform.position.x, transform.position.y + 0.4f);
             Debug.Log("Sei nella parte dove il player dovrebbe volare in alto perchè hai finito il livello");
         }
-
         if(transform.position.y > 7) {
-            Destroy(gameObject);
+            Destroy(gameObject);            // distruggi se sale oltre lo schermo
         }
+
+        
     }
+
 
     // Start is called before the first frame update
     void Start()

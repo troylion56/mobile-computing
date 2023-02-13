@@ -4903,7 +4903,7 @@ PrefabInstance:
     - target: {fileID: 7444645285609643843, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
       propertyPath: nemico
       value: 
-      objectReference: {fileID: 3402212365855453830, guid: e3184efb11a4ae9449f36d35a10f5bac, type: 3}
+      objectReference: {fileID: 1113272895072128976, guid: 35c9a459b07169a48b0e5a45f6a79487, type: 3}
     - target: {fileID: 7444645285609643843, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
       propertyPath: stella1
       value: 
@@ -5681,6 +5681,7 @@ GameObject:
   - component: {fileID: 1644977015}
   - component: {fileID: 1644977016}
   - component: {fileID: 1644977017}
+  - component: {fileID: 1644977018}
   m_Layer: 5
   m_Name: benzina
   m_TagString: Untagged
@@ -5774,6 +5775,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   benzina: {fileID: 1644977016}
+--- !u!114 &1644977018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644977014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8347e259b58121d4e968c21efc8ff4d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transizione: {fileID: 999440371}
+  benzina: {fileID: 1644977016}
+  posizione: {fileID: 1862041158}
 --- !u!1 &1654804397
 GameObject:
   m_ObjectHideFlags: 0
@@ -6752,6 +6768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transizione: {fileID: 999440371}
   benzina: {fileID: 1644977016}
+  posizione: {fileID: 1862041158}
 --- !u!1 &1869080734
 GameObject:
   m_ObjectHideFlags: 0

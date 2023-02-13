@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class gestoreBenzina : MonoBehaviour
 {
     public Slider benzina;
+    public static bool finita;
     void Start()
     {
+        finita = false;
         benzina.value=100;
     }
 
@@ -21,6 +23,7 @@ public class gestoreBenzina : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Q)) {
             benzina.value=0;
+            finita = true;
         }
 
 

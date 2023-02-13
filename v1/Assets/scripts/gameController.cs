@@ -25,9 +25,15 @@ public class gameController : MonoBehaviour{
         }
     }
 
+    IEnumerator wait() {
+        yield return new WaitForSeconds(2f);
+        Debug.Log("Sstai aspettando un po' di secondi");
+    }
+
 
 
     public void fineLivello (){
+        StartCoroutine(wait());         // aspetti qualche secondo che il player cada
         gameController.pausa=true;
         gameController.fineLiv=true;
         Time.timeScale=0f;
