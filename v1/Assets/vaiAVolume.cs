@@ -7,16 +7,28 @@ public class vaiAVolume : MonoBehaviour
 {
     public Button vaiVolume;
     public Animator animaz;             // l'animazione del pannello del volume
+    public static bool isVolume;
 
     /* devi far partire l'animazione del pannello del volume quando premi il bottone che va lì */
     // Update is called once per frame
+    
     public void Start() {
-        animaz = GetComponent<Animation()>;
+        vaiVolume.interactable = true;
+        
     }
-    public vaiAVolume() {
+
+    public void pannVolume() {
         // setta il trigger che fa partire il menu del volume
         animaz.SetTrigger("vol");
+        StartCoroutine(aspetta());
+        isVolume = true;
     }
+
+IEnumerator aspetta() {
+    yield return new WaitForSeconds(0.7f);
+    Debug.Log("sei nella coroutine");
+
+}
 
 
 }
