@@ -17,18 +17,19 @@ public class vaiAVolume : MonoBehaviour
         
     }
 
-    public void pannVolume() {
+    public void panVolume() {
         // setta il trigger che fa partire il menu del volume
-        animaz.SetTrigger("vol");
-        StartCoroutine(aspetta());
+        animaz.SetBool("volu",true);           // fai partire la transizione
         isVolume = true;
     }
 
-IEnumerator aspetta() {
-    yield return new WaitForSeconds(0.7f);
-    Debug.Log("sei nella coroutine");
+    public void torna() {
+        if(isVolume) {
+            animaz.SetTrigger("indietro");
+        }
+    }
 
-}
+
 
 
 }

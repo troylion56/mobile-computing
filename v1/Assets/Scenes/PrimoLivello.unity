@@ -616,7 +616,8 @@ GameObject:
   - component: {fileID: 151010742}
   - component: {fileID: 151010741}
   - component: {fileID: 151010740}
-  m_Layer: 0
+  - component: {fileID: 151010744}
+  m_Layer: 5
   m_Name: back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -641,7 +642,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.29, y: 2.83}
+  m_AnchoredPosition: {x: -1.5, y: 2.98}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &151010740
@@ -687,7 +688,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 151010741}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 151010744}
+        m_TargetAssemblyTypeName: backPausePanel, Assembly-CSharp
+        m_MethodName: clicca
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &151010741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,6 +739,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151010738}
   m_CullTransparentMesh: 1
+--- !u!114 &151010744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151010738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877ffe59c470b0243ab99825eac60f95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  back: {fileID: 1720967554}
+  indietro: {fileID: 151010740}
 --- !u!1 &151100283
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,6 +958,8 @@ GameObject:
   m_Component:
   - component: {fileID: 193624496}
   - component: {fileID: 193624497}
+  - component: {fileID: 193624500}
+  - component: {fileID: 193624499}
   m_Layer: 0
   m_Name: pannello pausa
   m_TagString: Untagged
@@ -1006,6 +1035,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!111 &193624499
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193624495}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: b0ca99df2a9aa8948a3591c304ba9444, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &193624500
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193624495}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b8c63a51f92623f48a4a859649656895, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &200117928
 GameObject:
   m_ObjectHideFlags: 0
@@ -5708,8 +5772,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.23391818}
-  m_SizeDelta: {x: 1080, y: 2280}
+  m_AnchoredPosition: {x: -0.0613, y: -0.0328}
+  m_SizeDelta: {x: 983.4648, y: 1390.2478}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1237888322
 MonoBehaviour:
@@ -6103,7 +6167,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1346849090}
         m_TargetAssemblyTypeName: vaiAVolume, Assembly-CSharp
-        m_MethodName: pannVolume
+        m_MethodName: panVolume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8088,6 +8152,7 @@ GameObject:
   - component: {fileID: 1720967552}
   - component: {fileID: 1720967554}
   - component: {fileID: 1720967553}
+  - component: {fileID: 1720967555}
   m_Layer: 0
   m_Name: pannello volume
   m_TagString: Untagged
@@ -8104,7 +8169,7 @@ Transform:
   m_GameObject: {fileID: 1720967550}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2300, y: 0, z: 0}
-  m_LocalScale: {x: 126.46875, y: 145.35, z: 228}
+  m_LocalScale: {x: 125.20406, y: 159.885, z: 228}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 670377672}
@@ -8175,7 +8240,7 @@ Animation:
   m_GameObject: {fileID: 1720967550}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: c0d3de41d7b888c48a19b0eac88a2580, type: 2}
+  m_Animation: {fileID: 7400000, guid: 22f408ca2a57be24cb8b8d173e22515d, type: 2}
   m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1
@@ -8191,9 +8256,9 @@ Animator:
   m_GameObject: {fileID: 1720967550}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 46a5a70f5e2ab7f4994bbfc7eca7d08f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 72f8dac8ed7ebd049a91a7ed9b463f42, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -8201,6 +8266,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1720967555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720967550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f05478fe13fb3b24898d9417e70cfc04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorri: {fileID: 1720967554}
 --- !u!1 &1731549977
 GameObject:
   m_ObjectHideFlags: 0
@@ -8480,8 +8558,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 108.5}
-  m_SizeDelta: {x: 0, y: -217}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -15.5, y: -54.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1768361521
 MonoBehaviour:

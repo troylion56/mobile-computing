@@ -14,5 +14,12 @@ public class menuPausa : MonoBehaviour
         if(vaiAVolume.isVolume) {
             aaa.SetBool("volume",true);
         }
+        if(backPausePanel.backPan) {
+            aaa.SetBool("volume",false);
+        }
+        if(backPausePanel.backPan) {
+            aaa.SetTrigger("pannADx");
+        }
+
     }
 }
