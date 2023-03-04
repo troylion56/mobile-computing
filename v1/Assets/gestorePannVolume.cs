@@ -10,6 +10,9 @@ public class gestorePannVolume : MonoBehaviour
         if(vaiAVolume.isVolume) {           // cioè se hai cliccato per farlo apparire
             scorri.SetTrigger("volu");
         }
+        if(backPausePanel.backPan) {
+            scorri.SetTrigger("voluBack");
+        }
     }
     
 }

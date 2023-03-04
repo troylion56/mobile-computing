@@ -17,6 +17,7 @@ public class backPausePanel : MonoBehaviour
     public void clicca() {
         back.SetTrigger("voluBack");
         backPan = true;
+        
     }
 
 }

@@ -8,6 +8,16 @@ public class mettiPlay : MonoBehaviour
 {
     public Animator transizione;
     public Button pulsanteRazzo;
+    public static bool isPlay;
+
+    public void Update() {
+        if(gameController.pausa) {
+            isPlay = false;
+        }
+        if(!gameController.pausa) {
+            isPlay = true;
+        }
+    }
         public void play(){
         gameController.pausa=false;
         Time.timeScale=1f;
