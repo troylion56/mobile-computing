@@ -22,15 +22,13 @@ public class menuPausa : MonoBehaviour
         }
         if(backPausePanel.backPan) {
             aaa.SetTrigger("triggerASx");
-            // StartCoroutine(animationDelay1());
+        }
+        if(!backPausePanel.backPan) {
+            aaa.SetTrigger("triggerInPos");
         }
 
-        if(mettiPlay.isPlay) {
-            isPausa = false;
-        }
-        if(mettiPlay.isPlay) {
-            isPausa = true;
-        }
+
+        
 
     }
 
@@ -39,10 +37,6 @@ public class menuPausa : MonoBehaviour
         Time.timeScale = 0f;
         aaa.SetTrigger("triggerInPos");
     }
-    public IEnumerator animationDelay1() {
-        yield return new WaitForSeconds(0.1f);
-        Time.timeScale = 0f;
-        aaa.SetTrigger("triggerASx");
-    }
+    
 
 }

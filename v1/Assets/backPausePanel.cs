@@ -14,6 +14,12 @@ public class backPausePanel : MonoBehaviour
 
     }
 
+    public void Update () {
+        if(menuPausa.isPausa || !gameController.pausa) {
+            backPan = false;
+        }
+    }
+
     public void clicca() {
         back.SetTrigger("voluBack");
         backPan = true;
