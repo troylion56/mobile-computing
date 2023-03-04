@@ -10,10 +10,7 @@ public class backPausePanel : MonoBehaviour
     public Button indietro;
     public static bool backPan;
 
-    public void Start() {
-
-    }
-
+    
     public void Update () {
         if(menuPausa.isPausa || !gameController.pausa) {
             backPan = false;
@@ -23,6 +20,7 @@ public class backPausePanel : MonoBehaviour
     public void clicca() {
         back.SetTrigger("voluBack");
         backPan = true;
+        Debug.Log("volume indietro");
         
     }
 
