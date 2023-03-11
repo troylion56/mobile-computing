@@ -22,7 +22,7 @@ public class contollerPlayfab : MonoBehaviour
         erroeReg.text="";
         erroreLog.text="";
     } 
-
+/*
     public void reggistrati() {
         var registerRequest = new RegisterPlayFabUserRequest {
             Username = usernameReg.text, 
@@ -31,7 +31,7 @@ public class contollerPlayfab : MonoBehaviour
         };
         PlayFabClientAPI.RegisterPlayFabUser(registerRequest, RegisterSuccess, RegisterNonOk);
     }
-
+*/
 
     public void RegisterSuccess(RegisterPlayFabUserResult result) {
         Debug.Log("a pazzo");
