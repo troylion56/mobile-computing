@@ -31,7 +31,7 @@ public class contollerPlayfab : MonoBehaviour
         };
         PlayFabClientAPI.RegisterPlayFabUser(registerRequest, RegisterSuccess, RegisterNonOk);
     }
-*/
+*/  
 
     public void RegisterSuccess(RegisterPlayFabUserResult result) {
         Debug.Log("a pazzo");
