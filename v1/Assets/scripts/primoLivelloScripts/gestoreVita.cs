@@ -14,6 +14,8 @@ public class gestoreVita : MonoBehaviour
     public Animator animator;
     public static bool morto;
 
+    [SerializeField] private AudioSource mortoSound;
+
     public void Start() {
         morto = false;
         animator = GetComponent<Animator>();
@@ -28,6 +30,7 @@ public class gestoreVita : MonoBehaviour
         }
 
         if(vita.value == 0) {
+            mortoSound.Play();
             morto = true;
             // StartCoroutine(destructionDelay());
             Debug.Log("vita scesa a zero");
