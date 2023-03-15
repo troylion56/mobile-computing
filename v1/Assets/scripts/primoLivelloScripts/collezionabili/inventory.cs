@@ -25,7 +25,7 @@ public class inventory : MonoBehaviour
     public void Update() {
         /* fine livello */
         if(gameController.fineLiv && transform.position.y < 7) {
-            haivinto.Play();
+//TODO            haivinto.Play();
             transform.position = new Vector2(transform.position.x, transform.position.y + 0.4f);
             Debug.Log("Sei nella parte dove il player dovrebbe volare in alto perchè hai finito il livello");
         }

@@ -19,6 +19,11 @@ public class startLivello2 : MonoBehaviour
     private float pausa=0.40f;
     public GameObject nemico1,nemico2,nemico3;
     bool f1=false,f2=false,f3=false,f4=false;
+    public gameController end;
+
+    private void Start() {
+        StartCoroutine(livello_pt1());
+    }
 
     private void Update() {
         if(nemico1!=null&&f1){
@@ -41,10 +46,6 @@ public class startLivello2 : MonoBehaviour
             StartCoroutine(livello_pt3());  
         }
     }
-    public void onClick(){
-        StartCoroutine(livello_pt1());
-    }
-
 
     IEnumerator livello_pt1(){
         crea(asteronide,false,true,false,true,false);
@@ -230,7 +231,8 @@ public class startLivello2 : MonoBehaviour
         crea(asteronide,false,true,false,true,false);
         yield return new WaitForSeconds(pausa);
         crea(asteronide,true,false,false,false,true);
-        yield return new WaitForSeconds(pausa);
+        yield return new WaitForSeconds(pausa*12);
+        end.fineLivello();
     }
     IEnumerator encounter_1(){
         while (nemico1!=null){

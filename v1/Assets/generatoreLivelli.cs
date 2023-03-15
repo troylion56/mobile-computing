@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class generatoreLivelli : MonoBehaviour
 {
-
     public Transform sp1;
     public Transform sp2;
     public Transform sp3;
@@ -20,9 +19,10 @@ public class generatoreLivelli : MonoBehaviour
     private float pausa=0.40f;
     public GameObject nemico1,nemico2,nemico3;
     private bool f1=false,f2=false;          //flag di start per le sezioni del livello
+    public gameController end;
 
     void Start(){
-        
+        StartCoroutine(livello_pt1());
     }
 
     private void Update() {
@@ -37,10 +37,6 @@ public class generatoreLivelli : MonoBehaviour
             f2=true;
             StartCoroutine(livello_pt3());
         }
-    }
-
-    public void onClick(){
-        StartCoroutine(livello_pt1());
     }
 
     IEnumerator livello_pt1(){
@@ -207,7 +203,8 @@ public class generatoreLivelli : MonoBehaviour
         crea(asteronide,true,false,false,false,false);
         yield return new WaitForSeconds(pausa);
         crea(asteronide,false,false,false,true,true);
-        yield return new WaitForSeconds(pausa);
+        yield return new WaitForSeconds(pausa*12);
+        end.fineLivello();
     }
     private void crea(GameObject oggetto,bool s1,bool s2,bool s3,bool s4,bool s5){
         /*funzione di supporto per istanziare un oggetto*/
