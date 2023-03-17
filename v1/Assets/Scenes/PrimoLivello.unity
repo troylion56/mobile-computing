@@ -1585,7 +1585,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65b0bd627e0b4c40a25a8085ade050e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
   anim: {fileID: 0}
 --- !u!114 &380799320
 MonoBehaviour:
@@ -2740,7 +2739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65b0bd627e0b4c40a25a8085ade050e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
   anim: {fileID: 0}
 --- !u!114 &626036077
 MonoBehaviour:
@@ -5508,7 +5506,7 @@ RectTransform:
   m_GameObject: {fileID: 1366387399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 604762216}
@@ -8359,7 +8357,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65b0bd627e0b4c40a25a8085ade050e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 1883668944}
   anim: {fileID: 1366387405}
 --- !u!1 &1889513313
 GameObject:

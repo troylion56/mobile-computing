@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class pulsanteEsci : MonoBehaviour
 {
-    public Button button;
     public Animator anim;
 
     public void clicca() {
