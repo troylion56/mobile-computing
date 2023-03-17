@@ -11,7 +11,7 @@ public class mettiInPausa : MonoBehaviour
     [SerializeField] private AudioSource pausaSound;
 
     public void giocoInPausa(){
-        pausaSound.Play();
+//        pausaSound.Play();
         gameController.pausa=true;
         Time.timeScale=0f;
         pulsanteRazzo.interactable=false;

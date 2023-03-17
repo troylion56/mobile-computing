@@ -6,22 +6,4 @@ using UnityEngine.UI;
 
 public class backPausePanel : MonoBehaviour
 {
-    public Animator back;
-    public Button indietro;
-    public static bool backPan;
-
-    
-    public void Update () {
-        if(menuPausa.isPausa || !gameController.pausa) {
-            backPan = false;
-        }
-    }
-
-    public void clicca() {
-        back.SetTrigger("voluBack");
-        backPan = true;
-        Debug.Log("volume indietro");
-        
-    }
-
 }
