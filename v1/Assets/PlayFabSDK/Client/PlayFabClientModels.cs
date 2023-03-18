@@ -5689,6 +5689,10 @@ namespace PlayFab.ClientModels
         private object value1;
         private object value2;
 
+        public RegisterPlayFabUserRequest()
+        {
+        }
+
         public RegisterPlayFabUserRequest(object value1, object value2)
         {
             this.value1 = value1;

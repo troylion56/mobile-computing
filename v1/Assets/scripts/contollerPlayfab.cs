@@ -22,16 +22,16 @@ public class contollerPlayfab : MonoBehaviour
         erroeReg.text="";
         erroreLog.text="";
     } 
-/*
+    
     public void reggistrati() {
-        var registerRequest = new RegisterPlayFabUserRequest {
+        var registerRequest = new RegisterPlayFabUserRequest{
             Username = usernameReg.text, 
             Email = emailReg.text, 
             Password= passwordReg.text
         };
         PlayFabClientAPI.RegisterPlayFabUser(registerRequest, RegisterSuccess, RegisterNonOk);
     }
-*/  
+  
 
     public void RegisterSuccess(RegisterPlayFabUserResult result) {
         Debug.Log("a pazzo");
