@@ -45,7 +45,7 @@ public class contollerPlayfab : MonoBehaviour
     public void RegisterNonOk(PlayFabError error) {
         Debug.Log("errore registrazione");
         erroeReg.text = error.GenerateErrorReport();
-        transOkReg.SetTrigger("errorTrigger1");
+        transErrReg.SetTrigger("registrazioneNonRiuscita");
     }
 
     public void accedi() {
