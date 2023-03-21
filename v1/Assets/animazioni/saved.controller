@@ -62,7 +62,7 @@ AnimatorController:
   m_Name: saved
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: savedTrigger
+  - m_Name: savedTrigger1
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -90,7 +90,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: savedTrigger
+    m_ConditionEvent: savedTrigger1
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3449026553055343000}

@@ -9,6 +9,8 @@ public class contollerPlayfab : MonoBehaviour
 {
     [SerializeField] GameObject accediTab , registaTab;
     public Text usernameReg, emailReg, passwordReg, eamilLog, passwordLog, erroreLog, erroeReg;
+
+    public Animator trasErrAccedi, transErrReg, transOkAccedi, transOkReg;
     public void RegistaTab() {
         registaTab.SetActive(true);
         accediTab.SetActive(false);
@@ -34,13 +36,16 @@ public class contollerPlayfab : MonoBehaviour
   
 
     public void RegisterSuccess(RegisterPlayFabUserResult result) {
-        Debug.Log("a pazzo");
+        Debug.Log("ok registrazione");
         erroeReg.text="";
         erroreLog.text="";
+        transOkReg.SetTrigger("savedTrigger1");
     } 
 
     public void RegisterNonOk(PlayFabError error) {
+        Debug.Log("errore registrazione");
         erroeReg.text = error.GenerateErrorReport();
+        transOkReg.SetTrigger("errorTrigger1");
     }
 
     public void accedi() {
@@ -49,13 +54,16 @@ public class contollerPlayfab : MonoBehaviour
     }
 
     public void LoginOk(LoginResult result){
-        Debug.Log("a matto");
+        Debug.Log("ok accedi");
         erroeReg.text="";
         erroreLog.text="";
+        transOkAccedi.SetTrigger("savedTrigger");
     }
 
     public void LoginNonOk(PlayFabError error) {
+        Debug.Log("errore accedi");
         erroreLog.text = error.GenerateErrorReport();
+        trasErrAccedi.SetTrigger("errorTrigger");
     } 
 
 }
