@@ -15,6 +15,6 @@ public class mettiInPausa : MonoBehaviour
         gameController.pausa=true;
         Time.timeScale=0f;
         pulsanteRazzo.interactable=false;
-        transizione.SetTrigger("triggerApriPausa");
+        transizione.SetTrigger("apriPausa");
     }
 }

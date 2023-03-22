@@ -18,6 +18,6 @@ public class mettiPlay : MonoBehaviour
         {
             pulsanteRazzo.interactable=true;
         }
-        transizione.SetTrigger("triggerChiudiPausa");
+        transizione.SetTrigger("chiudiPausa");
     }
 }
