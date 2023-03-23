@@ -1731,8 +1731,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 369655209}
-        m_TargetAssemblyTypeName: scriptVaiSecondoLivello, Assembly-CSharp
-        m_MethodName: vaiSecondolivello
+        m_TargetAssemblyTypeName: vaiASecondoLivello, Assembly-CSharp
+        m_MethodName: vaiALivello2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1789,11 +1789,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 369655204}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9c2c18ccf8d6df43954f71c2292f389, type: 3}
+  m_Script: {fileID: 11500000, guid: 27d8a9173af2e974ebe99caa95813683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trans: {fileID: 0}
-  time: 1
 --- !u!1 &380799317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,7 +1804,7 @@ GameObject:
   - component: {fileID: 380799322}
   - component: {fileID: 380799321}
   - component: {fileID: 380799320}
-  - component: {fileID: 380799319}
+  - component: {fileID: 380799324}
   m_Layer: 5
   m_Name: pulsante esci
   m_TagString: Untagged
@@ -1834,20 +1832,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -81}
   m_SizeDelta: {x: 248.3, y: 101.2}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &380799319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380799317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f65b0bd627e0b4c40a25a8085ade050e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  menu: {fileID: 0}
 --- !u!114 &380799320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1892,9 +1876,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 380799319}
-        m_TargetAssemblyTypeName: tornaSchermataPrincipale, Assembly-CSharp
-        m_MethodName: vaiSchermataIniziale
+      - m_Target: {fileID: 380799324}
+        m_TargetAssemblyTypeName: esciDaLvlFinito, Assembly-CSharp
+        m_MethodName: tornaALivelli
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1942,6 +1926,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380799317}
   m_CullTransparentMesh: 1
+--- !u!114 &380799324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380799317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7deb84d02b44574281a5615e9480475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &393494203 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7444645285380952849, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}

@@ -7,6 +7,7 @@ public class ricaricaLivello : MonoBehaviour
 {
     public void ricLivello (){
         gameController.pausa=false;
+        gameController.fineLiv=false;
         gameController.s1=false;
         gameController.s2=false;
         gameController.s3=false;
