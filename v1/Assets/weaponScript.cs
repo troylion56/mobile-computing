@@ -28,7 +28,7 @@ public class weaponScript : MonoBehaviour
 
     public void Update() {
         rate += Time.deltaTime;
-        if(rate > timeRicarica && colpiDisponibili < 3) {
+        if(rate > timeRicarica && colpiDisponibili <= 3) {
             colpiDisponibili ++;
             cambiaSprite();
             rate = 0;       // faccio riniziare il tempo di ricarica
