@@ -22,7 +22,7 @@ public class generatoreLivelli : MonoBehaviour
     public gameController end;
 
     void Start(){
-        StartCoroutine(livello_pt3());
+        StartCoroutine(livello_pt1());
     }
 
     private void Update() {
@@ -169,7 +169,7 @@ public class generatoreLivelli : MonoBehaviour
     }
 
     IEnumerator livello_pt3(){
-    /*    yield return new WaitForSeconds(pausa);
+        yield return new WaitForSeconds(pausa);
         crea(asteronide,true,false,true,false,false);
         yield return new WaitForSeconds(pausa);
         crea(asteronide,false,false,true,false,false);
@@ -199,7 +199,7 @@ public class generatoreLivelli : MonoBehaviour
         crea(asteronide,false,true,false,false,false);
         yield return new WaitForSeconds(pausa);
         crea(asteronide,false,false,false,true,false);
-        yield return new WaitForSeconds(pausa);*/
+        yield return new WaitForSeconds(pausa);
         crea(asteronide,true,false,false,false,false);
         yield return new WaitForSeconds(pausa);
         crea(asteronide,false,false,false,true,true);
