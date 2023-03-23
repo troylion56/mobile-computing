@@ -7,23 +7,32 @@ using PlayFab.ClientModels;
 
 public class contollerPlayfab : MonoBehaviour
 {
-    [SerializeField] GameObject accediTab , registaTab;
-    public Text usernameReg, emailReg, passwordReg, eamilLog, passwordLog, erroreLog, erroeReg;
+    [SerializeField] GameObject accediTab , registaTab, backupTab;
+    public Text usernameReg, emailReg, passwordReg, eamilLog, passwordLog, erroreLog, erroeReg, emailBackup;
 
-    public Animator trasErrAccedi, transErrReg, transOkAccedi, transOkReg;
+    public Animator trasErrAccedi, transErrReg, transOkAccedi, transOkReg, transOkBackup, transErrorBackup;
     public void RegistaTab() {
         registaTab.SetActive(true);
         accediTab.SetActive(false);
+        backupTab.SetActive(false);
         erroeReg.text="";
         erroreLog.text="";
     } 
 
     public void AccediTab() {
         accediTab.SetActive(true);
-        registaTab.SetActive(false);    
+        registaTab.SetActive(false);
+        backupTab.SetActive(false);    
         erroeReg.text="";
         erroreLog.text="";
-    } 
+    }
+
+    public void BackupTab() {
+        accediTab.SetActive(false);
+        registaTab.SetActive(false);
+        backupTab.SetActive(true);
+
+    }
     
     public void reggistrati() {
         var registerRequest = new RegisterPlayFabUserRequest{
@@ -64,6 +73,22 @@ public class contollerPlayfab : MonoBehaviour
         Debug.Log("errore accedi");
         erroreLog.text = error.GenerateErrorReport();
         trasErrAccedi.SetTrigger("errorTrigger");
-    } 
+    }
 
+    public void RecoverPassword() {
+            var request = new SendAccountRecoveryEmailRequest {
+                Email = emailBackup.text,
+                TitleId = "3E34E",
+            };
+            PlayFabClientAPI.SendAccountRecoveryEmail(request, ResultCallback, ErrorCallback);
+        }
+    private void ErrorCallback(PlayFabError error) {
+        Debug.LogError(error.ErrorMessage);
+        transErrorBackup.SetTrigger("erroreRecuperoTrigger");
+    }
+
+    private void ResultCallback(SendAccountRecoveryEmailResult result) {
+        Debug.Log("Please check your email");
+        transOkBackup.SetTrigger("okRecuperoTrigger");
+    }
 }
