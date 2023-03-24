@@ -22,6 +22,7 @@ public class enemyScript : ostacoli
     /* vita */
     public int health;
     public int danno;
+    public int dannoRazzo;
     public GameObject barraHP;
     public Sprite health0, health1, health2, health3, health4;
     public SpriteRenderer immagine;
@@ -35,6 +36,7 @@ public class enemyScript : ostacoli
 
         health = 4;
         danno = 1;
+        dannoRazzo = 4;
 
         shootRate = 0.6f;
 
@@ -115,7 +117,7 @@ public class enemyScript : ostacoli
     private void impatto (proiettili proiettile){
         if (proiettile is razzoShoting) {
             Debug.Log("missile colpisce nemico");
-            takeDamage(danno);
+            takeDamage(dannoRazzo);
         }
         if (proiettile is bulletScript) {
             Debug.Log("player colpisce nemico");
