@@ -31,18 +31,17 @@ public class bulletScript : proiettili
         }
         if(morto) {
             StartCoroutine(destructionDelay());                 // sei morto, parte l'esplosione
-
         }
 
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo) 
     {
-        /* if (hitInfo.CompareTag("ostacoli"))
+        if (hitInfo.CompareTag("ostacoli"))
         {
             morto = true;
             collisioneOstacoli(hitInfo.GetComponent<ostacoli>());
-        } */
+        }
 
         if (hitInfo.CompareTag("proiettili"))
         {
