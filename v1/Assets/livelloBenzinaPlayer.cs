@@ -7,7 +7,6 @@ public class livelloBenzinaPlayer : MonoBehaviour
 {
     public Animator transizione; 
     public Slider benzina;
-    public Transform posizione;
 
     // Update is called once per frame
     void Update()

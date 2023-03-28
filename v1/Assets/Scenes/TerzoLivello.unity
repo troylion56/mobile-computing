@@ -1932,7 +1932,6 @@ MonoBehaviour:
   colore: {fileID: 1136319209}
   danno: 20
   animator: {fileID: 432276755}
-  mortoSound: {fileID: 0}
 --- !u!114 &432276757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2757,9 +2756,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8347e259b58121d4e968c21efc8ff4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transizione: {fileID: 0}
+  transizione: {fileID: 1493523487}
   benzina: {fileID: 557802358}
-  posizione: {fileID: 0}
 --- !u!114 &557802357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6262,7 +6260,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transizione: {fileID: 1493523487}
   benzina: {fileID: 557802358}
-  posizione: {fileID: 1636627798}
 --- !u!95 &1636627790
 Animator:
   serializedVersion: 4
