@@ -10,8 +10,12 @@ public class pulsanteEsci : MonoBehaviour
 
     public void clicca() {
         // se clicchi fai partire l'animazione che tin chiede se vuoi veramente uscire
-        menu.SetActive(true);
-        anim.SetTrigger("apri");
-        Debug.Log("hai cliccato il pulsante esci!");
+        if(menu!=null){
+            menu.SetActive(true);
+        }
+        if (anim!=null){
+            anim.SetTrigger("apri");
+            Debug.Log("prova pulsante esci");
+        }
     }
 }

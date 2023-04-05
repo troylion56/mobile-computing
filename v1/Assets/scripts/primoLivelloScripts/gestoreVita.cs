@@ -14,6 +14,8 @@ public class gestoreVita : MonoBehaviour
     public Animator animator;
     public static bool morto;
 
+    public Animator animPlayer;
+
  //TODO   [SerializeField] private AudioSource mortoSound;
 
     public void Start() {
@@ -37,8 +39,7 @@ public class gestoreVita : MonoBehaviour
         }
 
         if(morto) {
-            Debug.Log("coroutine morte player attivata");
-            morto = false;
+            animPlayer.SetTrigger("dead");
         }
 
         if (Input.GetKeyDown(KeyCode.P))
@@ -46,10 +47,6 @@ public class gestoreVita : MonoBehaviour
             vita.value=0;
         } 
     }
-    
-
-    
-
   public void setMaxHp(int maxHp){
       /*setta il valore massimo dello slider vita a maxHp*/
       vita.maxValue=maxHp;

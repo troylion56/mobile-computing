@@ -4626,7 +4626,6 @@ GameObject:
   m_Component:
   - component: {fileID: 933981698}
   - component: {fileID: 933981697}
-  - component: {fileID: 933981696}
   - component: {fileID: 933981695}
   - component: {fileID: 933981693}
   - component: {fileID: 933981692}
@@ -4655,7 +4654,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transizione: {fileID: 1844408212}
   benzina: {fileID: 422055497}
-  posizione: {fileID: 0}
 --- !u!95 &933981690
 Animator:
   serializedVersion: 4
@@ -4756,19 +4754,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.609462, y: 6.183614}
   m_EdgeRadius: 0
---- !u!114 &933981696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 933981688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88a68d59e0103a94d974f60ac2b3ef4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vita: {fileID: 0}
 --- !u!212 &933981697
 SpriteRenderer:
   m_ObjectHideFlags: 0
