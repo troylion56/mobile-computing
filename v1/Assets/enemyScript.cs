@@ -85,7 +85,6 @@ public class enemyScript : ostacoli
                 enemyShoot();
             }
         }
-        Debug.Log("posizione: "+transform.position.x);
 
         if(morto) {
             StartCoroutine(destructionDelay());                 // sei morto, parte l'esplosione

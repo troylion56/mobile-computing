@@ -41,7 +41,7 @@ public class gestoreTestoTutorial : MonoBehaviour
     private bool primaMorte=true;          //flag per gestire il testo dopo la prima morte del player contro il nemico     default:true
 
     private void Start() {
-        contatoreDialoghi=60;
+        contatoreDialoghi=0;
     }
 
     void Update(){

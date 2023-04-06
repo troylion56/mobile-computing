@@ -15,7 +15,6 @@ public class livelloBenzinaPlayer : MonoBehaviour
         {
             gameController.pausa=true;
             Time.timeScale=0f;
-            Debug.Log("sesso");
             cadi();
             StartCoroutine(wait());
             transizione.SetTrigger("triggerMorte");

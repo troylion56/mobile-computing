@@ -37,59 +37,54 @@ public class bulletScript : proiettili
 
     void OnTriggerEnter2D(Collider2D hitInfo) 
     {
-        if (hitInfo.CompareTag("ostacoli"))
-        {
+        if (hitInfo.CompareTag("ostacoli")) {
             morto = true;
             collisioneOstacoli(hitInfo.GetComponent<ostacoli>());
         }
 
-        if (hitInfo.CompareTag("proiettili"))
-        {
+        if (hitInfo.CompareTag("proiettili")){
             collisioneProiettili (hitInfo.GetComponent<proiettili>(),hitInfo);
         }
 
-        if (hitInfo.CompareTag("nemico"))
-        {
+        if (hitInfo.CompareTag("nemico")){
             morto = true;
             collisioneNemici (hitInfo.GetComponent<enemyScript>(),hitInfo);
         }
 
     }
 
+    /*caso di collisone con un ostacolo*/
     private void collisioneOstacoli (ostacoli ostacolo){
-        if (ostacolo is enemyScript || ostacolo is asteroide)
-        {
+        if (ostacolo is asteroide){
             morto = true;
-            Debug.Log("Shot ha colpito il nemico ed è stato distrutto");
-            animator.SetTrigger("hit");
+            StartCoroutine(destructionDelay());
+            Debug.Log("Shot ha colpito un asteroide ed è stato distrutto");
         }
-
-        
     }
 
+    /*caso di collisione con un razzo sparato dal player*/
     private void collisioneProiettili (proiettili proiettile, Collider2D collisione){
-        if (proiettile is razzoShoting)
-        {
+        if (proiettile is razzoShoting){
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(),collisione);  
         }
     }
 
+    /*caso di collisione con un nemico*/
     private void collisioneNemici (enemyScript enemy, Collider2D collisione) {
         if(enemy is enemyScript) {
             morto = true;
             StartCoroutine(destructionDelay());
             Debug.Log("Shot ha colpito il nemico ed è stato distrutto");
-            animator.SetTrigger("hit");
         }
     }
 
     /* coroutine per la gestione dell'animazione dell'esplosione */
     IEnumerator destructionDelay() {
+        animator.SetTrigger("hit");
         yield return new WaitForSeconds(0.2f);
         Destroy(gameObject);            // l'esplosione è finita, muori
         yield return null;
         morto = false;
-        Debug.Log("coroutine attivata");
     }
 
 
@@ -100,7 +95,4 @@ public class bulletScript : proiettili
             Destroy(gameObject);
         }
     }
-
-    
-
 }

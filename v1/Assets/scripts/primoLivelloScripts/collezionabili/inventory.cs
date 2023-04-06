@@ -17,7 +17,6 @@ public class inventory : MonoBehaviour
     public gestoreVita vita;
     public shake cameraShake;
     public Animator player;
-
     [SerializeField] private AudioSource raccorta, haivinto, proiettileDanno, meteoriti;
 
 
@@ -57,9 +56,11 @@ public class inventory : MonoBehaviour
         }
 
         if(collider2D.CompareTag("proiettili")) {                 // caso di collisione con proettili nemico
-        proiettileDanno.Play();
-            vita.danneggia(1);
-            StartCoroutine(cameraShake.Shaking(.10f, .05f));
+            if (!(collider2D.GetComponent<proiettili>() is razzoShoting)){        
+                vita.danneggia(1);
+                StartCoroutine(cameraShake.Shaking(.10f, .05f));
+    //TODO       proiettileDanno.Play();
+            }
         }
     }
 
@@ -70,7 +71,7 @@ public class inventory : MonoBehaviour
         {
             if (canCollect is collectStellina1)
             {
-                raccorta.Play();
+ //TODO               raccorta.Play();
                 stellineTot++;
                 stella1.sprite = stellinaColore;
                 stella1GameOver.sprite =stellinaColore;
@@ -78,7 +79,7 @@ public class inventory : MonoBehaviour
             }
             else if (canCollect is collectStellina2)
             {
-                raccorta.Play();
+ //TODO               raccorta.Play();
                 stellineTot++;
                 stella2.sprite = stellinaColore;
                 stella2GameOver.sprite =stellinaColore;
@@ -86,7 +87,7 @@ public class inventory : MonoBehaviour
             }
             else if (canCollect is collectStellina3)
             {
-                raccorta.Play();
+ //TODO               raccorta.Play();
                 stellineTot++;
                 stella3.sprite = stellinaColore;
                 stella3GameOver.sprite =stellinaColore;
@@ -101,7 +102,7 @@ public class inventory : MonoBehaviour
             {
                 buttonRazzo.interactable=true;
                 razzo.stato=true;
-                Debug.Log("Ora puoi lancaira razzzzzzzziiiiiiiiiiiiiiiiiiiiiiiiiiii");
+                Debug.Log("Ora puoi lancaira razzzzzzzzi");
                 tasto.sprite = on;
             }
             else if (canCollect is collectShooting)
@@ -115,6 +116,7 @@ public class inventory : MonoBehaviour
     public IEnumerator destructionDelay() {
         yield return new WaitForSeconds(0.1f);
         Time.timeScale = 0f;
+        gameController.pausa=true;
         player.SetTrigger("dead");
         transizione.SetTrigger("triggerMorte");
         yield return new WaitForSeconds(0.6f);

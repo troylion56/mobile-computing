@@ -25,10 +25,10 @@ public class gestoreVita : MonoBehaviour
 
     public void Update() {
         if(gameController.pausa) {         // interrompi animazione se metti in pausa il gioco
-            animator.SetBool("isAlive", false);
+            //animator.SetBool("isAlive", false);
         }
         if(!gameController.pausa) {       // rimettila quando riprendi
-            animator.SetBool("isAlive", true);
+            //animator.SetBool("isAlive", true);
         }
 
         if(vita.value == 0) {
@@ -39,7 +39,7 @@ public class gestoreVita : MonoBehaviour
         }
 
         if(morto) {
-            animPlayer.SetTrigger("dead");
+            StartCoroutine(destructionDelay());
         }
 
         if (Input.GetKeyDown(KeyCode.P))
@@ -63,6 +63,15 @@ public class gestoreVita : MonoBehaviour
         vita.value = vita.value - danno;
         /*gestisce il gradiente della vita*/
         colore.color = gradiente.Evaluate(vita.normalizedValue);
-        
    }
+
+    public IEnumerator destructionDelay() {
+        yield return new WaitForSeconds(0.1f);
+        Time.timeScale = 0f;
+        gameController.pausa=true;
+        animPlayer.SetTrigger("dead");
+        transizione.SetTrigger("triggerMorte");
+        yield return new WaitForSeconds(0.6f);
+        Destroy(gameObject);
+    }
 }

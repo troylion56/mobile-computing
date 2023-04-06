@@ -35,6 +35,4 @@ public class asteroide : ostacoli
             Debug.Log("asteroide colpisce proiettile");
         }
     }
-
-
 }
