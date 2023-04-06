@@ -43,6 +43,13 @@ public class enemyShot : MonoBehaviour
             animator.SetTrigger("morto");
 
         }
+
+        if(col.CompareTag("proiettili")) {
+            morto = true;
+            Debug.Log("Proiettile nemico ha colpito un proiettile del player ed è stato distrutto");
+            animator.SetTrigger("morto");
+
+        }
     }
 
 

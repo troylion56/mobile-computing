@@ -10,6 +10,7 @@ public class bulletScript : proiettili
     public Rigidbody2D rb;
     Animator animator;
     public bool morto;
+    private bool colpitoAsteroide;
 
 
     // Start is called before the first frame update
@@ -18,11 +19,17 @@ public class bulletScript : proiettili
         morto = false;
         // pos = transform.position;
         animator = GetComponent<Animator>();
-        
 
+        colpitoAsteroide=false;
     }
     
     void Update() {
+
+        /*effetto necessario per vedere l'impatto del proiettile sui meteoriti*/
+        if (colpitoAsteroide){
+            transform.position = new Vector2 (transform.position.x, transform.position.y-2.5f*Time.deltaTime);
+        }
+
         Distruggi();            // se esce dallo schermo
         
         if(!morto) {
@@ -53,10 +60,11 @@ public class bulletScript : proiettili
 
     }
 
-    /*caso di collisone con un ostacolo*/
+    /*caso di collisone con un asteroide*/
     private void collisioneOstacoli (ostacoli ostacolo){
         if (ostacolo is asteroide){
             morto = true;
+            colpitoAsteroide=true;
             StartCoroutine(destructionDelay());
             Debug.Log("Shot ha colpito un asteroide ed è stato distrutto");
         }
@@ -64,9 +72,16 @@ public class bulletScript : proiettili
 
     /*caso di collisione con un razzo sparato dal player*/
     private void collisioneProiettili (proiettili proiettile, Collider2D collisione){
-        if (proiettile is razzoShoting){
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(),collisione);  
+       /// if (proiettile is razzoShoting){
+        //    Physics2D.IgnoreCollision(GetComponent<Collider2D>(),collisione);  
+        //}
+
+        if (proiettile is enemyShot){
         }
+            morto = true;
+            colpitoAsteroide=true;
+            StartCoroutine(destructionDelay());
+            Debug.Log("Shot ha colpito un proiettile nemico ed è stato distrutto");
     }
 
     /*caso di collisione con un nemico*/
