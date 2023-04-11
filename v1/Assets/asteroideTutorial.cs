@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class asteroideTutorial : ostacoli
 {
+    public Animator asteroide;
     // Update is called once per frame
     void Update()
     {
@@ -39,5 +40,8 @@ public class asteroideTutorial : ostacoli
         }
     }
 
+    private void OnDestroy() {
+        asteroide.SetTrigger("distrutto");
+    }
 
 }
