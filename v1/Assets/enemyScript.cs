@@ -30,7 +30,9 @@ public class enemyScript : ostacoli
     public bool morto;
 
     private void OnDestroy() {
+        if (health==0){
         Instantiate(benzina, puntoFuoco.position, puntoFuoco.rotation);
+        }
     }
 
     public void Start() {

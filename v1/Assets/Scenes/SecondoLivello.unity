@@ -700,6 +700,7 @@ GameObject:
   - component: {fileID: 271893046}
   - component: {fileID: 271893045}
   - component: {fileID: 271893047}
+  - component: {fileID: 271893048}
   m_Layer: 5
   m_Name: benzina
   m_TagString: Untagged
@@ -793,6 +794,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   benzina: {fileID: 271893045}
+--- !u!114 &271893048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271893044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8347e259b58121d4e968c21efc8ff4d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transizione: {fileID: 1005889106}
+  benzina: {fileID: 271893045}
+  player: {fileID: 730445038}
 --- !u!1 &308905460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2549,7 +2565,6 @@ GameObject:
   - component: {fileID: 730445042}
   - component: {fileID: 730445041}
   - component: {fileID: 730445040}
-  - component: {fileID: 730445039}
   - component: {fileID: 730445049}
   m_Layer: 0
   m_Name: player
@@ -2558,21 +2573,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &730445039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730445038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8347e259b58121d4e968c21efc8ff4d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transizione: {fileID: 1005889106}
-  benzina: {fileID: 271893045}
-  player: {fileID: 0}
 --- !u!95 &730445040
 Animator:
   serializedVersion: 4

@@ -26,7 +26,9 @@ public class enemyScriptDx : MonoBehaviour
     public SpriteRenderer immagine;
     
     private void OnDestroy() {
+        if (health==0){
         Instantiate(benzina, puntoFuoco.position, puntoFuoco.rotation);
+        }
     }
     
 
