@@ -88,7 +88,6 @@ public class enemyScript : ostacoli
 
         if(morto) {
             StartCoroutine(destructionDelay());                 // sei morto, parte l'esplosione
-
         }
     }
 

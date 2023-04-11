@@ -17,12 +17,10 @@ public class gestoreBenzina : MonoBehaviour
         benzina.value=benzina.value+ricarica;
     }
 
-
-
     private void Update() {
 
         if(Input.GetKeyDown(KeyCode.Q)) {
-            benzina.value=0;
+            benzina.value=2;
             finita = true;
         }
 

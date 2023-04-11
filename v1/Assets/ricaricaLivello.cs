@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ricaricaLivello : MonoBehaviour
 {
     public void ricLivello (){
+        StopAllCoroutines();
         gameController.pausa=false;
         gameController.fineLiv=false;
         gameController.s1=false;
