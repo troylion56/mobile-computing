@@ -25,6 +25,9 @@ public class enemyScriptDx : MonoBehaviour
     public Sprite health0, health1, health2, health3, health4;
     public SpriteRenderer immagine;
     
+    private void OnDestroy() {
+        Instantiate(benzina, puntoFuoco.position, puntoFuoco.rotation);
+    }
     
 
     public void Start() {

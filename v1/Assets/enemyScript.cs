@@ -29,6 +29,10 @@ public class enemyScript : ostacoli
     Animator animator;
     public bool morto;
 
+    private void OnDestroy() {
+        Instantiate(benzina, puntoFuoco.position, puntoFuoco.rotation);
+    }
+
     public void Start() {
         arrivato = false;
         dx = true;
@@ -171,7 +175,6 @@ public class enemyScript : ostacoli
     /* per far spawnare e muovere la carica di benzina quando il nemico muore */
     public void muori() {
         Debug.Log("nemico distrutto");
-        Instantiate(benzina, puntoFuoco.position, puntoFuoco.rotation);
         transform.position = new Vector2 (transform.position.x, transform.position.y - 4f*Time.deltaTime);          // muovi in basso
         if(transform.position.y < -6) {
             Destroy(gameObject);            // distruggi la tanica di benzina se sei fuori dallo schermo
