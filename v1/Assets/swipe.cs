@@ -22,27 +22,7 @@ public class swipe : MonoBehaviour
     void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.A))
-        {/*
-                    if (posizione.position.x==0)
-                    {
-                        spostamento.SetTrigger("vaiSx");
-                    }
-                    if (posizione.position.x==0.9f)
-                    {
-                        spostamento.SetTrigger("tornaDx");
-                    }
-                    if (posizione.position.x==-0.9f)
-                    {
-                        spostamento.SetTrigger("vaiSSx");
-                    }
-                    if (posizione.position.x==1.8f)
-                    {
-                        spostamento.SetTrigger("tornaDDx");
-                    }
-                    if (posizione.position.x==-1.8f)
-                    {
-                        spostamento.SetTrigger("vaiSSSx");
-                    }*/
+        {
             Debug.Log("sinistra");
             StopAllCoroutines();
             if (posIndex==0){
@@ -56,27 +36,7 @@ public class swipe : MonoBehaviour
             Debug.Log("index:"+posIndex);
         }
         if (Input.GetKeyDown(KeyCode.D))
-        {/*
-                   if (posizione.position.x==0)
-                    {
-                        spostamento.SetTrigger("vaiDx");
-                    }
-                    if (posizione.position.x==0.9f)
-                    {
-                        spostamento.SetTrigger("vaiDDx");
-                    }
-                    if (posizione.position.x==-0.9f)
-                    {
-                        spostamento.SetTrigger("tornaSx");
-                    }
-                    if (posizione.position.x==1.8f)
-                    {
-                        spostamento.SetTrigger("vaiDDDx");
-                    }
-                    if (posizione.position.x==-1.8f)
-                    {
-                        spostamento.SetTrigger("tornaSSx");
-                    }*/
+        {
             Debug.Log("destra");
             StopAllCoroutines();
             if (posIndex==4){
@@ -106,27 +66,6 @@ public class swipe : MonoBehaviour
                 
                 if (distanza.x<-swipeTime)
                 {
-                    /*swipe verso sinistra*//*
-                    if (posizione.position.x==0)
-                    {
-                        spostamento.SetTrigger("vaiSx");
-                    }
-                    if (posizione.position.x==0.9f)
-                    {
-                        spostamento.SetTrigger("tornaDx");
-                    }
-                    if (posizione.position.x==-0.9f)
-                    {
-                        spostamento.SetTrigger("vaiSSx");
-                    }
-                    if (posizione.position.x==1.8f)
-                    {
-                        spostamento.SetTrigger("tornaDDx");
-                    }
-                    if (posizione.position.x==-1.8f)
-                    {
-                        spostamento.SetTrigger("vaiSSSx");
-                    }*/
                     StopAllCoroutines();
                     if (posIndex==0){
                         /*se sono a margine dello schermo faccio effetto pacman*/
@@ -141,27 +80,6 @@ public class swipe : MonoBehaviour
                 }
                 if (distanza.x>swipeTime)
                 {
-                    /*swipe verso destra*//*
-                    if (posizione.position.x==0)
-                    {
-                        spostamento.SetTrigger("vaiDx");
-                    }
-                    if (posizione.position.x==0.9f)
-                    {
-                        spostamento.SetTrigger("vaiDDx");
-                    }
-                    if (posizione.position.x==-0.9f)
-                    {
-                        spostamento.SetTrigger("tornaSx");
-                    }
-                    if (posizione.position.x==1.8f)
-                    {
-                        spostamento.SetTrigger("vaiDDDx");
-                    }
-                    if (posizione.position.x==-1.8f)
-                    {
-                        spostamento.SetTrigger("tornaSSx");
-                    }*/
                     StopAllCoroutines();
                     if (posIndex==4){
                         /*se sono a margine dello schermo faccio effetto pacman*/
