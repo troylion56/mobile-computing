@@ -72,7 +72,9 @@ public class enemyScriptDx : MonoBehaviour
                     sx = true;             // sei arrivato alla fine sinistra dello schermo
                     dx = false;
                 }
-                shootTimer += Time.deltaTime;
+                if (shootTimer<=shootRate){
+                    shootTimer += Time.deltaTime;
+                }
             }
         }
         if(arrivato && shootTimer >= shootRate) {
