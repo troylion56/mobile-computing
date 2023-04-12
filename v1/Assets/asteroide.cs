@@ -50,5 +50,6 @@ public class asteroide : ostacoli
         distrutto=false;
         yield return new WaitForSeconds(0.50f);
         Destroy(gameObject);
+        yield return null;
     }
 }
