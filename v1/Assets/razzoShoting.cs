@@ -52,7 +52,4 @@ public class razzoShoting : proiettili
             Destroy(gameObject);
         }
     }
-
-
-    
 }

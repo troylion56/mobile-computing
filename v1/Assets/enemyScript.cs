@@ -129,24 +129,6 @@ public class enemyScript : ostacoli
         }
     }
 
-    private void collisioneProiettili (bulletScript bullet, Collider2D collisione) {
-        if(bullet is bulletScript) {
-            morto = true;
-            StartCoroutine(destructionDelay());
-            Debug.Log("Shot ha colpito il nemico che è stato distrutto");
-            animator.SetTrigger("isDead");
-        }
-    }
-
-    IEnumerator destructionDelay() {
-        yield return new WaitForSeconds(0.5f);
-        yield return null;
-        morto = false;
-        Debug.Log("coroutine morte nemico attivata");
-        muori();
-    }
-
-
     public void takeDamage(int danno) {
         health -= danno;            // danneggia di un tot
         
@@ -173,14 +155,10 @@ public class enemyScript : ostacoli
             immagine.sprite = health4;
         }
     }
-    
-    /* per far spawnare e muovere la carica di benzina quando il nemico muore */
-    public void muori() {
-        Debug.Log("nemico distrutto");
-        transform.position = new Vector2 (transform.position.x, transform.position.y - 4f*Time.deltaTime);          // muovi in basso
-        if(transform.position.y < -6) {
-            Destroy(gameObject);            // distruggi la tanica di benzina se sei fuori dallo schermo
-        }
-        Destroy(gameObject);                // alla fine distruggi il nemico
+    IEnumerator destructionDelay() {
+        yield return new WaitForSeconds(0.5f);
+        morto = false;
+        Debug.Log("coroutine morte nemico attivata");
+        Destroy(gameObject);
     }
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6730780980030681335}
   - component: {fileID: 6730780980030681336}
   - component: {fileID: 6730780980030681333}
+  - component: {fileID: 1237828253015894695}
   m_Layer: 0
   m_Name: asteroide
   m_TagString: ostacoli
@@ -98,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acf36c87651c844db995b86ff42cbf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aster: {fileID: 1237828253015894695}
+  oide: {fileID: 6730780980030681337}
 --- !u!58 &6730780980030681333
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -114,3 +117,23 @@ CircleCollider2D:
   m_Offset: {x: -0.023999909, y: -0.025703311}
   serializedVersion: 2
   m_Radius: 1.409717
+--- !u!95 &1237828253015894695
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6730780980030681337}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 87ae5f9058980c448b4774e0b771a826, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
