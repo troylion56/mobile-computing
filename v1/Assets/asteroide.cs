@@ -21,10 +21,6 @@ public class asteroide : ostacoli
         if (transform.position.y<=-5.6f){
             Destroy(gameObject);
         }
-
-        if (distrutto){
-            //StartCoroutine(distruggi());
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collider2D) {
@@ -45,11 +41,5 @@ public class asteroide : ostacoli
         {
             Debug.Log("asteroide colpisce proiettile");
         }
-    }
-    IEnumerator distruggi(){
-        distrutto=false;
-        yield return new WaitForSeconds(0.50f);
-        Destroy(gameObject);
-        yield return null;
     }
 }

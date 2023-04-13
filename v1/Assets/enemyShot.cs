@@ -9,6 +9,7 @@ public class enemyShot : MonoBehaviour
     float rotateSpeed = 400;
     Animator animator;
     public float transitionTime = 3f;
+    public GameObject proiettile;
 
     void Start() {
         animator = GetComponent<Animator>();
@@ -47,6 +48,7 @@ public class enemyShot : MonoBehaviour
         if(col.CompareTag("proiettili")) {
             morto = true;
             Debug.Log("Proiettile nemico ha colpito un proiettile del player ed è stato distrutto");
+            proiettile.GetComponent<Collider2D>().enabled=false;
             animator.SetTrigger("morto");
 
         }

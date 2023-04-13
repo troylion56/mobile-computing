@@ -153,6 +153,7 @@ MonoBehaviour:
   damage: 40
   rb: {fileID: 1505258326454334837}
   morto: 0
+  proiettile: {fileID: 5895105278621477321}
 --- !u!95 &4489134779392655296
 Animator:
   serializedVersion: 4

@@ -11,6 +11,7 @@ public class bulletScript : proiettili
     Animator animator;
     public bool morto;
     private bool colpitoAsteroide;
+    public GameObject proiettile;
 
 
     // Start is called before the first frame update
@@ -72,14 +73,11 @@ public class bulletScript : proiettili
 
     /*caso di collisione con un razzo sparato dal player*/
     private void collisioneProiettili (proiettili proiettile, Collider2D collisione){
-       /// if (proiettile is razzoShoting){
-        //    Physics2D.IgnoreCollision(GetComponent<Collider2D>(),collisione);  
-        //}
-
         if (proiettile is enemyShot){
         }
             morto = true;
             colpitoAsteroide=true;
+            proiettile.GetComponent<Collider2D>().enabled=false;
             StartCoroutine(destructionDelay());
             Debug.Log("Shot ha colpito un proiettile nemico ed è stato distrutto");
     }

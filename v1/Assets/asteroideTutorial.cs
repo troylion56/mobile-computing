@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class asteroideTutorial : ostacoli
 {
-    public Animator asteroide;
-    // Update is called once per frame
+    public Animator aster;
+    public GameObject oide;
     void Update()
     {
         if(!gameController.pausa){
@@ -24,7 +24,8 @@ public class asteroideTutorial : ostacoli
         if(collider2D.CompareTag("proiettili")){
             impatto(collider2D.GetComponent<proiettili>());
         }else{
-            Destroy(gameObject);
+            aster.SetTrigger("distruzione");
+            oide.GetComponent<Collider2D>().enabled=false;
         }
     }
 
@@ -32,16 +33,12 @@ public class asteroideTutorial : ostacoli
         if (proiettile is razzoShoting)
         {
             Debug.Log("missile colpisce asteroide");
-            Destroy(gameObject);
+            aster.SetTrigger("distruzione");
+            oide.GetComponent<Collider2D>().enabled=false;
         }
         if (proiettile is bulletScript)
         {
             Debug.Log("asteroide colpisce proiettile");
         }
     }
-
-    private void OnDestroy() {
-        asteroide.SetTrigger("distrutto");
-    }
-
 }

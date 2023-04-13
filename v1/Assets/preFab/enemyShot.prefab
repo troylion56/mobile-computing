@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionTime: 0
+  proiettile: {fileID: 5467323763638117864}
 --- !u!95 &8677812560008605426
 Animator:
   serializedVersion: 4
