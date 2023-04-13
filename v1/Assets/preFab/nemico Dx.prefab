@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 3402212365855453828}
   - component: {fileID: 7548300393650669805}
   - component: {fileID: -579921491520769050}
+  - component: {fileID: 696949553998451764}
   m_Layer: 0
   m_Name: nemico Dx
   m_TagString: nemico
@@ -318,3 +319,23 @@ MonoBehaviour:
   health3: {fileID: 21300000, guid: b70910828d9696b459900f4bdd2154a2, type: 3}
   health4: {fileID: 21300000, guid: 055d5349e198926498482014b17858d4, type: 3}
   immagine: {fileID: 3401310348577120399}
+--- !u!95 &696949553998451764
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3402212365855453830}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ed9416363d4db6b4b930f63601acf577, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

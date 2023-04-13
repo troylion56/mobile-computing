@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class enemyScriptDx : MonoBehaviour
+public class enemyScriptDx : ostacoli
 {
     /* per farlo muovere */
     public Transform posizione;
@@ -21,29 +22,34 @@ public class enemyScriptDx : MonoBehaviour
     /* vita */
     public int health;
     public int danno;
+    public int dannoRazzo;
     public GameObject barraHP;
     public Sprite health0, health1, health2, health3, health4;
     public SpriteRenderer immagine;
-    
+    Animator animator;
+    public bool morto;
+
     private void OnDestroy() {
         if (health==0){
         Instantiate(benzina, puntoFuoco.position, puntoFuoco.rotation);
         }
     }
-    
 
     public void Start() {
         arrivato = false;
-        dx = true;
-        sx = false;
-
+        dx = false;
+        sx = true;
 
         health = 4;
         danno = 1;
+        dannoRazzo = 4;
 
         shootRate = 0.6f;
 
         immagine.sprite = health4;
+
+        animator = GetComponent<Animator>();
+        morto = false;
 
     }
 
@@ -74,20 +80,21 @@ public class enemyScriptDx : MonoBehaviour
                     sx = true;             // sei arrivato alla fine sinistra dello schermo
                     dx = false;
                 }
-                if (shootTimer<=shootRate){
-                    shootTimer += Time.deltaTime;
-                }
+                shootTimer += Time.deltaTime;
             }
         }
         if(arrivato && shootTimer >= shootRate) {
             float temp=transform.position.x*10;
             temp=Mathf.Round(temp);
             if (temp==0f||temp==9f||temp==-9f||temp==18f||temp==-18f){
-                shootTimer -= shootRate;
+                shootTimer=0;
                 enemyShoot();
             }
         }
-        Debug.Log("posizione: "+transform.position.x);
+
+        if(morto) {
+            StartCoroutine(destructionDelay());                 // sei morto, parte l'esplosione
+        }
     }
 
     void enemyShoot() {
@@ -114,7 +121,7 @@ public class enemyScriptDx : MonoBehaviour
     private void impatto (proiettili proiettile){
         if (proiettile is razzoShoting) {
             Debug.Log("missile colpisce nemico");
-            takeDamage(4);
+            takeDamage(dannoRazzo);
         }
         if (proiettile is bulletScript) {
             Debug.Log("player colpisce nemico");
@@ -126,8 +133,10 @@ public class enemyScriptDx : MonoBehaviour
         health -= danno;            // danneggia di un tot
         
         if(health <= 0) {
-            muori();
+            morto = true;
             Debug.Log("hai ucciso un nemico");
+            animator.SetTrigger("isDead");
+            
         }
         
         if(health == 0) {
@@ -146,15 +155,10 @@ public class enemyScriptDx : MonoBehaviour
             immagine.sprite = health4;
         }
     }
-    
-    /* per far spawnare e muovere la carica di benzina quando il nemico muore */
-    public void muori() {
-        Debug.Log("nemico distrutto");
-        Instantiate(benzina, puntoFuoco.position, puntoFuoco.rotation);
-        transform.position = new Vector2 (transform.position.x, transform.position.y - 4f*Time.deltaTime);          // muovi in basso
-        if(transform.position.y < -6) {
-            Destroy(gameObject);            // distruggi la tanica di benzina se sei fuori dallo schermo
-        }
-        Destroy(gameObject);                // alla fine distruggi il nemico
+    IEnumerator destructionDelay() {
+        yield return new WaitForSeconds(0.5f);
+        morto = false;
+        Debug.Log("coroutine morte nemico attivata");
+        Destroy(gameObject);
     }
 }
