@@ -7,11 +7,12 @@ public class razzoShoting : proiettili
     public float speed = 20f;
     public int damage = 40;
     public Rigidbody2D rb;
+    public Animator razzo;
+    public GameObject razzObj;
 
     // Start is called before the first frame update
     void Start(){
         rb.velocity = transform.up * speed;
-        
     }
 
     void Update() {
@@ -24,7 +25,11 @@ public class razzoShoting : proiettili
             impattoProiettili(collisione.GetComponent<proiettili>(),collisione);
         }
         if (collisione.CompareTag("ostacoli"))
-        {
+        {/*
+            rb.velocity = transform.up * 0;
+            razzo.SetTrigger("esplodi");
+            razzObj.GetComponent<Collider2D>().enabled=false;
+            StartCoroutine(distruggi());*/
             Destroy(gameObject);
         }
         if (collisione.CompareTag("collectable"))
@@ -51,5 +56,11 @@ public class razzoShoting : proiettili
         {
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator distruggi(){
+        yield return new WaitForSeconds(0.50f);
+        Destroy(gameObject);
+        yield return null;
     }
 }

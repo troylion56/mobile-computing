@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: distruzioneAsteroide
+  m_Name: idleAsteroide
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 70d303963391ef54cb961e29fa05928d, type: 3}
-    - time: 0.033333335
-      value: {fileID: 21300000, guid: a766a255fe963e249b7697bd0eecdb2f, type: 3}
-    - time: 0.06666667
-      value: {fileID: 21300000, guid: 1efc90395320a9744ad25e545333011a, type: 3}
+      value: {fileID: 21300000, guid: cb2cb1b3ebaff7a4fa41817227cc2608, type: 3}
     - time: 0.1
-      value: {fileID: 21300000, guid: b2e847f6e68185a4bae475287bca457b, type: 3}
+      value: {fileID: 21300000, guid: cb2cb1b3ebaff7a4fa41817227cc2608, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,10 +42,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 70d303963391ef54cb961e29fa05928d, type: 3}
-    - {fileID: 21300000, guid: a766a255fe963e249b7697bd0eecdb2f, type: 3}
-    - {fileID: 21300000, guid: 1efc90395320a9744ad25e545333011a, type: 3}
-    - {fileID: 21300000, guid: b2e847f6e68185a4bae475287bca457b, type: 3}
+    - {fileID: 21300000, guid: cb2cb1b3ebaff7a4fa41817227cc2608, type: 3}
+    - {fileID: 21300000, guid: cb2cb1b3ebaff7a4fa41817227cc2608, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

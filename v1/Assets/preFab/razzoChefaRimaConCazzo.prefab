@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1505258326454334837}
   - component: {fileID: 3492891222664000665}
   - component: {fileID: -5467285405507662823}
+  - component: {fileID: 2421702397732234314}
   m_Layer: 0
   m_Name: razzoChefaRimaConCazzo
   m_TagString: proiettili
@@ -149,3 +150,25 @@ MonoBehaviour:
   speed: 6
   damage: 40
   rb: {fileID: 1505258326454334837}
+  razzo: {fileID: 2421702397732234314}
+  razzObj: {fileID: 5895105278621477321}
+--- !u!95 &2421702397732234314
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5895105278621477321}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 24cd1d230b8a24442ba59b65ba51eca4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
