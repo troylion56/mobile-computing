@@ -23,7 +23,7 @@ public class asteroide : ostacoli
         }
 
         if (distrutto){
-            StartCoroutine(distruggi());
+            //StartCoroutine(distruggi());
         }
     }
 
