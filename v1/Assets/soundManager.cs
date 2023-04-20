@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class soundManager : MonoBehaviour
-{
+{    public AudioSource mortePlayer;
+    public AudioSource dannoPlayer;
+    public AudioSource fineBenzina;
+    public AudioSource proiettiliPlayer;
+    public AudioSource missiliPlayer;
+    public AudioSource proiettiliNemici;
+    public AudioSource dannoNemici;
+    public AudioSource morteNemici;
+    public AudioSource distruzioneAsteroidi;
+    public AudioSource fineLivello;
+    public AudioSource gameOver;
+    public AudioSource musicaEsterna;
+    public AudioSource musicaLivelli;
 
-    public static AudioSource mortePlayer;
-    public static AudioSource fineBenzina;
-    public static AudioSource proiettiliPlayer;
-    public static AudioSource missiliPlayer;
-    public static AudioSource proiettiliNemici;
-    public static AudioSource morteNemici;
-    public static AudioSource distruzioneAsteroidi;
-    public static AudioSource fineLivello;
-    public static AudioSource gameOver;
-    public static AudioSource musicaEsterna;
-    public static AudioSource musicaLivelli;
-
-    private static float effetti;
-    private static float musica;
+    private float effetti;
+    private float musica;
 
     void Start()
     {
@@ -37,7 +37,7 @@ public class soundManager : MonoBehaviour
         }    
     }
 
-    public static void volumeEffetti (AudioSource s){
+    public void volumeEffetti (AudioSource s){
         s.volume=s.volume*effetti;
     }
 
@@ -45,46 +45,52 @@ public class soundManager : MonoBehaviour
         s.volume=s.volume*musica;
     }
 
-    public static void suonaEffetto (AudioSource s){
+    public void suonaEffetto (AudioSource s){
         volumeEffetti(s);                                       //aggiorno il volume dell'effetto
         s.Play();
     }
 
         //!metodi effetti
 
-    public static void playMortePlayer(){
+    public void playMortePlayer(){
         suonaEffetto(mortePlayer);
     }
+    public void playDannoPlayer(){
+        suonaEffetto(dannoPlayer);
+    }
 
-    public static void playFineBenzina(){
+    public void playFineBenzina(){
         suonaEffetto(fineBenzina);
     }
 
-    public static void playProiettiliPlayer(){
+    public void playProiettiliPlayer(){
         suonaEffetto(proiettiliPlayer);
     }
 
-    public static void playMissiliPlayer(){
+    public void playMissiliPlayer(){
         suonaEffetto(missiliPlayer);
     }
 
-    public static void playProiettiliNemici(){
+    public void playProiettiliNemici(){
         suonaEffetto(proiettiliNemici);
     }
 
-    public static void playMorteNemici(){
+    public void playDannoNemici(){
+        suonaEffetto(dannoNemici);
+    }
+    public void playMorteNemici(){
         suonaEffetto(morteNemici);
     }
 
-    public static void playDistruzioneAsteroidi(){
+    public void playDistruzioneAsteroidi(){
         suonaEffetto(distruzioneAsteroidi);
     }
 
-    public static void playFineLivello(){
+    public void playFineLivello(){
         suonaEffetto(fineLivello);
     }
 
-    public static void playGameOver(){
+    public void playGameOver(){
         suonaEffetto(gameOver);
     }
 }

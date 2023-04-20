@@ -9,7 +9,7 @@ public class ScriptGestisciVolume : MonoBehaviour
 {
     //! script che tramite il valore dello slider gestisce il volume
 
-    public static Slider sliderVolume;     //variabile di tipo slider
+    public Slider sliderVolume;     //variabile di tipo slider
 
     void Start(){
         /*se esiste in memoria un precedente salvataggio del volume*/

@@ -3592,6 +3592,7 @@ MonoBehaviour:
   spariNemici: {fileID: 0}
   morteNemici: {fileID: 0}
   effettiPausa: {fileID: 0}
+  sliderEffetti: {fileID: 689361079}
 --- !u!114 &689361078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6083,6 +6084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cf0f3e19bf8ef4faff8b7cceacd2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 0}
   firePoint: {fileID: 1024672095}
   bulletPreFab: {fileID: 5895105278621477321, guid: 532a562e429b7a8448eff965c492eec6, type: 3}
   caricamento0: {fileID: 21300000, guid: 25a11d754ddd8be40b821ba1b537c3ad, type: 3}
@@ -8154,6 +8156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cf0f3e19bf8ef4faff8b7cceacd2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 2121458669}
   firePoint: {fileID: 1024672095}
   bulletPreFab: {fileID: 5895105278621477321, guid: 532a562e429b7a8448eff965c492eec6, type: 3}
   caricamento0: {fileID: 21300000, guid: 25a11d754ddd8be40b821ba1b537c3ad, type: 3}
@@ -8570,6 +8573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4f46e6c81bf854894e8668da9476d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sliderVolume: {fileID: 1917221927}
 --- !u!114 &1917221926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9365,7 +9369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2121458668}
-  - component: {fileID: 2121458667}
+  - component: {fileID: 2121458669}
   - component: {fileID: 2121458666}
   - component: {fileID: 2121458665}
   - component: {fileID: 2121458664}
@@ -9870,7 +9874,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f1e9cfcf460884e49aff3ff6b440fe46, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -9955,18 +9959,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2121458667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121458660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f8d0dcbc0c0f58469b1f72569322bac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2121458668
 Transform:
   m_ObjectHideFlags: 0
@@ -9982,3 +9974,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2121458669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121458660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8d0dcbc0c0f58469b1f72569322bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mortePlayer: {fileID: 0}
+  dannoPlayer: {fileID: 0}
+  fineBenzina: {fileID: 0}
+  proiettiliPlayer: {fileID: 0}
+  missiliPlayer: {fileID: 0}
+  proiettiliNemici: {fileID: 0}
+  dannoNemici: {fileID: 0}
+  morteNemici: {fileID: 0}
+  distruzioneAsteroidi: {fileID: 0}
+  fineLivello: {fileID: 0}
+  gameOver: {fileID: 0}
+  musicaEsterna: {fileID: 0}
+  musicaLivelli: {fileID: 0}

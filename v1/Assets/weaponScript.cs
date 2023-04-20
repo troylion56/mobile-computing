@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class weaponScript : MonoBehaviour
 {
+    public soundManager SManager;
     public Transform firePoint;
     public GameObject bulletPreFab;
     public static bool stato;
@@ -43,6 +44,7 @@ public class weaponScript : MonoBehaviour
 
     void Shoot()
     {
+        SManager.playDannoPlayer();
         Instantiate(bulletPreFab, firePoint.position, firePoint.rotation);
     }
 

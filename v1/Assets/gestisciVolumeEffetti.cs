@@ -10,7 +10,7 @@ public class gestisciVolumeEffetti : MonoBehaviour
     public AudioSource spariNemici;
     public AudioSource morteNemici;
     public AudioSource effettiPausa;
-    public static Slider sliderEffetti;
+    public Slider sliderEffetti;
 
    void Start(){
         /*se esiste in memoria un precedente salvataggio del volume*/
