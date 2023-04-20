@@ -10,7 +10,7 @@ public class gestisciVolumeEffetti : MonoBehaviour
     public AudioSource spariNemici;
     public AudioSource morteNemici;
     public AudioSource effettiPausa;
-    public Slider slider;
+    public static Slider sliderEffetti;
 
    void Start(){
         /*se esiste in memoria un precedente salvataggio del volume*/
@@ -29,22 +29,18 @@ public class gestisciVolumeEffetti : MonoBehaviour
     /*questo metodo viene chiamato ogi volta che il valore dellos lider viene modificato manualmente*/
     public void cambiavolumeEffetti(){
         /*assegno il valored ello slider al volume generale*/
-//TODO        spariPlayer.volume=slider.value;
-//TODO        mortePlayer.volume=slider.value;
-//TODO        spariNemici.volume=slider.value;
-//TODO        morteNemici.volume=slider.value;
-//TODO        effettiPausa.volume=slider.value;
+
         /*salvo in memoria la modifica*/
         salva();
     }
 
     private void carica (){
         /*carico da la memoria l'attuale valore dello slider*/
-        slider.value=PlayerPrefs.GetFloat("volumeEffetti");
+        sliderEffetti.value=PlayerPrefs.GetFloat("volumeEffetti");
     }
 
     private void salva (){
         /*salvo in memoria l'attuale valore dello slider*/
-        PlayerPrefs.SetFloat("volumeEffetti",slider.value);
+        PlayerPrefs.SetFloat("volumeEffetti",sliderEffetti.value);
     }
 }

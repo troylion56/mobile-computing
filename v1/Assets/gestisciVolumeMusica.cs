@@ -25,7 +25,6 @@ public class gestisciVolumeMusica : MonoBehaviour
     /*questo metodo viene chiamato ogi volta che il valore dellos lider viene modificato manualmente*/
     public void cambiaVolumeMusica(){
         /*assegno il valored ello slider al volume generale*/
-//TODO        musica.volume=slider.value;
         /*salvo in memoria la modifica*/
         salva();
     }
