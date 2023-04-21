@@ -41,6 +41,7 @@ public class gestisciVolumeEffetti : MonoBehaviour
 
     private void salva (){
         /*salvo in memoria l'attuale valore dello slider*/
+        Debug.Log("salvo il volume degli effetti");
         PlayerPrefs.SetFloat("volumeEffetti",sliderEffetti.value);
     }
 }

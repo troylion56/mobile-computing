@@ -38,11 +38,13 @@ public class soundManager : MonoBehaviour
     }
 
     public void volumeEffetti (AudioSource s){
-        s.volume=s.volume*effetti;
+        effetti=PlayerPrefs.GetFloat("volumeEffetti");
+        s.volume=effetti;
     }
 
     public void volumeMusica (AudioSource s){
-        s.volume=s.volume*musica;
+        musica=PlayerPrefs.GetFloat("volumeMusica");
+        s.volume=musica;
     }
 
     public void suonaEffetto (AudioSource s){

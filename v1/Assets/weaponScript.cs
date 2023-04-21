@@ -39,12 +39,15 @@ public class weaponScript : MonoBehaviour
             // StartCoroutine(destructionDelay());
         }
         
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            SManager.playDannoPlayer();
+        }
     }
 
 
     void Shoot()
     {
-        SManager.playDannoPlayer();
         Instantiate(bulletPreFab, firePoint.position, firePoint.rotation);
     }
 
