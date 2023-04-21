@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class inventory : MonoBehaviour
 {
+    public soundManager SManager;
     public SpriteRenderer stella1, stella2, stella3,stella1GameOver, stella2GameOver, stella3GameOver;
-
     public Sprite stellinaColore, on ;
     public gestoreBenzina scriptBenzina;
     private int stellineTot = 0;
@@ -47,17 +47,20 @@ public class inventory : MonoBehaviour
     /* gestione delle collisioni del player */
     private void OnTriggerEnter2D(Collider2D collider2D) {
         if(collider2D.CompareTag("collectable")){
+            SManager.playRaccoltaCollezionabili();
             Collect(collider2D.GetComponent<collect>());
             Debug.Log("stellina raccolta");
         }
 
         if(collider2D.CompareTag("ostacoli")){                  // caso di collisione con ostacoli
+            SManager.playMortePlayer();
             StartCoroutine(destructionDelay());
         }
 
         if(collider2D.CompareTag("proiettili")) {                 // caso di collisione con proettili nemico
             if (!(collider2D.GetComponent<proiettili>() is razzoShoting)){        
                 vita.danneggia(1);
+                SManager.playDannoPlayer();
                 StartCoroutine(cameraShake.Shaking(.10f, .05f));
     //TODO       proiettileDanno.Play();
             }
