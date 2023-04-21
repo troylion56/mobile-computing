@@ -9400,7 +9400,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 50290aa6078fe194aaa71de349a2c86a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -9496,7 +9496,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8136c572b7c40204fbd8b416b556d9e8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -9592,7 +9592,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 033626087d3726a4d89bea765d17b93f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -9688,7 +9688,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3753f9c47a21e9c40a046dce5034d915, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -9784,7 +9784,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d07c712b01486f84cb146b4b78f4a496, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -9993,19 +9993,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f8d0dcbc0c0f58469b1f72569322bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mortePlayer: {fileID: 0}
+  mortePlayer: {fileID: 2121458676}
   dannoPlayer: {fileID: 2121458666}
   fineBenzina: {fileID: 0}
   proiettiliPlayer: {fileID: 0}
   missiliPlayer: {fileID: 0}
   proiettiliNemici: {fileID: 0}
-  dannoNemici: {fileID: 0}
-  morteNemici: {fileID: 0}
-  distruzioneAsteroidi: {fileID: 0}
+  dannoNemici: {fileID: 2121458666}
+  morteNemici: {fileID: 2121458676}
+  distruzioneAsteroidi: {fileID: 2121458661}
   fineLivello: {fileID: 0}
   gameOver: {fileID: 0}
-  musicaEsterna: {fileID: 0}
-  musicaLivelli: {fileID: 0}
+  pausa: {fileID: 2121458665}
+  raccoltaCollezionabili: {fileID: 2121458662}
+  musicaEsterna: {fileID: 2121458664}
+  musicaLivelli: {fileID: 2121458663}
 --- !u!82 &2121458670
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10592,7 +10594,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a7a7a02a797c98f42908d93bcaf8fb4d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

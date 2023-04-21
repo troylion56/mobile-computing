@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class soundManager : MonoBehaviour
-{    public AudioSource mortePlayer;
+{   public AudioSource mortePlayer;
     public AudioSource dannoPlayer;
     public AudioSource fineBenzina;
     public AudioSource proiettiliPlayer;
@@ -14,6 +14,8 @@ public class soundManager : MonoBehaviour
     public AudioSource distruzioneAsteroidi;
     public AudioSource fineLivello;
     public AudioSource gameOver;
+    public AudioSource pausa;
+    public AudioSource raccoltaCollezionabili;
     public AudioSource musicaEsterna;
     public AudioSource musicaLivelli;
 
@@ -94,5 +96,13 @@ public class soundManager : MonoBehaviour
 
     public void playGameOver(){
         suonaEffetto(gameOver);
+    }
+
+    public void playPausa(){
+        suonaEffetto(pausa);
+    }
+
+    public void playRaccoltaCollezionabili(){
+        suonaEffetto(raccoltaCollezionabili);
     }
 }
