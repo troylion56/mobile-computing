@@ -5,13 +5,12 @@ using UnityEngine.UI;
 
 public class mettiInPausa : MonoBehaviour
 {
-
+    public soundManager SManager;
     public Animator transizione; 
     public Button pulsanteRazzo;
-    [SerializeField] private AudioSource pausaSound;
 
     public void giocoInPausa(){
-//        pausaSound.Play();
+        SManager.playPausa();
         gameController.pausa=true;
         Time.timeScale=0f;
         pulsanteRazzo.interactable=false;

@@ -17,14 +17,12 @@ public class inventory : MonoBehaviour
     public gestoreVita vita;
     public shake cameraShake;
     public Animator player;
-    [SerializeField] private AudioSource raccorta, haivinto, proiettileDanno, meteoriti;
 
 
 
     public void Update() {
         /* fine livello */
         if(gameController.fineLiv && transform.position.y < 7) {
-//TODO            haivinto.Play();
             transform.position = new Vector2(transform.position.x, transform.position.y + 0.4f);
             Debug.Log("Sei nella parte dove il player dovrebbe volare in alto perchè hai finito il livello");
         }
@@ -62,7 +60,6 @@ public class inventory : MonoBehaviour
                 vita.danneggia(1);
                 SManager.playDannoPlayer();
                 StartCoroutine(cameraShake.Shaking(.10f, .05f));
-    //TODO       proiettileDanno.Play();
             }
         }
     }
@@ -74,7 +71,6 @@ public class inventory : MonoBehaviour
         {
             if (canCollect is collectStellina1)
             {
- //TODO               raccorta.Play();
                 stellineTot++;
                 stella1.sprite = stellinaColore;
                 stella1GameOver.sprite =stellinaColore;
@@ -82,7 +78,6 @@ public class inventory : MonoBehaviour
             }
             else if (canCollect is collectStellina2)
             {
- //TODO               raccorta.Play();
                 stellineTot++;
                 stella2.sprite = stellinaColore;
                 stella2GameOver.sprite =stellinaColore;
@@ -90,7 +85,6 @@ public class inventory : MonoBehaviour
             }
             else if (canCollect is collectStellina3)
             {
- //TODO               raccorta.Play();
                 stellineTot++;
                 stella3.sprite = stellinaColore;
                 stella3GameOver.sprite =stellinaColore;

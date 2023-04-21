@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class pulsanteEsci : MonoBehaviour
 {
+    public soundManager SManager;
     public Animator anim;
     public GameObject menu;
 
     public void clicca() {
         // se clicchi fai partire l'animazione che tin chiede se vuoi veramente uscire
+        SManager.playPausa();
         if(menu!=null){
             menu.SetActive(true);
         }

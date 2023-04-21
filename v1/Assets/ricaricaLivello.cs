@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class ricaricaLivello : MonoBehaviour
 {
+    public soundManager SManager;
     public void ricLivello (){
         StopAllCoroutines();
+        SManager.playPausa();
         gameController.pausa=false;
         gameController.fineLiv=false;
         gameController.s1=false;

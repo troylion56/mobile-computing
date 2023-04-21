@@ -550,6 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34889a8192612ed4d8033f880811fd0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 2121458669}
 --- !u!114 &111600554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,6 +1111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65b0bd627e0b4c40a25a8085ade050e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 2121458669}
   anim: {fileID: 438333795}
   menu: {fileID: 438333794}
 --- !u!114 &155078958
@@ -2349,9 +2351,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3c4e4d217846a48bbc845aa048d478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 2121458669}
   transizione: {fileID: 1752451194}
   pulsanteRazzo: {fileID: 1735072222}
-  pausaSound: {fileID: 488932597}
 --- !u!82 &488932597
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4423,6 +4425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80092f5a879da374db8cc1b0ae198b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 2121458669}
   transizione: {fileID: 1752451194}
   pulsanteRazzo: {fileID: 1735072222}
 --- !u!114 &1053395486
@@ -5094,6 +5097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34889a8192612ed4d8033f880811fd0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 0}
 --- !u!114 &1205789679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7752,6 +7756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34889a8192612ed4d8033f880811fd0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 0}
 --- !u!114 &1775702502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8077,7 +8082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be38fe9ffc05a7e459269b7c435a8d24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SManager: {fileID: 0}
+  SManager: {fileID: 2121458669}
   stella1: {fileID: 1377973978}
   stella2: {fileID: 1169039507}
   stella3: {fileID: 412281330}
@@ -8094,10 +8099,6 @@ MonoBehaviour:
   vita: {fileID: 2022207720}
   cameraShake: {fileID: 463631}
   player: {fileID: 1862041165}
-  raccorta: {fileID: 1862041167}
-  haivinto: {fileID: 1862041168}
-  proiettileDanno: {fileID: 1862041169}
-  meteoriti: {fileID: 1862041169}
 --- !u!61 &1862041161
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8105,7 +8106,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862041156}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -8716,6 +8717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd5d740806723349a9753427f132928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 2121458669}
   pausa: {fileID: 1752451194}
   volume: {fileID: 1489376275}
 --- !u!114 &1951463648
@@ -9497,7 +9499,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8136c572b7c40204fbd8b416b556d9e8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9e9467ebc3ee03448aa9da16c118a65b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

@@ -48,6 +48,7 @@ public class weaponScript : MonoBehaviour
 
     void Shoot()
     {
+        SManager.playProiettiliPlayer();
         Instantiate(bulletPreFab, firePoint.position, firePoint.rotation);
     }
 

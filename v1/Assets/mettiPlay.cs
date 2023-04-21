@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class mettiPlay : MonoBehaviour
 {
+    public soundManager SManager;
     public Animator transizione;
     public Button pulsanteRazzo;
 
    
         public void play(){
+        SManager.playPausa();
         gameController.pausa=false;
         Time.timeScale=1f;
         Debug.Log("stato: "+razzo.stato);
