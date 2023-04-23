@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aster: {fileID: 1237828253015894695}
   oide: {fileID: 6730780980030681337}
+  SManager: {fileID: 7438057263991559327, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
 --- !u!58 &6730780980030681333
 CircleCollider2D:
   m_ObjectHideFlags: 0

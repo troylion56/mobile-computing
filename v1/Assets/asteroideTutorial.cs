@@ -7,6 +7,7 @@ public class asteroideTutorial : ostacoli
 {
     public Animator aster;
     public GameObject oide;
+    public soundManager SManager;
     void Update()
     {
         if(!gameController.pausa){
@@ -35,6 +36,7 @@ public class asteroideTutorial : ostacoli
             Debug.Log("missile colpisce asteroide");
             aster.SetTrigger("distruzione");
             oide.GetComponent<Collider2D>().enabled=false;
+            SManager.playDistruzioneAsteroidi();
         }
         if (proiettile is bulletScript)
         {

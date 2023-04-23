@@ -12,6 +12,7 @@ public class razzo : MonoBehaviour
     public Image tasto;             //per passargli il bottone
     public static bool stato;
     public Button Button1;
+    public soundManager SManager;
 
 
     private void Start() {
@@ -19,6 +20,8 @@ public class razzo : MonoBehaviour
         Button1.interactable=false;
     }
     public void Shoot () {
+        Debug.Log("provaaaaaaaaa");
+        SManager.playMissiliPlayer();
         Instantiate(razzooooPreFab, firePoint2.position, firePoint2.rotation);
     }
     
