@@ -3,24 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class soundManager : MonoBehaviour
-{   public AudioSource mortePlayer;
+{   
+    [Header("       -----Player----")]
+    public AudioSource mortePlayer;
     public AudioSource dannoPlayer;
     public AudioSource fineBenzina;
     public AudioSource proiettiliPlayer;
     public AudioSource missiliPlayer;
+    public AudioSource raccoltaCollezionabili;
+
+    [Header("       -----Enemy----")]
     public AudioSource proiettiliNemici;
     public AudioSource dannoNemici;
     public AudioSource morteNemici;
+
+    [Header("       -----livello----")]
     public AudioSource distruzioneAsteroidi;
     public AudioSource fineLivello;
     public AudioSource gameOver;
     public AudioSource pausa;
-    public AudioSource raccoltaCollezionabili;
+
+    [Header("       -----Musica----")]
     public AudioSource musicaEsterna;
     public AudioSource musicaLivelli;
 
     private float effetti;
     private float musica;
+    private static soundManager istance;
+    private bool esterno;
 
     void Start()
     {
@@ -38,6 +48,20 @@ public class soundManager : MonoBehaviour
             musica=PlayerPrefs.GetFloat("volumeMusica");
         }    
     }
+
+    private void Awake() {
+        esterno=true;
+        if (esterno)
+        {
+            musicaEsterna.Play();
+        }
+        if(istance == null){
+            istance=this;
+            DontDestroyOnLoad(gameObject);
+        }else{
+            Destroy(gameObject);
+        }
+    }    
 
     public void volumeEffetti (AudioSource s){
         effetti=PlayerPrefs.GetFloat("volumeEffetti");
