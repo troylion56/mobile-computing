@@ -20,6 +20,7 @@ public class musicController : MonoBehaviour
         }else{
             if (!esterno){
                 esterno=true;
+                musicaEsterna.volume=PlayerPrefs.GetFloat("volumeMusica");
                 musicaEsterna.Play();
             }
         }
@@ -35,17 +36,11 @@ public class musicController : MonoBehaviour
     public void playMusic(){
         if (!esterno){            
             esterno=true;
+            musicaEsterna.volume=PlayerPrefs.GetFloat("volumeMusica");
             musicaEsterna.Play();
         }
     }
     private void Awake() {
-
-
-        if (esterno){
-            musicaEsterna.Play();
-        }else{
-            musicaEsterna.Stop();
-        }
         if(istance == null){
             istance=this;
             DontDestroyOnLoad(gameObject);

@@ -365,7 +365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3637326251469742885, guid: 35c9a459b07169a48b0e5a45f6a79487, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3637326251469742885, guid: 35c9a459b07169a48b0e5a45f6a79487, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6066,11 +6066,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7438057263991559320, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
       propertyPath: Loop
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7438057263991559326, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7438057263991559326, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6112,6 +6112,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7438057263991559327, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+      propertyPath: proiettiliNemici
+      value: 
+      objectReference: {fileID: 1226314961}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
 --- !u!114 &1226314960 stripped
@@ -6125,6 +6129,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f8d0dcbc0c0f58469b1f72569322bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1226314961 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7438057263991559296, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+  m_PrefabInstance: {fileID: 1226314959}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1227608838
 GameObject:
   m_ObjectHideFlags: 0
