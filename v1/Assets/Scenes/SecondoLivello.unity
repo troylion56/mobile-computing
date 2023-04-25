@@ -2335,6 +2335,7 @@ GameObject:
   - component: {fileID: 610083014}
   - component: {fileID: 610083017}
   - component: {fileID: 610083016}
+  - component: {fileID: 610083018}
   m_Layer: 5
   m_Name: slider effetti
   m_TagString: Untagged
@@ -2444,7 +2445,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610083018}
         m_TargetAssemblyTypeName: gestisciVolumeEffetti, Assembly-CSharp
         m_MethodName: cambiavolumeEffetti
         m_Mode: 1
@@ -2456,6 +2457,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &610083018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610083013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be3d26706ea9ea49948ea90a9c68298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderEffetti: {fileID: 610083017}
 --- !u!1 &623814856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2606,7 +2620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cf0f3e19bf8ef4faff8b7cceacd2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SManager: {fileID: 0}
+  SManager: {fileID: 1036831686}
   firePoint: {fileID: 205128380}
   bulletPreFab: {fileID: 5895105278621477321, guid: 532a562e429b7a8448eff965c492eec6, type: 3}
   caricamento0: {fileID: 21300000, guid: 25a11d754ddd8be40b821ba1b537c3ad, type: 3}
@@ -2661,7 +2675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be38fe9ffc05a7e459269b7c435a8d24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SManager: {fileID: 0}
+  SManager: {fileID: 1036831686}
   stella1: {fileID: 1120084711}
   stella2: {fileID: 215968092}
   stella3: {fileID: 1694609604}
@@ -8017,7 +8031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34889a8192612ed4d8033f880811fd0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SManager: {fileID: 0}
+  SManager: {fileID: 1036831686}
 --- !u!114 &1881864732
 MonoBehaviour:
   m_ObjectHideFlags: 0
