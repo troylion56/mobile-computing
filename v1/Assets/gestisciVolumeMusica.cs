@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class gestisciVolumeMusica : MonoBehaviour
 {
-    public AudioSource musica;
     public Slider slider;
+    public soundManager Smanager;
 
    void Start(){
         /*se esiste in memoria un precedente salvataggio del volume*/
@@ -27,6 +27,7 @@ public class gestisciVolumeMusica : MonoBehaviour
         /*assegno il valored ello slider al volume generale*/
         /*salvo in memoria la modifica*/
         salva();
+        Smanager.cambiaVolume(slider.value);
     }
 
     private void carica (){

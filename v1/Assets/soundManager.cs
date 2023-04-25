@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class soundManager : MonoBehaviour
@@ -44,6 +45,10 @@ public class soundManager : MonoBehaviour
         }else{
             musica=PlayerPrefs.GetFloat("volumeMusica");
         }    
+
+        if(SceneManager.GetActiveScene().name=="PrimoLivello" || SceneManager.GetActiveScene().name=="SecondoLivello" || SceneManager.GetActiveScene().name=="tutorial") {
+            suonaMusica(musicaLivelli);
+        }
     }
 
 
@@ -61,6 +66,11 @@ public class soundManager : MonoBehaviour
     public void suonaEffetto (AudioSource s){
         volumeEffetti(s);                                       //aggiorno il volume dell'effetto
         s.Play();
+    }
+
+    public void suonaMusica (AudioSource m){
+        volumeMusica(m);                                       //aggiorno il volume della musica
+        m.Play();
     }
 
         //!metodi effetti
@@ -113,5 +123,9 @@ public class soundManager : MonoBehaviour
 
     public void playRaccoltaCollezionabili(){
         suonaEffetto(raccoltaCollezionabili);
+    }
+
+    public void cambiaVolume(float vol){
+        musicaLivelli.volume=vol;
     }
 }

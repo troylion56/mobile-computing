@@ -31,6 +31,7 @@ public class gestoreTestoTutorial : MonoBehaviour
     string prova= "testo di prova per testare la comparsa singola delle lettere";
     public Animator transizioniTutorial;
     public continuaTutorial scrittaAttesa;
+    public soundManager SManager;
     private bool salta;
     
     [TextArea(3,10)]
@@ -42,6 +43,7 @@ public class gestoreTestoTutorial : MonoBehaviour
 
     private void Start() {
         contatoreDialoghi=0;
+        SManager.playPausa();
     }
 
     void Update(){
@@ -55,8 +57,7 @@ public class gestoreTestoTutorial : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.O))
-        {
+        if (Input.GetKeyDown(KeyCode.O)){
             contatoreDialoghi=20;
         }
 
@@ -249,6 +250,7 @@ public class gestoreTestoTutorial : MonoBehaviour
                 {
                     dialogo=true;
                     StartCoroutine(entra());
+                    SManager.playPausa();
                 }
                 StopAllCoroutines();
                 StartCoroutine(scrittura(dialoghi[contatoreDialoghi]));
@@ -261,7 +263,7 @@ public class gestoreTestoTutorial : MonoBehaviour
     IEnumerator fineTutorial (){
         player.SetTrigger("volaInAlto");
         //yield return new WaitForSeconds(1);
-        SceneManager.LoadSceneAsync("livelli");
+        SceneManager.LoadSceneAsync("SchermataIniziale");
         yield return null;
     }
 

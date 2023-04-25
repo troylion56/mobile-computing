@@ -12,7 +12,7 @@ public class musicController : MonoBehaviour
     private bool livello=false;
 
     private void Update() {
-        if(SceneManager.GetActiveScene().name=="PrimoLivello" || SceneManager.GetActiveScene().name=="Secondoivello" || SceneManager.GetActiveScene().name=="tutorial") {
+        if(SceneManager.GetActiveScene().name=="PrimoLivello" || SceneManager.GetActiveScene().name=="SecondoLivello" || SceneManager.GetActiveScene().name=="tutorial") {
             if (esterno){
                 esterno=false;
                 musicaEsterna.Stop();
