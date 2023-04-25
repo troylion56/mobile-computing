@@ -5,12 +5,7 @@ using UnityEngine.UI;
 
 public class gestisciVolumeEffetti : MonoBehaviour
 {
-    public AudioSource spariPlayer;
-    public AudioSource mortePlayer;
-    public AudioSource spariNemici;
-    public AudioSource morteNemici;
-    public AudioSource effettiPausa;
-    public Slider sliderEffetti;
+      public Slider sliderEffetti;
 
    void Start(){
         /*se esiste in memoria un precedente salvataggio del volume*/

@@ -24,13 +24,10 @@ public class soundManager : MonoBehaviour
     public AudioSource pausa;
 
     [Header("       -----Musica----")]
-    public AudioSource musicaEsterna;
     public AudioSource musicaLivelli;
 
     private float effetti;
     private float musica;
-    private static soundManager istance;
-    private bool esterno;
 
     void Start()
     {
@@ -49,19 +46,7 @@ public class soundManager : MonoBehaviour
         }    
     }
 
-    private void Awake() {
-        esterno=true;
-        if (esterno)
-        {
-            musicaEsterna.Play();
-        }
-        if(istance == null){
-            istance=this;
-            DontDestroyOnLoad(gameObject);
-        }else{
-            Destroy(gameObject);
-        }
-    }    
+
 
     public void volumeEffetti (AudioSource s){
         effetti=PlayerPrefs.GetFloat("volumeEffetti");

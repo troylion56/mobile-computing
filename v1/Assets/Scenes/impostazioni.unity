@@ -193,12 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be3d26706ea9ea49948ea90a9c68298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spariPlayer: {fileID: 0}
-  mortePlayer: {fileID: 0}
-  spariNemici: {fileID: 0}
-  morteNemici: {fileID: 0}
-  effettiPausa: {fileID: 0}
-  slider: {fileID: 4734627}
+  sliderEffetti: {fileID: 4734627}
 --- !u!114 &4734627
 MonoBehaviour:
   m_ObjectHideFlags: 0
