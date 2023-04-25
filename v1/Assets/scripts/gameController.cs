@@ -15,6 +15,15 @@ public class gameController : MonoBehaviour{
     public Animator transizione;    //animazione delle cose che scompaiono
     public Animator trans;          //animazione del player che vola
     public Animator trans1;   
+    public musicController MController;
+
+    private void Start() {
+        if(SceneManager.GetActiveScene().name=="PrimoLivello" || SceneManager.GetActiveScene().name=="SecondoLivello" || SceneManager.GetActiveScene().name=="tutorial") {
+            MController.stopMusic();
+        }else{
+            MController.playMusic();
+        }
+    }
 
     
     void Update()

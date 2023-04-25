@@ -8,17 +8,38 @@ public class musicController : MonoBehaviour
     [Header("       -----Musica----")]
     public AudioSource musicaEsterna;
     private static musicController istance;
-    private bool esterno;
+    private bool esterno=true;
+    private bool livello=false;
 
-    private void Start() {
-         Debug.Log("aaaaaaaaaaaaaaaa");
+    private void Update() {
+        if(SceneManager.GetActiveScene().name=="PrimoLivello" || SceneManager.GetActiveScene().name=="Secondoivello" || SceneManager.GetActiveScene().name=="tutorial") {
+            if (esterno){
+                esterno=false;
+                musicaEsterna.Stop();
+            }
+        }else{
+            if (!esterno){
+                esterno=true;
+                musicaEsterna.Play();
+            }
+        }
+    }
+
+    public void stopMusic(){
+        if (esterno){            
+        esterno=false;
+        musicaEsterna.Stop();
+        }
+    }
+
+    public void playMusic(){
+        if (!esterno){            
+            esterno=true;
+            musicaEsterna.Play();
+        }
     }
     private void Awake() {
-        if(SceneManager.GetActiveScene().name=="PrimoLivello" || SceneManager.GetActiveScene().name=="Secondoivello" || SceneManager.GetActiveScene().name=="tutorial") {
-            esterno=false;
-        }else{
-            esterno=true;
-        }
+
 
         if (esterno){
             musicaEsterna.Play();
