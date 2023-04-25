@@ -28,6 +28,7 @@ public class enemyScriptDx : ostacoli
     public SpriteRenderer immagine;
     Animator animator;
     public bool morto;
+    public soundManager SManager;
 
     private void OnDestroy() {
         if (health==0){
@@ -98,6 +99,7 @@ public class enemyScriptDx : ostacoli
     }
 
     void enemyShoot() {
+        SManager.playProiettiliNemici();
         Instantiate(enemyShotPreFab, puntoFuoco.position, puntoFuoco.rotation);
     }
 
@@ -125,6 +127,7 @@ public class enemyScriptDx : ostacoli
         }
         if (proiettile is bulletScript) {
             Debug.Log("player colpisce nemico");
+            SManager.playDannoNemici();
             takeDamage(danno);
         }
     }
@@ -133,6 +136,7 @@ public class enemyScriptDx : ostacoli
         health -= danno;            // danneggia di un tot
         
         if(health <= 0) {
+            SManager.playMorteNemici();
             morto = true;
             Debug.Log("hai ucciso un nemico");
             animator.SetTrigger("isDead");

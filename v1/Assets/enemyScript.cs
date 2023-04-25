@@ -29,6 +29,8 @@ public class enemyScript : ostacoli
     Animator animator;
     public bool morto;
 
+    public soundManager SManager;
+
     private void OnDestroy() {
         if (health==0){
         Instantiate(benzina, puntoFuoco.position, puntoFuoco.rotation);
@@ -98,6 +100,7 @@ public class enemyScript : ostacoli
     }
 
     void enemyShoot() {
+        SManager.playProiettiliNemici();
         Instantiate(enemyShotPreFab, puntoFuoco.position, puntoFuoco.rotation);
     }
 
@@ -125,6 +128,7 @@ public class enemyScript : ostacoli
         }
         if (proiettile is bulletScript) {
             Debug.Log("player colpisce nemico");
+            SManager.playDannoNemici();
             takeDamage(danno);
         }
     }
@@ -133,6 +137,7 @@ public class enemyScript : ostacoli
         health -= danno;            // danneggia di un tot
         
         if(health <= 0) {
+            SManager.playMorteNemici();
             morto = true;
             Debug.Log("hai ucciso un nemico");
             animator.SetTrigger("isDead");
@@ -156,6 +161,7 @@ public class enemyScript : ostacoli
         }
     }
     IEnumerator destructionDelay() {
+        
         yield return new WaitForSeconds(0.5f);
         morto = false;
         Debug.Log("coroutine morte nemico attivata");

@@ -809,6 +809,7 @@ MonoBehaviour:
   transizione: {fileID: 1005889106}
   benzina: {fileID: 271893045}
   player: {fileID: 730445038}
+  SManager: {fileID: 1036831686}
 --- !u!1 &308905460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,7 +1931,7 @@ MonoBehaviour:
   off: {fileID: 21300000, guid: 3994422c860c6874992cf69d99d03979, type: 3}
   tasto: {fileID: 475497344}
   Button1: {fileID: 475497342}
-  SManager: {fileID: 0}
+  SManager: {fileID: 1036831686}
 --- !u!114 &475497344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3592,6 +3593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pausa: {fileID: 887092348}
   volume: {fileID: 1145969155}
+  SManager: {fileID: 1036831686}
 --- !u!114 &833099445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4771,6 +4773,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7438057263991559327, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+      propertyPath: distruzioneAsteroidi
+      value: 
+      objectReference: {fileID: 1392105886}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
 --- !u!114 &1036831686 stripped
@@ -5283,6 +5289,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1113272895072128977, guid: 35c9a459b07169a48b0e5a45f6a79487, type: 3}
+      propertyPath: SManager
+      value: 
+      objectReference: {fileID: 1036831686}
     - target: {fileID: 3637326251469742885, guid: 35c9a459b07169a48b0e5a45f6a79487, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5768,6 +5778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 1275683532}
   Smanager: {fileID: 1036831686}
+  MManager: {fileID: 0}
 --- !u!114 &1275683531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5954,6 +5965,11 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!82 &1392105886 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7438057263991559302, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+  m_PrefabInstance: {fileID: 1036831685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1473039480
 GameObject:
   m_ObjectHideFlags: 0
@@ -6286,6 +6302,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1113272895072128977, guid: 35c9a459b07169a48b0e5a45f6a79487, type: 3}
+      propertyPath: SManager
+      value: 
+      objectReference: {fileID: 1036831686}
     - target: {fileID: 3637326251469742885, guid: 35c9a459b07169a48b0e5a45f6a79487, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7068,6 +7088,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -579921491520769050, guid: 2a116b00d51c8664ebfd44fc9a2ad56d, type: 3}
+      propertyPath: SManager
+      value: 
+      objectReference: {fileID: 1036831686}
     - target: {fileID: 1314581763113590387, guid: 2a116b00d51c8664ebfd44fc9a2ad56d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8923,7 +8947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cf0f3e19bf8ef4faff8b7cceacd2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SManager: {fileID: 0}
+  SManager: {fileID: 1036831686}
   firePoint: {fileID: 205128380}
   bulletPreFab: {fileID: 5895105278621477321, guid: 532a562e429b7a8448eff965c492eec6, type: 3}
   caricamento0: {fileID: 21300000, guid: 25a11d754ddd8be40b821ba1b537c3ad, type: 3}

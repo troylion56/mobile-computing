@@ -1727,6 +1727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd5d740806723349a9753427f132928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 0}
   pausa: {fileID: 1500273367}
   volume: {fileID: 1979822549}
 --- !u!114 &415443424
@@ -2608,6 +2609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65b0bd627e0b4c40a25a8085ade050e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 0}
   anim: {fileID: 1645042433}
   menu: {fileID: 1645042431}
 --- !u!114 &522698288
@@ -3056,6 +3058,7 @@ MonoBehaviour:
   off: {fileID: 21300000, guid: 3994422c860c6874992cf69d99d03979, type: 3}
   tasto: {fileID: 702933597}
   Button1: {fileID: 702933596}
+  SManager: {fileID: 1007850963}
 --- !u!114 &702933596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4157,6 +4160,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &1007850954 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7438057263991559296, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+  m_PrefabInstance: {fileID: 1779306007}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1007850963 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7438057263991559327, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+  m_PrefabInstance: {fileID: 1779306007}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8d0dcbc0c0f58469b1f72569322bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1109298770
 GameObject:
   m_ObjectHideFlags: 0
@@ -4529,8 +4548,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b313cde0010b444a5cf4f649e2b0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musica: {fileID: 0}
   slider: {fileID: 1170112223}
+  Smanager: {fileID: 0}
+  MManager: {fileID: 0}
 --- !u!114 &1170112222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5557,6 +5577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34889a8192612ed4d8033f880811fd0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 0}
 --- !u!114 &1426269422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5998,9 +6019,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3c4e4d217846a48bbc845aa048d478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 0}
   transizione: {fileID: 1500273367}
   pulsanteRazzo: {fileID: 702933596}
-  pausaSound: {fileID: 1582215448}
 --- !u!114 &1582215450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6297,6 +6318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cf0f3e19bf8ef4faff8b7cceacd2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 1007850963}
   firePoint: {fileID: 666091081}
   bulletPreFab: {fileID: 5895105278621477321, guid: 532a562e429b7a8448eff965c492eec6, type: 3}
   caricamento0: {fileID: 21300000, guid: 25a11d754ddd8be40b821ba1b537c3ad, type: 3}
@@ -6351,6 +6373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be38fe9ffc05a7e459269b7c435a8d24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 1007850963}
   stella1: {fileID: 893484922}
   stella2: {fileID: 157250977}
   stella3: {fileID: 403497597}
@@ -6367,10 +6390,6 @@ MonoBehaviour:
   vita: {fileID: 432276756}
   cameraShake: {fileID: 1412235751}
   player: {fileID: 1636627790}
-  raccorta: {fileID: 1582215448}
-  haivinto: {fileID: 1582215448}
-  proiettileDanno: {fileID: 1582215448}
-  meteoriti: {fileID: 1582215448}
 --- !u!61 &1636627795
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6727,6 +6746,7 @@ MonoBehaviour:
   transizione: {fileID: 0}
   trans: {fileID: 1636627790}
   trans1: {fileID: 836983997}
+  MController: {fileID: 0}
 --- !u!114 &1661129901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7023,12 +7043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be3d26706ea9ea49948ea90a9c68298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spariPlayer: {fileID: 0}
-  mortePlayer: {fileID: 0}
-  spariNemici: {fileID: 0}
-  morteNemici: {fileID: 0}
-  effettiPausa: {fileID: 0}
-  slider: {fileID: 1668220915}
+  sliderEffetti: {fileID: 0}
 --- !u!114 &1668220914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7350,6 +7365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34889a8192612ed4d8033f880811fd0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 0}
 --- !u!114 &1754850808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7444,6 +7460,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754850805}
   m_CullTransparentMesh: 1
+--- !u!1001 &1779306007
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7438057263991559318, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+      propertyPath: m_Name
+      value: soundController
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438057263991559326, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438057263991559326, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.18106478
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438057263991559326, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.47834778
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438057263991559326, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 64469.297
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438057263991559326, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438057263991559326, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438057263991559326, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438057263991559326, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438057263991559326, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438057263991559326, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438057263991559326, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438057263991559327, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
+      propertyPath: proiettiliNemici
+      value: 
+      objectReference: {fileID: 1007850954}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d214857bf9e21bd4cb886d16266269e2, type: 3}
 --- !u!1 &1807486750
 GameObject:
   m_ObjectHideFlags: 0
@@ -7878,6 +7955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34889a8192612ed4d8033f880811fd0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 0}
 --- !u!114 &1849368246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8109,6 +8187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80092f5a879da374db8cc1b0ae198b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 0}
   transizione: {fileID: 1500273367}
   pulsanteRazzo: {fileID: 0}
 --- !u!114 &1884307625
@@ -8300,6 +8379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: nemico 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1113272895072128977, guid: 35c9a459b07169a48b0e5a45f6a79487, type: 3}
+      propertyPath: SManager
+      value: 
+      objectReference: {fileID: 1007850963}
     - target: {fileID: 3637326251469742885, guid: 35c9a459b07169a48b0e5a45f6a79487, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8760,6 +8843,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -579921491520769050, guid: 2a116b00d51c8664ebfd44fc9a2ad56d, type: 3}
+      propertyPath: SManager
+      value: 
+      objectReference: {fileID: 1007850963}
     - target: {fileID: 1314581763113590387, guid: 2a116b00d51c8664ebfd44fc9a2ad56d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8960,6 +9047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cf0f3e19bf8ef4faff8b7cceacd2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SManager: {fileID: 1007850963}
   firePoint: {fileID: 666091081}
   bulletPreFab: {fileID: 5895105278621477321, guid: 532a562e429b7a8448eff965c492eec6, type: 3}
   caricamento0: {fileID: 21300000, guid: 25a11d754ddd8be40b821ba1b537c3ad, type: 3}

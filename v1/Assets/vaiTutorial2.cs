@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class vaiTutorial2 : MonoBehaviour
 {
+    public soundManager SManager;
     public void vaiATutorial () {
+        SManager.playPausa();
         SceneManager.LoadSceneAsync("tutorial");
     }
 }

@@ -4,18 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class scriptVaiImpostazioni : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    
-    }
+    public soundManager SManager;
     public void vaiImpostazioni () {
+        SManager.playPausa();
         SceneManager.LoadSceneAsync("impostazioni");
     }
 }

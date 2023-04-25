@@ -9,6 +9,7 @@ public class livelloBenzinaPlayer : MonoBehaviour
     public Slider benzina;
     private bool distrutto;
     public GameObject player;
+    public soundManager SManager;
 
     private void Start() {
         distrutto=false;
@@ -29,6 +30,7 @@ public class livelloBenzinaPlayer : MonoBehaviour
     public void cadi() {
         player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y - 0.07f);
         if(player.transform.position.y < -5.8f) {
+            SManager.playDannoPlayer();
             Destroy(player);
             distrutto=true;
         }

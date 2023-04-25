@@ -6,8 +6,10 @@ public class tornaAPausa : MonoBehaviour
 {
     public Animator pausa;
     public Animator volume;
+    public soundManager SManager;
 
     public void onClick (){
+        SManager.playPausa();
         pausa.SetTrigger("chiudiVolumiP");
         volume.SetTrigger("chiudiVolumeV");
     }

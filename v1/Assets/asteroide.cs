@@ -37,6 +37,7 @@ public class asteroide : ostacoli
             aster.SetTrigger("distruzione");
             oide.GetComponent<Collider2D>().enabled=false;
             SManager.playDistruzioneAsteroidi();
+            Debug.Log("bbbbbbbbbbbbbbbb");
             distrutto=true;
         }
         if (proiettile is bulletScript)

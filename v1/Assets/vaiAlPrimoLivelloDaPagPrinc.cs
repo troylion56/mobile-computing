@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class vaiAlPrimoLivelloDaPagPrinc : MonoBehaviour
 {
+    public soundManager SManager;
     public Animator trans;
     public float time = 1f; 
 
     public void scriptVaiAPrimolivelloDaPrinc () {
+        SManager.playPausa();
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 2));
     }
     IEnumerator LoadLevel(int levelIndex) {

@@ -53,4 +53,8 @@ public class musicController : MonoBehaviour
             Destroy(gameObject);
         }
     }    
+
+    public void cambiaVolume(float vol){
+        musicaEsterna.volume=vol;
+    }
 }

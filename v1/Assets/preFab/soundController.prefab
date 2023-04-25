@@ -62,15 +62,14 @@ MonoBehaviour:
   fineBenzina: {fileID: 0}
   proiettiliPlayer: {fileID: 7438057263991559296}
   missiliPlayer: {fileID: 7438057263991559297}
+  raccoltaCollezionabili: {fileID: 7438057263991559316}
   proiettiliNemici: {fileID: 7438057263991559297}
   dannoNemici: {fileID: 7438057263991559320}
   morteNemici: {fileID: 7438057263991559302}
-  distruzioneAsteroidi: {fileID: 7438057263991559319}
+  distruzioneAsteroidi: {fileID: 7438057263991559317}
   fineLivello: {fileID: 0}
   gameOver: {fileID: 0}
   pausa: {fileID: 7438057263991559323}
-  raccoltaCollezionabili: {fileID: 7438057263991559316}
-  musicaEsterna: {fileID: 7438057263991559322}
   musicaLivelli: {fileID: 7438057263991559317}
 --- !u!82 &7438057263991559320
 AudioSource:
