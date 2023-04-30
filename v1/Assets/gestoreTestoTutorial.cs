@@ -268,6 +268,7 @@ public class gestoreTestoTutorial : MonoBehaviour
     }
 
     IEnumerator scrittura (string dialogo){
+        SManager.playScrittura();
         continua.SetActive(false);
         salta=false;
         tutorial.text="";
@@ -282,6 +283,7 @@ public class gestoreTestoTutorial : MonoBehaviour
                 yield return new WaitForSeconds(0.05f);
             }
         }
+        SManager.stopScrittura();
         continua.SetActive(true);
         scrittaAttesa.attesa();                 //animazione puntini scritta attesa
     }

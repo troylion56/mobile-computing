@@ -23,6 +23,7 @@ public class soundManager : MonoBehaviour
     public AudioSource fineLivello;
     public AudioSource gameOver;
     public AudioSource pausa;
+    public AudioSource scrittura;
 
     [Header("       -----Musica----")]
     public AudioSource musicaLivelli;
@@ -125,8 +126,20 @@ public class soundManager : MonoBehaviour
     public void playRaccoltaCollezionabili(){
         suonaEffetto(raccoltaCollezionabili);
     }
+    public void playScrittura(){
+        suonaEffetto(scrittura);
+    }
 
+    public void stopScrittura(){
+        scrittura.Stop();
+    }
     public void cambiaVolume(float vol){
         musicaLivelli.volume=vol;
+    }
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Y)){
+            suonaEffetto(distruzioneAsteroidi);
+        }
     }
 }

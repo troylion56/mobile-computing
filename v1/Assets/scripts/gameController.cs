@@ -16,6 +16,7 @@ public class gameController : MonoBehaviour{
     public Animator trans;          //animazione del player che vola
     public Animator trans1;   
     public musicController MController;
+    public soundManager SManager;
 
     
     void Update()
@@ -40,6 +41,7 @@ public class gameController : MonoBehaviour{
         Time.timeScale=0f;
 
         transizione.SetTrigger("triggermov");
+        SManager.playPausa();
         trans.SetTrigger("volaInAlto");
         trans1.SetTrigger("stel");
 

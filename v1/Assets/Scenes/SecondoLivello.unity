@@ -2126,7 +2126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34889a8192612ed4d8033f880811fd0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SManager: {fileID: 0}
+  SManager: {fileID: 1036831686}
 --- !u!114 &525007244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5787,7 +5787,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 1275683532}
   Smanager: {fileID: 1036831686}
-  MManager: {fileID: 0}
 --- !u!114 &1275683531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8734,6 +8733,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1938703689}
     - target: {fileID: 7444645285609643845, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
+      propertyPath: SManager
+      value: 
+      objectReference: {fileID: 1036831686}
+    - target: {fileID: 7444645285609643845, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
       propertyPath: transizione
       value: 
       objectReference: {fileID: 868809087}
@@ -8843,6 +8846,7 @@ MonoBehaviour:
   trans: {fileID: 730445040}
   trans1: {fileID: 1938703689}
   MController: {fileID: 0}
+  SManager: {fileID: 0}
 --- !u!114 &2135767696
 MonoBehaviour:
   m_ObjectHideFlags: 0
