@@ -24,6 +24,10 @@ public class musicController : MonoBehaviour
                 musicaEsterna.Play();
             }
         }
+
+        if (PlayerPrefs.GetFloat("volumeMusica") != musicaEsterna.volume){
+            musicaEsterna.volume=PlayerPrefs.GetFloat("volumeMusica");
+        }
     }
 
     public void stopMusic(){
@@ -40,6 +44,8 @@ public class musicController : MonoBehaviour
             musicaEsterna.Play();
         }
     }
+
+    //rende permanente il game object in ogni scena
     private void Awake() {
         if(istance == null){
             istance=this;
@@ -50,6 +56,7 @@ public class musicController : MonoBehaviour
     }    
 
     public void cambiaVolume(float vol){
+        Debug.Log("cambio volume musica esterna");
         musicaEsterna.volume=vol;
     }
 }

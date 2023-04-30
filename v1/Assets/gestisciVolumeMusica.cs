@@ -7,7 +7,6 @@ public class gestisciVolumeMusica : MonoBehaviour
 {
     public Slider slider;
     public soundManager Smanager;
-    public musicController MManager;
 
    void Start(){
         /*se esiste in memoria un precedente salvataggio del volume*/
@@ -30,10 +29,6 @@ public class gestisciVolumeMusica : MonoBehaviour
         salva();
         if (Smanager!=null){
             Smanager.cambiaVolume(slider.value);
-        }
-
-        if (MManager!=null){
-            MManager.cambiaVolume(slider.value);
         }
     }
 
