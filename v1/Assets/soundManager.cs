@@ -107,7 +107,7 @@ public class soundManager : MonoBehaviour
 
     public void playDistruzioneAsteroidi(){
         suonaEffetto(distruzioneAsteroidi);
-        Debug.Log("aaaaaaaaaaaaa");
+        Debug.Log("booooooooooooooooooommm");
     }
 
     public void playFineLivello(){

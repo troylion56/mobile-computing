@@ -814,7 +814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3637326251469742885, guid: 35c9a459b07169a48b0e5a45f6a79487, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3637326251469742885, guid: 35c9a459b07169a48b0e5a45f6a79487, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4788,6 +4788,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35c9a459b07169a48b0e5a45f6a79487, type: 3}
+--- !u!1 &1136656367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1113272895072128976, guid: 35c9a459b07169a48b0e5a45f6a79487, type: 3}
+  m_PrefabInstance: {fileID: 1136656366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1165334234
 GameObject:
   m_ObjectHideFlags: 0
@@ -6429,6 +6434,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
+--- !u!114 &1425051098 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7444645285609643845, guid: c8c8e80b3072aa048bb0b32895e82170, type: 3}
+  m_PrefabInstance: {fileID: 1425051097}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551875115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510072e02924f104d8d385d8d43ded9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1441948018
 GameObject:
   m_ObjectHideFlags: 0
@@ -6846,8 +6862,8 @@ MonoBehaviour:
   stella3: {fileID: 4574897740969164788, guid: 0d0ea355f10ae9c43959b7ac6693448f, type: 3}
   nemico1: {fileID: 142167054}
   nemico2: {fileID: 919132418}
-  nemico3: {fileID: 0}
-  end: {fileID: 0}
+  nemico3: {fileID: 1136656367}
+  end: {fileID: 1425051098}
 --- !u!1 &1555845330
 GameObject:
   m_ObjectHideFlags: 0
@@ -9326,7 +9342,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 2039882006}
   Smanager: {fileID: 2121458669}
-  MManager: {fileID: 0}
 --- !u!114 &2039882005
 MonoBehaviour:
   m_ObjectHideFlags: 0

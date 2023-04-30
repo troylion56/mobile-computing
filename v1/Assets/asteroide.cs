@@ -13,6 +13,7 @@ public class asteroide : ostacoli
     private void Start() {
         distrutto=false;
     }
+
     void Update()
     {
         if(!gameController.pausa){
@@ -33,10 +34,10 @@ public class asteroide : ostacoli
     private void impatto (proiettili proiettile){
         if (proiettile is razzoShoting)
         {
+            SManager.playDistruzioneAsteroidi();
             Debug.Log("missile colpisce asteroide");
             aster.SetTrigger("distruzione");
             oide.GetComponent<Collider2D>().enabled=false;
-            SManager.playDistruzioneAsteroidi();
             Debug.Log("bbbbbbbbbbbbbbbb");
             distrutto=true;
         }
