@@ -4772,8 +4772,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transizione: {fileID: 1844408212}
   benzina: {fileID: 422055497}
-  player: {fileID: 0}
-  SManager: {fileID: 0}
+  player: {fileID: 933981688}
+  SManager: {fileID: 1226314960}
 --- !u!95 &933981690
 Animator:
   serializedVersion: 4
@@ -4806,7 +4806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cf0f3e19bf8ef4faff8b7cceacd2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SManager: {fileID: 0}
+  SManager: {fileID: 1226314960}
   firePoint: {fileID: 711801894}
   bulletPreFab: {fileID: 5895105278621477321, guid: 532a562e429b7a8448eff965c492eec6, type: 3}
   caricamento0: {fileID: 21300000, guid: 25a11d754ddd8be40b821ba1b537c3ad, type: 3}
@@ -4970,6 +4970,7 @@ MonoBehaviour:
   tutorial: {fileID: 331741306}
   tasto: {fileID: 1343135811}
   vita: {fileID: 1898730272}
+  SManager: {fileID: 1226314960}
 --- !u!114 &933981700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4986,7 +4987,7 @@ MonoBehaviour:
   swipeTime: 2.5
   tapTime: 10
   spostamento: {fileID: 933981690}
-  player: {fileID: 0}
+  player: {fileID: 933981688}
   tutorial: {fileID: 331741306}
   posIndex: 2
 --- !u!114 &933981701
@@ -6047,6 +6048,7 @@ MonoBehaviour:
   rate: 0.03
   timeRicarica: 2
   tutorial: {fileID: 331741306}
+  SManager: {fileID: 1226314960}
   st:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 21300000, guid: f4cbc0c54fa339a47b801d4a5b5780c2, type: 3}
@@ -6927,7 +6929,7 @@ MonoBehaviour:
   off: {fileID: 21300000, guid: 3994422c860c6874992cf69d99d03979, type: 3}
   tasto: {fileID: 1343135811}
   Button1: {fileID: 1343135809}
-  SManager: {fileID: 0}
+  SManager: {fileID: 1226314960}
 --- !u!114 &1343135811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9086,6 +9088,7 @@ MonoBehaviour:
   colore: {fileID: 674181731}
   danno: 1
   tutorial: {fileID: 331741306}
+  animPlayer: {fileID: 0}
 --- !u!1 &1948840744
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ public class gestoreVita : MonoBehaviour
     public int danno = 1;
     public Animator animator;
     public static bool morto;
-
+    public soundManager SManager;
     public Animator animPlayer;
 
  //TODO   [SerializeField] private AudioSource mortoSound;
@@ -70,6 +70,7 @@ public class gestoreVita : MonoBehaviour
         Time.timeScale = 0f;
         gameController.pausa=true;
         animPlayer.SetTrigger("dead");
+        SManager.playMortePlayer();
         transizione.SetTrigger("triggerMorte");
         yield return new WaitForSeconds(0.6f);
         Destroy(gameObject);

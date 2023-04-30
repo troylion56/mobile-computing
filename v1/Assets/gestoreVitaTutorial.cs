@@ -11,7 +11,8 @@ public class gestoreVitaTutorial : MonoBehaviour
   public Gradient gradiente;
   public Image colore;
   public int danno = 1;
-public gestoreTestoTutorial tutorial;
+  public gestoreTestoTutorial tutorial;
+  public Animator animPlayer;
 
 
   public void setMaxHp(int maxHp){

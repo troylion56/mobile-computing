@@ -9122,6 +9122,7 @@ MonoBehaviour:
   colore: {fileID: 1184772081}
   danno: 20
   animator: {fileID: 999440371}
+  SManager: {fileID: 2121458669}
   animPlayer: {fileID: 1862041165}
 --- !u!95 &2022207721
 Animator:

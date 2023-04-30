@@ -17,8 +17,11 @@ public class weaponScriptTutorial : MonoBehaviour
     private int contatoreSpari=0;       //variabile che conta gli spari effettuati durante il tutorial dello shooting
     public gestoreTestoTutorial tutorial;
     private bool singolo=true;
+    public soundManager SManager;
     public SpriteState st;
     public Sprite onclick1,onclick2,onclick3, onclick4;
+
+    
     private void Start() {
         stato = true;
         colpiDisponibili = 4;            // si inizia con il caricatore pieno
@@ -27,8 +30,8 @@ public class weaponScriptTutorial : MonoBehaviour
 
     }
 
-    void Shoot()
-    {
+    void Shoot(){
+        SManager.playProiettiliPlayer();
         Instantiate(bulletPreFab, firePoint.position, firePoint.rotation);
     }
 

@@ -16,6 +16,7 @@ public class inventoryTutorial : MonoBehaviour
     public gestoreTestoTutorial tutorial;
     public Image tasto;         //per passargli il bottone
      public gestoreVitaTutorial vita;
+     public soundManager SManager;
 
 
     // Start is called before the first frame update
@@ -27,6 +28,7 @@ public class inventoryTutorial : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider2D) {
         if(collider2D.CompareTag("collectable")){
+            SManager.playRaccoltaCollezionabili();
             Collect(collider2D.GetComponent<collect>());
         }
 
@@ -35,6 +37,7 @@ public class inventoryTutorial : MonoBehaviour
         }
 
         if(collider2D.CompareTag("proiettili")) {                 // caso di collisione con proettili nemico
+            SManager.playDannoPlayer();
             if (gestoreTestoTutorial.contatoreDialoghi==53){
                 vita.danneggia(1);
             }
