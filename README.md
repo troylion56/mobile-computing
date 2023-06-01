@@ -6,6 +6,6 @@ Il giocatore dovra cercare di schivare i meteoriti e non farsi colpire dalle ast
 Allego il link per un video dimostrativo: https://uniroma3-my.sharepoint.com/:v:/g/personal/tro_tony_stud_uniroma3_it/EW_t28k0g39BnHYM_Wu8gMsBE-Qbn3UAZzXDkCr4xL06Ng?e=XP4Kx0                                                                                        
 In oltre per chi si vuole divertire puo scaricare l'apk andando sopra e scaricando apk.apk                               
 fatto da         
-Marinangeli Ludovica                           
+Marinangeli Ludovica  detta nemo                         
 Peroni Alessandro  detto il denu                               
-Tony Troy                                            
+Tony Troy          detto cibo per tigri                                         
